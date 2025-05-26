@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from ray.rllib.env import PettingZooEnv
 from ray.tune.registry import register_env
 from envs.timetabling_env import TimetablingEnv
@@ -10,7 +13,7 @@ def env_creator(_):
 register_env("timetabling_env", env_creator)
 
 if __name__ == "__main__":
-    init(ignore_reinit_error=True)
+    init(ignore_reinit_error=True, include_dashboard=False)
 
     env = TimetablingEnv()
     policies = {
