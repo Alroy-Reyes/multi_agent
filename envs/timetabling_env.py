@@ -46,7 +46,9 @@ class TimetablingEnv(AECEnv):
         }
 
     def observe(self, agent):
-        return np.array(self.observations[agent], dtype=np.float32)
+        obs=np.array(self.observations[agent], dtype=np.float32)
+        print(f"[DEBUG] Observation for {agent}: {obs}")
+        return obs
 
     def step(self, action):
         agent = self.agent_selection
