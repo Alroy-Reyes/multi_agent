@@ -1,15 +1,15 @@
 # training/train_ppo.py
 
-import sys
-import os
+import sys, os
 from ray import init, tune
 from ray.tune import CLIReporter
-from ray.air.config import RunConfig
+# ← import the official TensorBoard callback
 from ray.tune.logger import TBXLoggerCallback
 from ray.tune.registry import register_env
 from ray.rllib.algorithms.ppo import PPOConfig
 from ray.rllib.env import PettingZooEnv
 
+# allow importing your custom environment
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from envs.timetabling_env import TimetablingEnv
 
@@ -25,51 +25,64 @@ def make_env():
     )
     return PettingZooEnv(base)
 
-def env_creator(_):
-    return make_env()
-
 if __name__ == "__main__":
     # 1) Start Ray
     init(ignore_reinit_error=True, include_dashboard=False)
 
-    # 2) Register the env
-    register_env("timetabling_env", lambda config: make_env())
+    # 2) Register your env
+    register_env("timetabling_env", lambda cfg: make_env())
 
-    # 3) Build a dummy to extract obs/action spaces
-    dummy = make_env()
-    dummy.env.reset()
-    raw = dummy.env
+    # 3) Build a dummy so we can pull out observation & action spaces
+    wrapped = make_env()
+    wrapped.env.reset()      # reset the raw AECEnv
+    raw = wrapped.env
+
     policies = {}
     for agent_id in raw.possible_agents:
-        obs_space = dummy.observation_space[agent_id]
-        act_space = dummy.action_space[agent_id]
+        # grab the real spaces from the raw environment
+        obs_space = raw.observation_space(agent_id)
+        act_space = raw.action_space(agent_id)
         policies[agent_id] = (None, obs_space, act_space, {})
 
-    # 4) Build PPOConfig
-    config = (
+    # 4) Build a straightforward PPOConfig (no logger_config/loggers hacks)
+    ppo_cfg = (
         PPOConfig()
         .environment(env="timetabling_env", disable_env_checking=True)
         .framework("torch")
-        .rollouts(num_rollout_workers=0, rollout_fragment_length=1, batch_mode="complete_episodes")
-        .training(gamma=0.99, lr=1e-3, train_batch_size=6, sgd_minibatch_size=6)
+        .rollouts(
+            num_rollout_workers=0,
+            rollout_fragment_length=1,
+            batch_mode="complete_episodes",
+        )
+        .training(
+            gamma=0.99,
+            lr=1e-3,
+            train_batch_size=6,
+            sgd_minibatch_size=6,
+        )
         .resources(num_gpus=0)
-        .multi_agent(policies=policies, policy_mapping_fn=lambda aid, *args, **kwargs: aid)
-    ).to_dict()
+        .multi_agent(
+            policies=policies,
+            policy_mapping_fn=lambda agent_id, *args, **kwargs: agent_id,
+        )
+    )
+    config = ppo_cfg.to_dict()
 
-    # 5) Use CLIReporter to show live progress in console
+    # 5) CLIReporter for live console metrics
     reporter = CLIReporter(
         parameter_columns=["env", "lr", "train_batch_size"],
-        metric_columns=["episode_reward_mean", "policy_reward_mean", "policy_loss", "vf_loss", "timesteps_total"]
+        metric_columns=["episode_reward_mean", "timesteps_total"]
     )
 
-    # 6) Run with tune.run rather than Tuner
+    # 6) Run with Tune, using only TBXLoggerCallback to emit TensorBoard events
     tune.run(
         "PPO",
         config=config,
-        stop={"training_iteration": 50},   # e.g. run for 10 iterations
+        stop={"training_iteration": 50},
         local_dir=os.path.expanduser("~/ray_results"),
         name="PPO_Timetabling",
         callbacks=[TBXLoggerCallback()],
         progress_reporter=reporter,
         verbose=1,
+        log_to_file="output.log",
     )
