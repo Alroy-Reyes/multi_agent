@@ -1,42 +1,57 @@
+import numpy as np
+import numpy as np
 from timetabling_env import TimetablingEnv
 
-# Initialize environment with SAHAs and CMAs, plus room/building info
-env = TimetablingEnv(
-    num_sahas=2,
-    num_cmas=2,
-    num_teachers=5,
-    num_subjects=6,
-    num_timeslots=5,
-    buildings_room_info={
-        0: ['lecture', 'lab'],
-        1: ['lecture', 'lecture']
-    },
-    max_classes_per_teacher=3
-)
+class TimetablingEnvWithDisplay(TimetablingEnv):
+    def render_schedule(self):
+        """Display the current room schedule in a tabular format."""
+        
+        print("\nRoom Assignment Schedule:")
+        
+        # Column headers (Timeslots)
+        print(f"{'Room/Timeslot':<15}", end="")
+        for timeslot in range(self.num_timeslots):
+            print(f"TS{timeslot + 1:<5}", end="")  # Format each timeslot with consistent spacing
+        print()  # Newline after the header
+        
+        print("-" * (15 + self.num_timeslots * 7))  # Create a separator line for better readability
+        
+        # Display each room's booking for each timeslot
+        for bldg_id, room_types in self.buildings_room_info.items():
+            for room_idx, room_type in enumerate(room_types):
+                print(f"Room {room_idx + 1} ({room_type:<7}) | ", end="")
+                # Display bookings for this room across all timeslots
+                for timeslot in range(self.num_timeslots):
+                    subject = self.buildings_room_schedule[bldg_id][room_idx][timeslot]
+                    if subject == -1:
+                        print(f"{'Available':<8}", end="")  # Ensure consistent width for "Available"
+                    else:
+                        print(f"S{subject + 1:<7}", end="")  # Show subject number with consistent spacing
+                print()  # Newline after each room's schedule
 
-obs, info = env.reset()
+# Create a new environment instance
+env = TimetablingEnvWithDisplay()
 
-done = {agent: False for agent in env.agents}
-action_pointer = 0
+# Sample run of the environment
+env.reset()
 
-while not all(done.values()) and env.agents:
-    agent = env.agent_selection
+# Display the schedule for each step
+for step in range(10):
+    print(f"\nStep {step + 1}:")
+    
+    # Render the current schedule for better visualization
+    env.render_schedule()
+    
+    # Iterate over agents and take actions
+    for agent in env.agents:
+        observation = env.observe(agent)
+        print(f"Observation for {agent}: {observation}")
+        action = np.random.randint(0, env.action_spaces[agent].n)
+        print(f"Action taken by {agent}: {action}")
+        env.step(action)
+        print(f"Reward for {agent}: {env.rewards[agent]}")
 
-    if done.get(agent, False):
-        env.agent_selection = env._agent_selector.next()
-        continue
+    print("-" * 30)
 
-    action_space = env.action_space(agent)
-    action = action_pointer % action_space.n
-
-    print(f"\n▶️ {agent} attempting action: {action}")
-
-    env.step(action)
-    env.render()
-
-    if env.terminations.get(agent, False):
-        done[agent] = True
-
-    action_pointer += 1
-
+# Close the environment after the run
 env.close()
