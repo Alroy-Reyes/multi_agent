@@ -18,7 +18,7 @@ class TimetablingEnv(AECEnv):
         num_teachers: int = 5,
         num_subjects: int = 12,
         num_timeslots: int = 5,
-        num_days: int = 5,                           # <-- new
+        num_days: int = 5,
         room_codes: list[str] | None = None,
         subject_codes: list[str] | None = None,
         subject_campuses: list[list[str]] | None = None,
@@ -31,7 +31,7 @@ class TimetablingEnv(AECEnv):
         self.num_teachers  = num_teachers
         self.num_subjects  = num_subjects
         self.num_timeslots = num_timeslots
-        self.num_days      = num_days               # <-- store days
+        self.num_days      = num_days
         self.max_classes   = max_classes_per_teacher
 
         # ─── BUILDING / ROOM SETUP ───────────────────────────────────────────────
@@ -79,14 +79,14 @@ class TimetablingEnv(AECEnv):
             for i in range(self.num_teachers)
         }
 
-        # ─── AGENT LISTS ──────────────────────────────────────────────────────────
+        # ─── AGENTS ────────────────────────────────────────────────────────────────
         self.saha_agents = [f"saha_{i}" for i in range(self.num_sahas)]
         self.cma_agents  = [f"cma_{b}"  for b in self.building_keys]
         self.possible_agents = self.saha_agents + self.cma_agents
 
         # ─── ACTION / OBSERVATION SPACES ─────────────────────────────────────────
-        # Sahas choose (teacher × timeslot) as before
-        self.saha_action_space      = spaces.Discrete(self.num_teachers * self.num_timeslots)
+        # SAHAs now choose only a teacher (no timeslot)
+        self.saha_action_space      = spaces.Discrete(self.num_teachers)
         self.saha_observation_space = spaces.Box(
             low=np.float32(0.0),
             high=np.float32(1.0),
@@ -94,7 +94,7 @@ class TimetablingEnv(AECEnv):
             dtype=np.float32
         )
 
-        # CMAs now choose among (room × day × timeslot)
+        # CMAs choose (room × day × timeslot) as before
         self.cma_action_spaces      = {}
         self.cma_observation_spaces = {}
         for b in self.building_keys:
@@ -121,19 +121,14 @@ class TimetablingEnv(AECEnv):
         self._init_state()
 
     def _init_state(self):
-        # one teacher assignment per subject
         self.subject_assignments = np.full(self.num_subjects, -1, dtype=int)
-
-        # now a 3-D schedule: (n_rooms, num_days, num_timeslots)
         self.buildings_room_schedule = {
             b: np.full(
                 (len(self.buildings_room_info[b]), self.num_days, self.num_timeslots),
-                -1,
-                dtype=int
+                -1, dtype=int
             )
             for b in self.building_keys
         }
-
         self.teacher_classes     = {f"teacher_{i}": 0 for i in range(self.num_teachers)}
         self.conflict_count      = 0
         self.negotiation_success = 0
@@ -155,21 +150,15 @@ class TimetablingEnv(AECEnv):
 
         self._init_state()
 
-        # random initial teacher‐scores for Sahas
         for a in self.saha_agents:
             self.saha_teacher_scores[a] = np.random.rand(self.num_teachers).astype(np.float32)
 
         self._update_cma_observations()
         self._update_all_observations()
 
-        # cast all observations
         for a in self.possible_agents:
             self.observations[a] = np.array(self.observations[a], dtype=np.float32)
-
-        # sanity‐check bounds
-        for a in self.possible_agents:
-            low  = self.observation_spaces[a].low
-            high = self.observation_spaces[a].high
+            low, high = self.observation_spaces[a].low, self.observation_spaces[a].high
             if not np.allclose(self.observations[a], np.clip(self.observations[a], low, high)):
                 raise ValueError(f"Observation for agent {a} out of bounds!")
 
@@ -183,23 +172,18 @@ class TimetablingEnv(AECEnv):
                 self._step_saha(agent, action)
             else:
                 self._step_cma(agent, action)
-
-            # assign reward to current agent
             self.rewards[agent] = self.current_reward
             self._cumulative_rewards[agent] += self.current_reward
 
-        # update all obs for next agent
         self._update_cma_observations()
         self._update_all_observations()
 
-        # handle terminations
         if self.terminations.get(agent) or self.truncations.get(agent):
             self.agents.remove(agent)
             self._agent_selector = agent_selector(self.agents)
         if self.agents:
             self.agent_selection = self._agent_selector.next()
 
-        # attach error_rate info
         for a in self.agents:
             self.infos[a]["error_rate"] = self.calculate_error_rate()
 
@@ -222,13 +206,13 @@ class TimetablingEnv(AECEnv):
             key=self.subject_priority, reverse=True
         )
         if not candidates:
-            self.current_reward       = 0.0
-            self.terminations[agent]  = True
+            self.current_reward      = 0.0
+            self.terminations[agent] = True
             return
 
         subj = candidates[0]
-        tid, _ = divmod(action, self.num_timeslots)
-        teacher_key = f"teacher_{tid}"
+        # SAHA action is now just the teacher index
+        teacher_key = f"teacher_{action}"
         code        = self.subject_codes[subj]
         valid_buildings = self.subject_campuses[subj]
 
@@ -236,9 +220,9 @@ class TimetablingEnv(AECEnv):
             self.current_reward = -1.0
             return
 
-        self.subject_assignments[subj]      = tid
-        self.teacher_classes[teacher_key]  += 1
-        self.current_reward                 = 1.0
+        self.subject_assignments[subj]     = action
+        self.teacher_classes[teacher_key] += 1
+        self.current_reward                = 1.0
 
     def _step_cma(self, agent: str, action: int):
         bkey = agent.split("_", 1)[1]
@@ -247,7 +231,6 @@ class TimetablingEnv(AECEnv):
         rest        = action % total_slots
         day_idx, ts = divmod(rest, self.num_timeslots)
 
-        # if all placed, terminate everyone
         if len(self.cma_placed) == self.num_subjects:
             for a in list(self.agents):
                 self.terminations[a] = True
@@ -262,11 +245,11 @@ class TimetablingEnv(AECEnv):
             )
         ]
         if not candidates:
-            self.current_reward       = 0.0
-            self.terminations[agent]  = True
+            self.current_reward      = 0.0
+            self.terminations[agent] = True
             return
 
-        subj = sorted(candidates, key=self.subject_priority, reverse=True)[0]
+        subj    = sorted(candidates, key=self.subject_priority, reverse=True)[0]
         schedule = self.buildings_room_schedule[bkey]
 
         if schedule[room_idx, day_idx, ts] == -1:

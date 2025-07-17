@@ -102,33 +102,37 @@ def build_schedule_dataframe(env):
     return pd.DataFrame(rows)
 
 # ─── 6) CUSTOM CALLBACK WITH COMPACT SUMMARY ───────────────────────────────────
+
 class ScheduleCallback(DefaultCallbacks):
     def __init__(self):
         super().__init__()
-        self.writer = SummaryWriter(log_dir="C:/ray_logs/custom_tensorboard")
+        self.writer = SummaryWriter(log_dir="C:/ray_logs/test2_tensorboard")
 
     def on_train_result(self, *, algorithm, result, **kwargs):
-        it, ts, rew = (
-            result["training_iteration"],
-            result["timesteps_total"],
-            result["episode_reward_mean"],
-        )
-        print(f"[DEBUG] iter={it:<3} timesteps={ts:<6} reward={rew:.2f}")
+        it = result["training_iteration"]
+        ts = result["timesteps_total"]
+        rew = result["episode_reward_mean"]
+
+        # existing logging to TensorBoard
         self.writer.add_scalar("Reward/EpisodeRewardMean", rew, it)
         self.writer.add_scalar("Timesteps/Total", ts, it)
         for k, v in result.get("custom_metrics", {}).items():
             if isinstance(v, (int, float)):
                 self.writer.add_scalar(f"Custom/{k}", v, it)
 
+        learner_info = result.get("info", {}).get("learner", {})
+        for pid, data in learner_info.items():
+            stats = data.get("learner_stats", {})
+            for name in ("policy_loss", "vf_loss", "entropy"):
+                val = stats.get(name)
+                if val is not None:
+                    self.writer.add_scalar(f"{pid}/{name}", val, it)
+
     def on_episode_end(self, *, worker, base_env, episode, **kwargs):
+        env = base_env.get_sub_environments()[0].env
         sub_env = base_env.get_sub_environments()[0].env
         df_sched = build_schedule_dataframe(sub_env).fillna("")
-
-        # print full timetable
-        print("\n=== Full Timetable ===")
-        print(df_sched.to_string(index=False))
-        print("======================\n")
-
+        
         # compact one-line summary per Subject/Teacher
         assigned = df_sched[df_sched["Subject"].notna()]
         summary = (
@@ -142,17 +146,36 @@ class ScheduleCallback(DefaultCallbacks):
             .reset_index()
         )
 
-        print("=== Assignment Summary ===")
-        for _, row in summary.iterrows():
-            print(
-                f"{row.Subject} ({row.Teacher}) -  "
-                f"Rooms: {row.Rooms} | "
-                f"Days: {row.Days} | "
-                f"Timeslots: {row.Timeslots}"
-            )
-            # blank line after each summary entry
-            print()
-        print("==========================\n")
+        # print("=== Assignment Summary ===")
+        # for _, row in summary.iterrows():
+        #     print(
+        #         f"{row.Subject} ({row.Teacher}) -  "
+        #         f"Rooms: {row.Rooms} | "
+        #         f"Days: {row.Days} | "
+        #         f"Timeslots: {row.Timeslots}"
+        #     )
+        #     # blank line after each summary entry
+        #     print()
+        # print("==========================\n")
+
+        # 1) assigned vs unassigned subjects
+        assigns = env.subject_assignments
+        num_assigned   = int((assigns >= 0).sum())
+        num_unassigned = int((assigns <  0).sum())
+
+        # 2) faculty load
+        counts     = list(env.teacher_classes.values())
+        max_load   = env.max_classes
+        full_load  = sum(1 for c in counts if c >= max_load)
+        under_load = sum(1 for c in counts if c <  max_load)
+
+        # print only
+        # print("=== Episode Statistics ===")
+        # print(f"Assigned subjects:        {num_assigned}")
+        # print(f"Unassigned subjects:      {num_unassigned}")
+        # print(f"Faculty at full load:     {full_load}")
+        # print(f"Faculty below full load:  {under_load}")
+        # print("============================\n")
 
     def __del__(self):
         if hasattr(self, "writer"):
@@ -168,7 +191,7 @@ def make_env():
         num_timeslots=num_timeslots,
         room_codes=room_codes,
         subject_campuses=subject_campuses,
-        max_classes_per_teacher=5,
+        max_classes_per_teacher=4,
     )
     env.subject_names     = subject_names
     env.teacher_names     = teacher_names
@@ -210,19 +233,42 @@ if __name__ == "__main__":
         PPOConfig()
         .environment(env="timetabling_env_v5", disable_env_checking=True)
         .framework("torch")
-        .rollouts(num_rollout_workers=0, rollout_fragment_length=7, batch_mode="complete_episodes")
-        .training(gamma=0.95, lr=2e-4, train_batch_size=256, sgd_minibatch_size=64, entropy_coeff=0.01)
+        .rollouts(
+            num_rollout_workers=0,
+            rollout_fragment_length=20,   # ↑ from 7
+            batch_mode="complete_episodes",
+        )
+        .training(
+            gamma=0.95,
+            lr=1e-4,                      # ↓ from 2e-4
+            lr_schedule=[                # optional decay
+                (0,      1e-4),
+                (200000, 5e-5),
+                (500000, 1e-5),
+            ],
+            train_batch_size=2048,        # ↑ from 256
+            sgd_minibatch_size=512,       # ↑ from 64
+            num_sgd_iter=10,              # fewer passes
+            clip_param=0.2,               # tighter PPO clipping
+            vf_clip_param=200000.0,           # cap value target change
+            entropy_coeff=0.002,          # ↓ from 0.01
+            vf_loss_coeff=1.0,            # stronger critic weight
+        )
         .resources(num_gpus=0)
-        .multi_agent(policies=policies, policy_mapping_fn=policy_mapping_fn,
-                     policies_to_train=list(policies.keys()), count_steps_by="env_steps")
+        .multi_agent(
+            policies=policies,
+            policy_mapping_fn=policy_mapping_fn,
+            policies_to_train=list(policies.keys()),
+            count_steps_by="env_steps",
+        )
         .callbacks(ScheduleCallback)
     )
 
-    config   = ppo_cfg.to_dict()
+    config = ppo_cfg.to_dict()
     reporter = CLIReporter(
         parameter_columns=["env","lr","train_batch_size"],
         metric_columns=[
-            "episode_reward_mean","timesteps_total","episode_len_mean",
+            "episode_reward_mean", "timesteps_total", "episode_len_mean",
             "custom_metrics/valid_schedule_mean",
             "custom_metrics/negotiation_success_rate_mean",
             "custom_metrics/error_rate_mean",
