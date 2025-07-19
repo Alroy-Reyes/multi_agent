@@ -106,7 +106,7 @@ def build_schedule_dataframe(env):
 class ScheduleCallback(DefaultCallbacks):
     def __init__(self):
         super().__init__()
-        self.writer = SummaryWriter(log_dir="C:/ray_logs/test2_tensorboard")
+        self.writer = SummaryWriter(log_dir="C:/ray_logs/present_tensorboard")
 
     def on_train_result(self, *, algorithm, result, **kwargs):
         it = result["training_iteration"]
@@ -210,7 +210,7 @@ if __name__ == "__main__":
     dummy.reset()
     raw = dummy.env
 
-    # define multi-agent policies
+    
     policies = {}
     obs_s, act_s = raw.observation_spaces["saha_0"], raw.action_spaces["saha_0"]
     policies["saha_policy"] = (
@@ -235,24 +235,24 @@ if __name__ == "__main__":
         .framework("torch")
         .rollouts(
             num_rollout_workers=0,
-            rollout_fragment_length=20,   # ↑ from 7
+            rollout_fragment_length=20,   
             batch_mode="complete_episodes",
         )
         .training(
             gamma=0.95,
-            lr=1e-4,                      # ↓ from 2e-4
-            lr_schedule=[                # optional decay
+            lr=1e-4,                      
+            lr_schedule=[                
                 (0,      1e-4),
                 (200000, 5e-5),
                 (500000, 1e-5),
             ],
-            train_batch_size=2048,        # ↑ from 256
-            sgd_minibatch_size=512,       # ↑ from 64
-            num_sgd_iter=10,              # fewer passes
-            clip_param=0.2,               # tighter PPO clipping
-            vf_clip_param=200000.0,           # cap value target change
-            entropy_coeff=0.002,          # ↓ from 0.01
-            vf_loss_coeff=1.0,            # stronger critic weight
+            train_batch_size=2048,        
+            sgd_minibatch_size=512,       
+            num_sgd_iter=10,             
+            clip_param=0.2,              
+            vf_clip_param=100000.0,        
+            entropy_coeff=0.002,          
+            vf_loss_coeff=1.0,            
         )
         .resources(num_gpus=0)
         .multi_agent(

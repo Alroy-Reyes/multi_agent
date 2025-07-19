@@ -211,7 +211,6 @@ class TimetablingEnv(AECEnv):
             return
 
         subj = candidates[0]
-        # SAHA action is now just the teacher index
         teacher_key = f"teacher_{action}"
         code        = self.subject_codes[subj]
         valid_buildings = self.subject_campuses[subj]
