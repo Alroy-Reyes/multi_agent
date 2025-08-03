@@ -5,10 +5,10 @@ git clone https://github.com/Alroy-Reyes/multi_agent.git
 cd multi_agent
 
 Activate virtual environment
-# Activate on Windows
+Activate on Windows
 marl_env\Scripts\activate
 
-# Activate on macOS/Linux
+Activate on macOS/Linux
 source marl_env/bin/activate
 
 Install dependencies
