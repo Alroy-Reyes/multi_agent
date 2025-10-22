@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,HUMSS 12-C,Homeroom,"Laude, John Claver T.",F,1100-1300,90,2,Y402,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,HUMSS 12-D,Homeroom,"Laude, John Claver T.",H,0730-0900,90,2,Y403,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,HUMSS 12-C,Homeroom,"Laude, John Claver T.",H,0915-0945,90,2,Y402,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,HUMSS 12-D,Homeroom,"Laude, John Claver T.",MH,0915-0945,90,2,Y403,Physical,Y,Y,Face-to-Face,No

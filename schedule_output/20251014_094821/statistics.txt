@@ -1,0 +1,11 @@
+SCHEDULE GENERATION STATISTICS
+==================================================
+
+Completion Rate: 68.2%
+Subjects Placed: 435/638
+Generation Steps: 400
+Conflicts: 10
+
+Constraint Violations:
+  no_intent: 3751
+  teacher_busy: 233

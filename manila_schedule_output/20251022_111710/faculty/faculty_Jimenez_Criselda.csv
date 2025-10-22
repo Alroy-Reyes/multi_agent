@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL MATHEMATICS,ADT 11-A,Math,"Jimenez, Criselda",H,0830-0900,90,2,ZOOM005,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,STEM 11-M,Math,"Jimenez, Criselda",T,1015-1045,90,2,ZOOM002,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,STEM 11-M,Math,"Jimenez, Criselda",TF,0945-1015,90,2,ZOOM002,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,ADT 11-A,Math,"Jimenez, Criselda",TF,1145-1215,90,2,ZOOM002,Virtual,Z,Z,Online,No

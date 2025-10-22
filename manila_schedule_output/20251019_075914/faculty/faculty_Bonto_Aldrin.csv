@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+EARTH SCIENCE,STEM 11-L,Science,"Bonto, Aldrin",H,0730-0900,90,2,ZOOM005,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-L,Science,"Bonto, Aldrin",M,1100-1230,90,2,ZOOM001,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-K,Science,"Bonto, Aldrin",TF,1245-1415,90,2,ZOOM010,Virtual,Z,Z,Online,Yes
+EARTH SCIENCE,STEM 11-L,Science,"Bonto, Aldrin",W,1430-1600,90,2,ZOOM017,Virtual,Z,Z,Online,Yes

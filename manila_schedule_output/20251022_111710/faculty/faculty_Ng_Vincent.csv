@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1,STEM 12-H,Science,"Ng, Vincent",F,1430-1630,90,2,G206,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-G,Science,"Ng, Vincent",MH,1330-1530,90,2,G205,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-G,Science,"Ng, Vincent",TF,1100-1300,90,2,G205,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-H,Science,"Ng, Vincent",W,1515-1545,90,2,G206,Physical,G,G,Hybrid,No

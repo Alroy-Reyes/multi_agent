@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 12-A,Homeroom,"Parco, Olga G.",F,1430-1600,90,2,G101,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-A,Homeroom,"Parco, Olga G.",H,1100-1230,90,2,G101,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-B,Homeroom,"Parco, Olga G.",T,1245-1315,90,2,G102,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-B,Homeroom,"Parco, Olga G.",TF,1330-1400,90,2,G102,Physical,G,G,Face-to-Face,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DC_GENERAL CHEMISTRY 2-LABORATORY_STEM 12-J_Online,STEM 12-J,Science,"Natividad, Michelle",H,1430-1600,90,2,ZOOM005,Virtual,Z,Z,Online,No
+COS-DC_GENERAL CHEMISTRY 2-LABORATORY_STEM 12-J_Online,STEM 12-J,Science,"Natividad, Michelle",MH,0730-0900,90,2,ZOOM019,Virtual,Z,Z,Online,No
+COS-DC_GENERAL CHEMISTRY 1_STEM 12-L_Hybrid,STEM 12-L,Science,"Natividad, Michelle",MH,1100-1230,90,2,G211,Physical,G,G,Hybrid,No
+COS-DC_GENERAL CHEMISTRY 1_STEM 12-L_Hybrid,STEM 12-L,Science,"Natividad, Michelle",T,0730-0900,90,2,G211,Physical,G,G,Hybrid,No

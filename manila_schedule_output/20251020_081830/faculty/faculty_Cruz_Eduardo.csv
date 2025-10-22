@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL MATHEMATICS,STEM 11-C,Math,"Cruz, Eduardo",H,1615-1745,90,2,ZOOM007,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,STEM 11-B,Math,"Cruz, Eduardo",M,1545-1615,30,1,ZOOM002,Virtual,Z,Z,Online,Yes
+GENERAL MATHEMATICS,STEM 11-B,Math,"Cruz, Eduardo",MH,1345-1415,30,1,ZOOM005,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,STEM 11-C,Math,"Cruz, Eduardo",T,0730-0900,90,2,ZOOM014,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,STEM 11-B,Math,"Cruz, Eduardo",T,1345-1415,30,1,ZOOM007,Virtual,Z,Z,Online,No

@@ -1,0 +1,153 @@
+Faculty,Total_Subjects,Total_Sections,Total_Sessions_Per_Week,Days_Teaching,Time_Slots,Campus,F2F_Sessions,Online_Sessions,Hybrid_Sessions
+Cyrill Escolano <cyrill.escolano@dlsu.edu.ph>,1,5,13,"F, H, T","0730-0900, 0915-1045, 1030-1230, 1100-1230, 1615-1815, 1618-1815","G, Online",0,0,0
+"Acala, Jefferson",2,3,7,"H, M","0730-0900, 1430-1630","Online, Y",0,0,0
+"Azcarraga, Judith",1,2,7,"F, H, M, T","0915-1045, 0945-1145, 1430-1600","V, Online",0,0,0
+"Tan, Lindsey",1,2,7,"F, H, M, T","0730-0900, 0730-0930, 1430-1600, 1430-1630","Y, Online",0,0,0
+"Pamaos, Angela Mae",2,3,7,"F, M, T","1030-1230, 1100-1230, 1300-1500","Online, G",0,0,0
+"Mapugay, Ma. Jayanne",1,4,7,"F, H, M, T","0730-0900, 1100-1230, 1430-1600, 1615-1815","G, Online",0,0,0
+"Felicilda, Joshua",1,3,7,"F, H, T","1100-1230, 1245-1415, 1430-1600, 1615-1815","Online, Y, V",0,0,0
+"Zafra, Reynelle Bren",2,2,7,"F, H, M, W","1100-1230, 1230-1430, 1430-1600, 1545-1745","L, Online, G",0,0,0
+"Ang, Charisse Jollins",2,2,7,"H, M, T","1100-1230, 1430-1600, 1430-1630, 1615-1815","Y, Online",0,0,0
+"Buso, Nelson Jr.",1,4,6,"F, H, M, T","0800-0900, 1300-1330, 1330-1400","Y, L",6,0,0
+"Diolazo, Justin Ray",1,4,6,"H, M, T, W","0800-0900, 0945-1015, 1145-1215","L, G",6,0,0
+"Sabulao, Alma P.",1,2,6,"F, H, M, T",0800-0900,"Y, L",6,0,0
+"Tuplano, Ma. Vera",2,4,6,"F, M, T","0730-0900, 0730-0930, 0915-1045, 1100-1230","Online, Y",0,0,0
+"RIVERA, JOANNA PAULINE",1,3,6,"F, H, M, T","0915-1045, 1100-1230, 1430-1600",G,0,0,0
+"Clark, Eppie",1,1,6,"F, H, M, T","1430-1600, 1430-1630","Y, Online",0,0,0
+"Santos, Jennifer A.",2,5,6,"F, H, M, W","0730-0930, 0945-1015, 1100-1130, 1245-1445","Y, Online",2,0,0
+"Perlas, Ricalyn",1,3,6,"F, T","1100-1230, 1245-1415, 1430-1630, 1500-1700","Online, Y",0,0,0
+"Dolor, Ramon Rafael",2,1,6,"F, H, M, T","0730-0930, 1430-1600, 1615-1815","V, Online",1,0,0
+"Nunez, Ana Margarita",1,2,6,"F, H, M, W","0730-0930, 0915-1045, 1430-1630","Y, Online",0,0,0
+"Crisologo, Ma. Louise",2,2,6,"F, H, M","0915-1045, 1100-1230, 1300-1500, 1515-1715","Online, G",0,0,0
+"Navarro, Joanna Christelle D.",1,4,6,"F, H, T, W","0800-0900, 0830-0900, 0945-1015, 1015-1045","Y, L",6,0,0
+"Cheng, Charibeth",1,2,6,"H, M, T","1100-1230, 1245-1415, 1415-1615, 1515-1715","L, Online",0,0,0
+"Atalia, Eros",1,2,6,"F, M, T","0730-0930, 0915-1045, 1100-1230, 1430-1630","Y, Online",0,0,0
+"Baluran, Fe Violeta",2,3,6,"H, M, T","1345-1545, 1430-1600, 1615-1815","Online, Y",0,0,0
+"Mendoza, Lourdes",1,2,6,"F, H, M, T","0730-0900, 0915-1045",G,0,0,0
+"Santos, Joseph Russell R.",1,4,5,"F, H, M","0800-0900, 1015-1045, 1100-1130, 1245-1315",Y,5,0,0
+Dimaculangan Arvy F.,1,4,5,"H, M, W","0800-0900, 1015-1045, 1300-1500, 1430-1500","Y, G, L",5,0,0
+"Cruz, Eduardo",1,3,5,"F, H, M, T, W","0730-0900, 0730-0930","Online, V",0,0,0
+"Jimenez, Criselda",1,2,5,"F, H, M","1245-1415, 1430-1600, 1618-1815","G, Online",0,0,0
+"Reyes, Maria Angeli",1,4,5,"F, M, T, W","0730-0930, 0915-1045, 1400-1600, 1615-1815","Online, L",0,0,0
+"Purpura, Jeanne",1,2,5,"F, H, M, T","0730-0930, 1100-1230, 1245-1445",Y,0,0,0
+"Garvez, Allen Jemes L.",1,4,5,"F, H, T","0800-0900, 0945-1015, 1245-1315, 1300-1330",Y,5,0,0
+"Gatchalian, Clarence",1,3,5,"F, M, T","0730-0900, 1430-1630, 1615-1815","Online, L",0,0,0
+"Hernandez, Alana Margarita",1,3,5,"F, H, M","0945-1145, 1100-1230, 1330-1530, 1515-1715","Online, Y",0,0,0
+"Morales, John Vincent",1,2,5,"F, T, W","0730-0930, 0915-1045, 1330-1530","Y, V, Online",0,0,0
+"Concepcion, Edward",2,4,5,"F, T, W","0730-0930, 1245-1415, 1430-1600, 1515-1715","Online, G, Y",0,0,0
+"Dizon, Melba",2,4,5,"H, M, T, W","0730-0930, 1100-1230, 1245-1445","Y, Online",0,0,0
+"Chua, Johannes",1,3,5,"F, H, M, T","0915-1045, 1100-1230, 1430-1630","Y, Online",0,0,0
+"Cabrera, Emil John",1,1,5,"F, W","0730-0930, 0915-1045","Y, Online",0,0,0
+"Bensal, Edwina",1,4,5,"H, M, T, W","0730-0900, 0730-0930, 0945-1145, 1100-1230","Y, L",0,0,0
+"Baylon, Dioscoro",2,3,5,"F, H, M, T","1245-1415, 1315-1515, 1345-1545, 1430-1600, 1615-1815",Y,0,0,0
+"Tubilleja, Renzo Luigi R.",1,3,5,"F, H, M, T","0800-0900, 1345-1415",G,5,0,0
+"Bedia, Noel D.",1,4,5,"F, T, W","0800-0900, 0945-1015, 1245-1315, 1330-1400","L, G, Y, V",5,0,0
+"Tabora, Liandro",1,1,4,"F, H, M, T",1100-1230,G,0,0,0
+"Tabuloc, Maria Cristina",1,1,4,"H, M, T","0730-0900, 1430-1630","L, Online",0,0,0
+"Villaluz, Brian",2,2,4,"H, M","0915-1045, 1100-1230, 1345-1545","Y, Online",0,0,0
+"Mayol, Andres Philip",1,2,4,"F, T","0730-0900, 1100-1230","G, Y",0,0,0
+"Ong, Ethel",1,2,4,"F, H, M, T","1045-1245, 1100-1230, 1615-1815","G, Online",0,0,0
+"Pamaos, Angela Mae A.",1,3,4,"F, T, W","0800-0900, 1100-1130, 1300-1330","Y, G",4,0,0
+"Go, Stella P.",1,3,4,"H, M, T","0730-0900, 0730-0930, 1100-1230, 1615-1815","Online, Y",0,0,0
+"Parco, Olga G.",1,3,4,"H, M, W","0800-0900, 1345-1415, 1600-1630","G, Y",4,0,0
+"Parungao, Anita",2,3,4,"F, H, T","0730-0930, 1245-1415","L, Online",0,0,0
+"Perez, Candice",1,3,4,"F, H, M","0730-0930, 0945-1145, 1245-1415","Y, L",0,0,0
+"Bertumen, Estefanie",1,2,4,"F, H, M, T","1100-1230, 1245-1415",G,0,0,0
+"Betita, Rene",1,2,4,"F, T, W","0730-0930, 1100-1230","Online, Y",0,0,0
+"Villacorta, Dennis",1,3,4,"F, T","0730-0930, 1100-1230, 1245-1415, 1500-1700","Y, L",0,0,0
+"Seumal, Anthony",1,2,4,"F, H, M, T","0915-1045, 1430-1600",G,0,0,0
+"Buencibello, Joenel B.",1,2,4,"H, M, T, W","0800-0900, 1245-1315","G, Y",4,0,0
+"Cruz, Ruth Angelie",1,3,4,"F, H, M","0730-0930, 0945-1145","Y, Online",0,0,0
+"Labog, Michael John R.",1,3,4,"F, M, T","0800-0900, 1100-1130, 1600-1630","G, Y",4,0,0
+"Alberto, Angelo",1,2,4,"F, H, T","1100-1230, 1430-1600, 1615-1815","G, Online",0,0,0
+"Hugo, Alleona",1,2,4,"H, M","0730-0930, 1500-1700","Online, L",0,0,0
+"Flores, Carlo",1,4,4,"F, M, T","0730-0930, 1000-1200",E,4,0,0
+"Miraflores, Edna",1,1,4,"F, H, M","0730-0900, 1430-1630",Online,0,0,0
+"Aguilar, Noah",1,2,4,"F, H, M, T","0915-1045, 1245-1415",G,0,0,0
+"Rodulfo, Flordeliza",1,2,4,"F, T, W","0730-0930, 0915-1045, 1100-1230, 1615-1815","G, Y",0,0,0
+"Bautista, Adriane",1,2,4,"F, H, T","1430-1600, 1615-1815","G, Online",0,0,0
+"Santos, Russell",1,4,4,"H, M","0730-0930, 1000-1200, 1300-1500",E,4,0,0
+"Villamil, Winfred",2,1,4,"F, H, M","0730-0930, 0915-1045, 1100-1230, 1430-1630",Y,0,0,0
+"Tresvalles, Regina",2,2,4,"F, H, M, T","1100-1230, 1245-1415, 1445-1645","L, Y",0,0,0
+"Lubrico, Jim Benedick",1,1,4,"H, M","1100-1230, 1615-1815",Y,0,0,0
+"Torres, Myrla",1,3,4,"F, T, W","0800-0900, 1015-1045, 1245-1315","Y, L",4,0,0
+"Lubrico, Jim Benedict",1,3,4,"F, H, M, T","0800-0900, 0945-1015, 1600-1630","L, G",4,0,0
+"Flores, Carlo Gabriel  B.",1,3,4,"H, T, W","0915-0945, 0945-1015, 1015-1045","L, Y",4,0,0
+"Navarro, Joanna",1,3,3,"F, W","0730-0930, 1000-1200, 1300-1500",E,3,0,0
+"Ponsones, Rigor",1,2,3,"H, M","0730-0930, 0915-1045, 1615-1815","Y, L",0,0,0
+"Pilapil, Charlene A.",1,3,3,"F, M, W","0915-0945, 0945-1015, 1100-1130","L, Y",3,0,0
+"Velasco, Elsie",2,2,3,"F, T, W","0730-0930, 0915-1045",Y,0,0,0
+"Razon, Luis F.",1,2,3,"F, M, T","0730-0930, 1245-1445","Y, L",0,0,0
+"Roces, Susan A.",1,2,3,"H, T, W","1245-1415, 1430-1600","Online, Y",0,0,0
+"Rosales, Jhon Mark M.",1,2,3,"F, T, W","1100-1230, 1245-1315","G, V",3,0,0
+"Salvador, Mark Anthony",1,2,3,"F, T","0730-0900, 0915-1045, 1245-1445",Online,0,0,0
+"Maranon, Christine Ann",2,2,3,"H, M, T","0945-1145, 1245-1415, 1315-1515","Online, Y",0,0,0
+"Tan, Christian",2,2,3,"H, M","1100-1230, 1200-1400, 1430-1600","L, Online",0,0,0
+"Sioson, Ivory",1,3,3,W,"0915-1045, 0945-1145, 1100-1230","L, Online",0,0,0
+"Marcial, Joshua R.",1,3,3,"H, M, W","1015-1045, 1245-1315, 1600-1630","Y, L",3,0,0
+"Lim, Cristina Teresa",2,2,3,"H, M","1230-1430, 1430-1600, 1615-1815","L, G",0,0,0
+"Flores, Gene",1,2,3,"F, M, T","1100-1230, 1245-1415","Online, Y",0,0,0
+"De Guzman, Billy",1,1,3,"H, M","1430-1600, 1615-1815",Online,0,0,0
+"Cebedo, Charlyn",1,3,3,"H, W","1145-1215, 1300-1330, 1600-1630","L, Y",3,0,0
+"Casanes, Dennis P.",1,2,3,"F, W","1245-1315, 1330-1530","L, V",3,0,0
+"Carpio, Avegail",2,2,3,"F, T","1430-1600, 1445-1645","Online, G",0,0,0
+"Gentalian, Xavier Dwight M.",1,2,3,"F, H, T","0800-0900, 0915-0945","G, Y",3,0,0
+"Eballo, Mia B.",1,2,3,"H, M","0945-1015, 1600-1630",Y,3,0,0
+"Guevarra, Mary Harmony",1,2,3,"F, T","0730-0930, 1345-1545","Online, Y",0,0,0
+"Hugo, Alleaona",1,3,3,"F, T","1015-1045, 1100-1130","L, G, Y",3,0,0
+"Espejo, Lance Isaac",1,2,3,"H, M","0800-0900, 0945-1015",G,3,0,0
+"Cacal, Ralph Anthony C.",1,2,3,"H, M","1100-1130, 1100-1230",G,3,0,0
+"Garganta, Lambert Yancy B.",1,2,3,"F, M, T","1245-1315, 1245-1445","Y, V",3,0,0
+"Limson, Brian",1,2,3,"F, T, W","0730-0930, 1618-1815","G, Y",0,0,0
+"Go, Joanna",1,2,3,"H, M","0730-0930, 1245-1415, 1245-1445","Online, L",0,0,0
+"Evangelista, Tyrone",1,1,2,"H, M","1245-1415, 1245-1445",L,0,0,0
+"Rosales, Dynessa",1,2,2,"T, W","0730-0930, 1100-1230","L, Online",0,0,0
+"Roquel, Kritel Ian",1,1,2,"H, M",1100-1230,V,0,0,0
+"Delantar, Edna",2,2,2,"H, M","0730-0930, 1245-1415","Y, Online",0,0,0
+"Fabroa, Kate",1,1,2,"H, M","1430-1600, 1615-1815",G,0,0,0
+"Sipin, Glenn",1,1,2,"F, T",1430-1600,G,0,0,0
+"Saron, Gracelyn D.",1,2,2,"F, M","0945-1015, 1015-1045","Y, L",2,0,0
+"Gallego, Roman",1,1,2,"H, M","1100-1230, 1515-1715",L,0,0,0
+"Candellaria, Luisette",1,1,2,"F, T","0730-0900, 0730-0930",L,0,0,0
+"Tighe, Edward",1,1,2,"H, M",1430-1600,G,0,0,0
+"Calindro, Myrille",1,1,2,"F, T","0730-0900, 1245-1445",G,0,0,0
+"Cabatingan, Camille / Cacal, Ralph",1,1,2,"F, T",0800-0900,L,0,0,0
+"Umlas, Christian",1,1,2,"H, M","0730-0900, 1245-1445",G,0,0,0
+"Briones, Richard",2,2,2,"M, W","0730-0930, 1400-1600","L, Y",0,0,0
+"Belo, Lawrence",1,1,2,"H, M",0915-1045,G,0,0,0
+"Azucena, Jemmar T.",1,2,2,"F, W","0915-0945, 1245-1315","Y, G",2,0,0
+"Ferrer, Nathaniel Rey D.",1,1,2,"H, M","1100-1230, 1200-1400",L,0,0,0
+"Maranon, Cristine",1,2,2,"H, M","1015-1045, 1430-1500",G,2,0,0
+"Golamco, Angelina",1,1,2,"F, T","1430-1600, 1515-1715",Y,0,0,0
+"Pacao, Shaine",1,1,2,"H, M","0730-0900, 0730-0930",V,0,0,0
+"Aguiflor, Danica",1,1,2,"F, T","0730-0900, 0730-0930",L,0,0,0
+"Miranda, Janeson M.",1,1,2,"H, M","0915-1045, 0945-1145",V,0,0,0
+"Mobilla, Patricia Joy V.",1,2,2,M,"1245-1315, 1600-1630","G, Y",2,0,0
+"Jimenez, Criselda R.",1,2,2,F,"1100-1130, 1600-1630",G,2,0,0
+"Nario, Jem Marie",1,1,2,"F, T","1430-1600, 1515-1715",Y,0,0,0
+"Acelajado, Maxima",1,1,2,"H, M",0730-0900,L,0,0,0
+"Olo, Marial Grace",1,1,2,"H, M",0800-0900,L,0,0,0
+"Garcia, Emmanuel V.",1,1,2,"F, T",1545-1745,G,0,0,0
+"Aquino, Marvin",1,2,2,"T, W","0730-0930, 1000-1200",E,2,0,0
+"Perlas, Ricalyn A.",1,2,2,"T, W","0945-1015, 1600-1630","Y, G",2,0,0
+"Querubin, Florabelle",1,1,2,"F, T",1100-1230,V,0,0,0
+"Go, Christian",1,2,2,"F, T","1100-1230, 1430-1600",Y,0,0,0
+"Perez, Joseph",1,1,2,"F, T",1245-1415,Y,0,0,0
+"Garcia, Mark Anthony",1,2,2,"T, W",0915-1045,"Y, Online",0,0,0
+"Garcia, Miguel",1,2,2,"H, M","0730-0930, 1100-1230","Y, L",0,0,0
+"Tubilleja, Renzo Luigi",1,1,1,W,0730-0930,E,1,0,0
+"Villanueva, Chrizelle M.",1,1,1,W,1430-1600,G,0,0,0
+"Laude, John Claver T.",1,1,1,W,1600-1630,Y,1,0,0
+"Buted, Jerilou A",1,1,1,M,1300-1500,Y,1,0,0
+Cabatingan Camille M.,1,1,1,H,1600-1630,L,1,0,0
+"Rosales, Dynessa W.",1,1,1,M,1100-1130,Y,1,0,0
+"Dalisay, Alfred",1,1,1,F,0730-0930,Online,0,0,0
+"Gojo-Cruz, Genaro",1,1,1,M,1100-1230,Online,0,0,0
+"Garvez, Allen",1,1,1,F,0730-0930,E,1,0,0
+"Ocampo Tan, Michelle Brendy",1,1,1,T,0730-0930,Y,0,0,0
+"Acheampong, Joan",1,1,1,T,0730-0930,E,1,0,0
+"Candelaria, Luisette",1,1,1,F,0730-0930,Online,0,0,0
+"Ortenero, Joseph",1,1,1,H,0945-1145,Y,0,0,0
+"Parco, Olga",1,1,1,H,1300-1500,E,1,0,0
+"Acheampong, Joan Kassey S.",1,1,1,M,1600-1630,L,1,0,0
+"Mapugay, Ma. Jayanne C.",1,1,1,W,1100-1130,L,1,0,0

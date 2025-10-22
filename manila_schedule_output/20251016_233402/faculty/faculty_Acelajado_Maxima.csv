@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DMS_STATISTICS AND PROBABILITIES_STEM 12-N_Online,STEM 12-N,Math,"Acelajado, Maxima",MH,0915-1045,90,2,ZOOM011,Virtual,Z,Z,Online,Yes
+COS-DMS_STATISTICS AND PROBABILITIES_STEM 12-O_Online,STEM 12-O,Math,"Acelajado, Maxima",MH,1245-1415,90,2,ZOOM018,Virtual,Z,Z,Online,Yes
+COS-DMS_STATISTICS AND PROBABILITIES_STEM 12-O_Online,STEM 12-O,Math,"Acelajado, Maxima",W,0730-0900,90,2,ZOOM009,Virtual,Z,Z,Online,No
+COS-DMS_STATISTICS AND PROBABILITIES_STEM 12-O_Online,STEM 12-O,Math,"Acelajado, Maxima",W,1100-1230,90,2,ZOOM019,Virtual,Z,Z,Online,No

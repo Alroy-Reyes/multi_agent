@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ABM 11-F,Homeroom,"Garvez, Allen Jemes L.",H,1300-1330,90,2,G-207,Physical,G,G,Face-to-Face,No
+HOMEROOM,ABM 11-E,Homeroom,"Garvez, Allen Jemes L.",H,1430-1630,90,2,G-206,Physical,G,G,Face-to-Face,No
+HOMEROOM,ABM 11-F,Homeroom,"Garvez, Allen Jemes L.",T,1145-1215,90,2,G-207,Physical,G,G,Face-to-Face,No
+HOMEROOM,ABM 11-E,Homeroom,"Garvez, Allen Jemes L.",TF,1545-1615,90,2,G-206,Physical,G,G,Face-to-Face,No

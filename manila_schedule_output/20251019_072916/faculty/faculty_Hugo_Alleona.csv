@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+IS-SHS_ORAL COMMUNICATION IN CONTEXT_SPT 11-A_Hybrid,SPT 11-A,English/Communication,"Hugo, Alleona",F,0915-1045,90,2,Y604,Physical,Y,Y,Hybrid,No
+IS-SHS_ORAL COMMUNICATION IN CONTEXT_SPT 11-A_Hybrid,SPT 11-A,English/Communication,"Hugo, Alleona",M,1100-1230,90,2,Y604,Physical,Y,Y,Hybrid,No
+IS-SHS_MEDIA INFORMATION AND LITERACY_HUMSS 12-D_Hybrid,HUMSS 12-D,English/Communication,"Hugo, Alleona",M,1430-1600,90,2,Y403,Physical,Y,Y,Hybrid,Yes
+IS-SHS_MEDIA INFORMATION AND LITERACY_HUMSS 12-D_Hybrid,HUMSS 12-D,English/Communication,"Hugo, Alleona",T,0915-1045,90,2,Y403,Physical,Y,Y,Hybrid,No
+IS-SHS_MEDIA INFORMATION AND LITERACY_HUMSS 12-D_Hybrid,HUMSS 12-D,English/Communication,"Hugo, Alleona",TF,0915-1045,90,2,Y403,Physical,Y,Y,Hybrid,No

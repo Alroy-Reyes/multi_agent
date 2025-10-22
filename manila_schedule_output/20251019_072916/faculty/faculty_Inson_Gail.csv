@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DP_GENERAL PHYSICS 1_STEM 12-I_Hybrid,STEM 12-I,Science,"Inson, Gail",H,1430-1600,90,2,G207,Physical,G,G,Hybrid,No
+COS-DP_GENERAL PHYSICS 1_STEM 12-I_Hybrid,STEM 12-I,Science,"Inson, Gail",MH,1430-1600,90,2,G207,Physical,G,G,Hybrid,No
+COS-DP_GENERAL PHYSICS 1-LABORATORY_STEM 12-I1_Hybrid,STEM 12-I1,Science,"Inson, Gail",T,1430-1600,90,2,J411,Physical,J,J,Hybrid,No
+COS-DP_GENERAL PHYSICS 1-LABORATORY_STEM 12-I1_Hybrid,STEM 12-I1,Science,"Inson, Gail",TF,1245-1415,90,2,J411,Physical,J,J,Hybrid,No

@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DMS_GENERAL MATHEMATICS_STEM 11-F_Online,STEM 11-F,Math,"Pacao, Shaine",H,0730-0930,120,1,ZOOM006,Virtual,Z,Z,Online,Yes
+COS-DMS_GENERAL MATHEMATICS_STEM 11-F_Online,STEM 11-F,Math,"Pacao, Shaine",T,1245-1415,90,2,ZOOM015,Virtual,Z,Z,Online,No
+COS-DMS_GENERAL MATHEMATICS_STEM 11-G_Online,STEM 11-G,Math,"Pacao, Shaine",TF,0730-0930,120,1,ZOOM012,Virtual,Z,Z,Online,No
+COS-DMS_GENERAL MATHEMATICS_STEM 11-G_Online,STEM 11-G,Math,"Pacao, Shaine",TF,0915-1045,90,2,ZOOM017,Virtual,Z,Z,Online,No
+COS-DMS_GENERAL MATHEMATICS_STEM 11-F_Online,STEM 11-F,Math,"Pacao, Shaine",W,0730-0900,90,2,ZOOM006,Virtual,Z,Z,Online,No

@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+MEDIA INFORMATION AND LITERACY,ADT 12-A,English/Communication,"Tuplano, Ma. Vera",F,1545-1615,30,1,G101,Physical,G,G,Hybrid,No
+MEDIA INFORMATION AND LITERACY,ADT 12-B,English/Communication,"Tuplano, Ma. Vera",H,0830-0900,30,1,G102,Physical,G,G,Hybrid,No
+MEDIA INFORMATION AND LITERACY,ADT 12-A,English/Communication,"Tuplano, Ma. Vera",T,0930-1000,30,1,G101,Physical,G,G,Hybrid,No
+MEDIA INFORMATION AND LITERACY,ADT 12-A,English/Communication,"Tuplano, Ma. Vera",TF,0830-0900,30,1,G101,Physical,G,G,Hybrid,Yes
+MEDIA INFORMATION AND LITERACY,ADT 12-B,English/Communication,"Tuplano, Ma. Vera",W,0800-1000,120,1,G102,Physical,G,G,Hybrid,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ADT 11-A,Homeroom,"Ferrer, Nathaniel Rey D.",F,1615-1745,90,2,Y303,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ADT 11-A,Homeroom,"Ferrer, Nathaniel Rey D.",H,1545-1615,90,2,Y303,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ADT 11-B,Homeroom,"Ferrer, Nathaniel Rey D.",T,0730-0900,90,2,L228,Physical,L,L,Face-to-Face,No
+HOMEROOM,ADT 11-B,Homeroom,"Ferrer, Nathaniel Rey D.",TF,1015-1045,90,2,L228,Physical,L,L,Face-to-Face,No

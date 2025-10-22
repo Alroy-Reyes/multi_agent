@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 11-F,Homeroom,"Gentalian, Xavier Dwight M.",H,1430-1600,90,2,Y504,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-E,Homeroom,"Gentalian, Xavier Dwight M.",MH,1515-1545,90,2,Y503,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-F,Homeroom,"Gentalian, Xavier Dwight M.",T,0730-0930,90,2,Y504,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-E,Homeroom,"Gentalian, Xavier Dwight M.",W,1000-1200,90,2,Y503,Physical,Y,Y,Face-to-Face,No

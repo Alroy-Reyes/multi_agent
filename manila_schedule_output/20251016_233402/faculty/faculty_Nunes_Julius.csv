@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DB_GENERAL BIOLOGY 2_STEM 12-S_Online,STEM 12-S,Science,"Nunes, Julius",H,1245-1415,90,2,ZOOM002,Virtual,Z,Z,Online,No
+COS-DB_GENERAL BIOLOGY 2-LABORATORY_STEM 12-R2_Online,STEM 12-R2,Science,"Nunes, Julius",H,1430-1600,90,2,ZOOM003,Virtual,Z,Z,Online,No
+COS-DB_GENERAL BIOLOGY 2-LABORATORY_STEM 12-R2_Online,STEM 12-R2,Science,"Nunes, Julius",T,0915-1045,90,2,ZOOM002,Virtual,Z,Z,Online,No
+COS-DB_GENERAL BIOLOGY 2_STEM 12-S_Online,STEM 12-S,Science,"Nunes, Julius",W,1430-1600,90,2,ZOOM011,Virtual,Z,Z,Online,No

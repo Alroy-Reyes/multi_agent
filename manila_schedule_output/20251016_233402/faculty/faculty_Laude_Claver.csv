@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+IS-SHS_PHYSICAL EDUCATION AND HEALTH 4_STEM 12-L_Face-to-Face,STEM 12-L,PE/Health,"Laude, Claver",F,1000-1200,120,1,E101,Physical,E,E,Face-to-Face,No
+IS-SHS_PHYSICAL EDUCATION AND HEALTH 4_STEM 12-N_Face-to-Face,STEM 12-N,PE/Health,"Laude, Claver",H,0730-0930,120,1,E2FLR HALLWAY,Physical,E,E,Face-to-Face,No
+IS-SHS_PHYSICAL EDUCATION AND HEALTH 4_STEM 12-M_Face-to-Face,STEM 12-M,PE/Health,"Laude, Claver",M,1300-1500,120,1,E101,Physical,E,E,Face-to-Face,No
+IS-SHS_PHYSICAL EDUCATION AND HEALTH 4_STEM 12-O_Face-to-Face,STEM 12-O,PE/Health,"Laude, Claver",W,1300-1500,120,1,E101,Physical,E,E,Face-to-Face,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-O,Science,"Nunes, Julius",MH,0730-0900,90,2,Y306,Physical,Y,Y,Hybrid,No
+GENERAL BIOLOGY 2,STEM 12-O,Science,"Nunes, Julius",MH,1430-1600,90,2,ZOOM018,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-O,Science,"Nunes, Julius",T,1245-1415,90,2,Y306,Physical,Y,Y,Hybrid,No
+GENERAL BIOLOGY 2,STEM 12-O,Science,"Nunes, Julius",TF,1100-1230,90,2,ZOOM010,Virtual,Z,Z,Online,No

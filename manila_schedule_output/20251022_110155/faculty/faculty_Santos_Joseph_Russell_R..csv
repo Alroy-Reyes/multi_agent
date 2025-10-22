@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 12-M,Homeroom,"Santos, Joseph Russell R.",H,0945-1015,90,2,Y303,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 12-L,Homeroom,"Santos, Joseph Russell R.",M,1430-1630,90,2,G-211,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-M,Homeroom,"Santos, Joseph Russell R.",MH,1145-1215,90,2,Y303,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 12-L,Homeroom,"Santos, Joseph Russell R.",MH,1515-1545,90,2,G-211,Physical,G,G,Face-to-Face,No

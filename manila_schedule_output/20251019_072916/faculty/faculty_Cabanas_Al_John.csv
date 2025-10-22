@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DC_GENERAL CHEMISTRY 1_STEM 12-Q_Hybrid,STEM 12-Q,Science,"Cabanas, Al John",MH,1430-1600,90,2,Y403,Physical,Y,Y,Hybrid,No
+COS-DB_GENERAL BIOLOGY 2_STEM 12-Q_Online,STEM 12-Q,Science,"Cabanas, Al John",T,1100-1230,90,2,ZOOM020,Virtual,Z,Z,Online,No
+COS-DB_GENERAL BIOLOGY 2_STEM 12-Q_Online,STEM 12-Q,Science,"Cabanas, Al John",TF,0730-0900,90,2,ZOOM017,Virtual,Z,Z,Online,No
+COS-DC_GENERAL CHEMISTRY 1_STEM 12-Q_Hybrid,STEM 12-Q,Science,"Cabanas, Al John",W,1430-1600,90,2,Y403,Physical,Y,Y,Hybrid,No

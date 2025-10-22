@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DC_GENERAL CHEMISTRY 1_STEM 12-S_Hybrid,STEM 12-S,Science,"Limbauan, Jaryna O",F,0915-1045,90,2,V503,Physical,V,V,Hybrid,No
+COS-DC_GENERAL CHEMISTRY 1-LABORATORY_STEM 12-S_Online,STEM 12-S,Science,"Limbauan, Jaryna O",M,0915-1045,90,2,ZOOM004,Virtual,Z,Z,Online,No
+COS-DC_GENERAL CHEMISTRY 1_STEM 12-S_Hybrid,STEM 12-S,Science,"Limbauan, Jaryna O",M,1430-1600,90,2,V503,Physical,V,V,Hybrid,No
+COS-DC_GENERAL CHEMISTRY 1-LABORATORY_STEM 12-S_Online,STEM 12-S,Science,"Limbauan, Jaryna O",TF,1430-1600,90,2,ZOOM003,Virtual,Z,Z,Online,No

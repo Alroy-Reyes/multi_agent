@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ABM 12-G,Homeroom,"Espejo, Lance Isaac",F,1515-1545,90,2,Y505,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-H,Homeroom,"Espejo, Lance Isaac",MH,1145-1215,90,2,Y506,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-H,Homeroom,"Espejo, Lance Isaac",T,1600-1630,90,2,Y506,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-G,Homeroom,"Espejo, Lance Isaac",W,0800-1000,90,2,Y505,Physical,Y,Y,Face-to-Face,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+CREATIVE WRITING,HUMSS 12-C1,Literature,"Atalia, Eros",F,1015-1045,90,2,Y402,Physical,Y,Y,Hybrid,No
+CREATIVE WRITING,HUMSS 12-C2,Literature,"Atalia, Eros",H,0800-0930,90,2,Y506,Physical,Y,Y,Hybrid,No
+CREATIVE WRITING,HUMSS 12-C1,Literature,"Atalia, Eros",T,1015-1045,90,2,Y402,Physical,Y,Y,Hybrid,No
+CREATIVE WRITING,HUMSS 12-C2,Literature,"Atalia, Eros",W,1015-1045,90,2,Y506,Physical,Y,Y,Hybrid,No

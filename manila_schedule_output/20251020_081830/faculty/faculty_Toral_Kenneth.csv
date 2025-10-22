@@ -1,0 +1,7 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-O,Science,"Toral, Kenneth",F,1615-1745,90,2,Y306,Physical,Y,Y,Hybrid,No
+GENERAL BIOLOGY 2,STEM 12-N,Science,"Toral, Kenneth",M,0915-0945,30,1,ZOOM006,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-O,Science,"Toral, Kenneth",M,1100-1230,90,2,Y306,Physical,Y,Y,Hybrid,No
+GENERAL BIOLOGY 2,STEM 12-N,Science,"Toral, Kenneth",W,0800-1000,120,1,ZOOM012,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-N,Science,"Toral, Kenneth",W,1430-1600,90,2,Y304,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-N,Science,"Toral, Kenneth",W,1600-1630,30,1,Y304,Physical,Y,Y,Hybrid,No

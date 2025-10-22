@@ -1,0 +1,4 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+IS-SHS_PRACTICAL RESEARCH 2_ADT 12-A_Hybrid,ADT 12-A,Research,"Umlas, Christian",M,1245-1415,90,2,G101,Physical,G,G,Hybrid,Yes
+IS-SHS_PRACTICAL RESEARCH 2_ADT 12-B_Hybrid,ADT 12-B,Research,"Umlas, Christian",T,1430-1600,90,2,G102,Physical,G,G,Hybrid,No
+IS-SHS_PRACTICAL RESEARCH 2_ADT 12-B_Hybrid,ADT 12-B,Research,"Umlas, Christian",TF,1245-1415,90,2,G102,Physical,G,G,Hybrid,No

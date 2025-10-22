@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DC_GENERAL CHEMISTRY 1_STEM 12-R_Hybrid,STEM 12-R,Science,"Vitor, Rodel Jonathan",F,1430-1600,90,2,ZOOM013,Virtual,Z,Z,Hybrid,No
+COS-DB_GENERAL BIOLOGY 2_STEM 12-R_Online,STEM 12-R,Science,"Vitor, Rodel Jonathan",H,1430-1600,90,2,ZOOM017,Virtual,Z,Z,Online,No
+COS-DB_GENERAL BIOLOGY 2_STEM 12-R_Online,STEM 12-R,Science,"Vitor, Rodel Jonathan",MH,0730-0900,90,2,ZOOM021,Virtual,Z,Z,Online,No
+COS-DC_GENERAL CHEMISTRY 1_STEM 12-R_Hybrid,STEM 12-R,Science,"Vitor, Rodel Jonathan",T,0730-0900,90,2,ZOOM005,Virtual,Z,Z,Hybrid,No

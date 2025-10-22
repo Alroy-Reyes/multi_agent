@@ -1,0 +1,211 @@
+{
+  "department_counts": {
+    "IS-SHS": 262,
+    "UNKNOWN": 45,
+    "COS-DP": 44,
+    "COS-DC": 38,
+    "CCS": 32,
+    "BAGCED-DEAL": 31,
+    "COS-DMS": 31,
+    "COS-DB": 27,
+    "CLA-DL": 18,
+    "CLA-DF": 16,
+    "CLA-DBS\nCLA-DPS": 15,
+    "CLA-DPhilo": 14,
+    "GCOE-DCIVENG": 10,
+    "RVRCOB-DA": 10,
+    "RVRCOB-DMO": 10,
+    "RVRCOB-DSI": 10,
+    "GCOE": 8,
+    "GCOE-CHE": 6,
+    "RVRCOB-DFM": 5,
+    "SOE-DED": 5,
+    "COS": 4,
+    "BAGCED-DSE": 3
+  },
+  "cross_department_faculty": 3,
+  "coordination_strategy": "COORDINATION_LAYER",
+  "training_configs": {
+    "BAGCED-DEAL": {
+      "max_timesteps": 100,
+      "train_batch_size": 512,
+      "sgd_minibatch_size": 256,
+      "training_iterations": 60,
+      "estimated_time_minutes": 20,
+      "num_sgd_iter": 5
+    },
+    "BAGCED-DSE": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "CCS": {
+      "max_timesteps": 100,
+      "train_batch_size": 512,
+      "sgd_minibatch_size": 256,
+      "training_iterations": 60,
+      "estimated_time_minutes": 20,
+      "num_sgd_iter": 5
+    },
+    "CLA-DBS CLA-DPS": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "CLA-DF": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "CLA-DL": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "CLA-DPhilo": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "COS": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "COS-DB": {
+      "max_timesteps": 100,
+      "train_batch_size": 512,
+      "sgd_minibatch_size": 256,
+      "training_iterations": 60,
+      "estimated_time_minutes": 20,
+      "num_sgd_iter": 5
+    },
+    "COS-DC": {
+      "max_timesteps": 100,
+      "train_batch_size": 512,
+      "sgd_minibatch_size": 256,
+      "training_iterations": 60,
+      "estimated_time_minutes": 20,
+      "num_sgd_iter": 5
+    },
+    "COS-DMS": {
+      "max_timesteps": 100,
+      "train_batch_size": 512,
+      "sgd_minibatch_size": 256,
+      "training_iterations": 60,
+      "estimated_time_minutes": 20,
+      "num_sgd_iter": 5
+    },
+    "COS-DP": {
+      "max_timesteps": 100,
+      "train_batch_size": 512,
+      "sgd_minibatch_size": 256,
+      "training_iterations": 60,
+      "estimated_time_minutes": 20,
+      "num_sgd_iter": 5
+    },
+    "GCOE": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "GCOE-CHE": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "GCOE-DCIVENG": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "IS-SHS": {
+      "max_timesteps": 400,
+      "train_batch_size": 1536,
+      "sgd_minibatch_size": 512,
+      "training_iterations": 200,
+      "estimated_time_minutes": 75,
+      "num_sgd_iter": 10
+    },
+    "RVRCOB-DA": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "RVRCOB-DFM": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "RVRCOB-DMO": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "RVRCOB-DSI": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "SOE-DED": {
+      "max_timesteps": 50,
+      "train_batch_size": 256,
+      "sgd_minibatch_size": 128,
+      "training_iterations": 30,
+      "estimated_time_minutes": 10,
+      "num_sgd_iter": 3
+    },
+    "UNKNOWN": {
+      "max_timesteps": 100,
+      "train_batch_size": 512,
+      "sgd_minibatch_size": 256,
+      "training_iterations": 60,
+      "estimated_time_minutes": 20,
+      "num_sgd_iter": 5
+    }
+  },
+  "estimated_times": {
+    "sequential_minutes": 355,
+    "parallel_minutes": 75,
+    "speedup_factor": 4.733333333333333
+  }
+}

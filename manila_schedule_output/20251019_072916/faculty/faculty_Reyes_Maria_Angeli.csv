@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DMS_GENERAL MATHEMATICS_STEM 11-E_Online,STEM 11-E,Math,"Reyes, Maria Angeli",H,0730-0900,90,2,ZOOM021,Virtual,Z,Z,Online,No
+COS-DMS_GENERAL MATHEMATICS_STEM 11-E_Online,STEM 11-E,Math,"Reyes, Maria Angeli",MH,0730-0930,120,1,ZOOM007,Virtual,Z,Z,Online,No
+COS-DMS_GENERAL MATHEMATICS_STEM 11-E_Online,STEM 11-E,Math,"Reyes, Maria Angeli",T,1100-1230,90,2,ZOOM021,Virtual,Z,Z,Online,Yes
+GCOE-CHE_GENERAL MATHEMATICS_STEM 11-D_Online,STEM 11-D,Math,"Reyes, Maria Angeli",TF,0730-0930,120,1,ZOOM021,Virtual,Z,Z,Online,Yes

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+IS-SHS_PERSONAL DEVELOPMENT_STEM 11-N_Hybrid,STEM 11-N,PE/Health,"Acheampong, Joan",F,0730-0900,90,2,L228,Physical,L,L,Hybrid,No
+IS-SHS_PERSONAL DEVELOPMENT_STEM 11-N_Hybrid,STEM 11-N,PE/Health,"Acheampong, Joan",H,1245-1415,90,2,L228,Physical,L,L,Hybrid,No
+IS-SHS_PERSONAL DEVELOPMENT_STEM 11-M_Hybrid,STEM 11-M,PE/Health,"Acheampong, Joan",M,1245-1415,90,2,L211,Physical,L,L,Hybrid,Yes
+IS-SHS_PERSONAL DEVELOPMENT_STEM 11-N_Hybrid,STEM 11-N,PE/Health,"Acheampong, Joan",TF,0730-0900,90,2,L228,Physical,L,L,Hybrid,Yes

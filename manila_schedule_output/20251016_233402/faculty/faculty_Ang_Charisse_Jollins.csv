@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+RVRCOB-DFM_BUSINESS FINANCE_ABM 12-I_Hybrid,ABM 12-I,Business/ABM,"Ang, Charisse Jollins",F,1430-1600,90,2,Y604,Physical,Y,Y,Hybrid,No
+RVRCOB-DFM_BUSINESS FINANCE_ABM 12-I_Hybrid,ABM 12-I,Business/ABM,"Ang, Charisse Jollins",H,1100-1230,90,2,Y604,Physical,Y,Y,Hybrid,Yes
+"RVRCOB-DA_FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2_ABM 12-J_Hybrid",ABM 12-J,Business/ABM,"Ang, Charisse Jollins",MH,0915-1045,90,2,ZOOM012,Virtual,Z,Z,Hybrid,No
+"RVRCOB-DA_FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2_ABM 12-J_Hybrid",ABM 12-J,Business/ABM,"Ang, Charisse Jollins",TF,1430-1600,90,2,ZOOM012,Virtual,Z,Z,Hybrid,No
+RVRCOB-DFM_BUSINESS FINANCE_ABM 12-I_Hybrid,ABM 12-I,Business/ABM,"Ang, Charisse Jollins",W,1430-1600,90,2,Y604,Physical,Y,Y,Hybrid,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+IS-SHS_HOMEROOM_STEM 12-G_Face-to-Face,STEM 12-G,Homeroom,"Cebedo, Charlyn",F,0930-1000,30,1,G-205,Physical,G,G,Face-to-Face,No
+IS-SHS_HOMEROOM_STEM 12-F_Face-to-Face,STEM 12-F,Homeroom,"Cebedo, Charlyn",H,1245-1315,30,1,G-204,Physical,G,G,Face-to-Face,No
+IS-SHS_HOMEROOM_STEM 12-G_Face-to-Face,STEM 12-G,Homeroom,"Cebedo, Charlyn",H,1330-1530,120,1,G-205,Physical,G,G,Face-to-Face,No
+IS-SHS_HOMEROOM_STEM 12-H_Face-to-Face,STEM 12-H,Homeroom,"Cebedo, Charlyn",M,1245-1315,30,1,G-206,Physical,G,G,Face-to-Face,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 12-G,Homeroom,"Mobilla, Patricia Joy V.",H,1100-1300,90,2,G-205,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-G,Homeroom,"Mobilla, Patricia Joy V.",MH,0800-1000,90,2,G-205,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-H,Homeroom,"Mobilla, Patricia Joy V.",TF,1430-1500,90,2,G-206,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-H,Homeroom,"Mobilla, Patricia Joy V.",W,0730-0900,90,2,G-206,Physical,G,G,Face-to-Face,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+IS-SHS_CHRISTIAN LIVING 4_STEM 12-N_Face-to-Face,STEM 12-N,Social Studies,"Malbarosa, Jose Ma. Acardio",F,1000-1200,120,1,Y304,Physical,Y,Y,Face-to-Face,No
+CLA-DPhilo_INTRODUCTION TO THE PHILOSOPHY OF THE HUMAN PERSON_STEM 12-N_Hybrid,STEM 12-N,Social Studies,"Malbarosa, Jose Ma. Acardio",M,1430-1600,90,2,G204,Physical,G,G,Hybrid,No
+CLA-DPhilo_INTRODUCTION TO THE PHILOSOPHY OF THE HUMAN PERSON_STEM 12-N_Hybrid,STEM 12-N,Social Studies,"Malbarosa, Jose Ma. Acardio",T,0730-0900,90,2,G204,Physical,G,G,Hybrid,No
+CLA-DPhilo_INTRODUCTION TO THE PHILOSOPHY OF THE HUMAN PERSON_STEM 12-N_Hybrid,STEM 12-N,Social Studies,"Malbarosa, Jose Ma. Acardio",W,0915-1045,90,2,G204,Physical,G,G,Hybrid,Yes

@@ -1,0 +1,4 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+PRACTICAL RESEARCH 2,STEM 12-N,Research,"Ortenero, Joseph",F,1100-1230,90,2,Y304,Physical,Y,Y,Hybrid,No
+PRACTICAL RESEARCH 2,STEM 12-M,Research,"Ortenero, Joseph",H,1430-1600,90,2,Y303,Physical,Y,Y,Hybrid,Yes
+PRACTICAL RESEARCH 2,STEM 12-N,Research,"Ortenero, Joseph",MH,1245-1415,90,2,Y304,Physical,Y,Y,Hybrid,No

@@ -1,0 +1,23 @@
+MANILA SCHEDULE GENERATION STATISTICS
+==================================================
+
+Checkpoint: checkpoint_000015
+Completion Rate: 17.9%
+Subjects Placed: 166/925
+Generation Steps: 400
+Conflicts: 129
+
+Modality Placement:
+  Face-to-Face:
+    Placed: 38
+    Attempted: 49
+  Online:
+    Placed: 52
+    Attempted: 74
+  Hybrid:
+    Placed: 145
+    Attempted: 282
+
+Constraint Violations:
+  no_intent: 4395
+  teacher_busy: 41

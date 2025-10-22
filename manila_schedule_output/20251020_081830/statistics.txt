@@ -1,0 +1,32 @@
+MANILA SCHEDULE GENERATION STATISTICS v16.0
+==================================================
+
+Version: Optimum Fix (Breaking 70% Plateau)
+Checkpoint: checkpoint_000021
+Completion Rate: 71.9%
+Subjects Placed: 665/925
+Generation Steps: 400
+Conflicts: 5
+
+Modality Placement:
+  Face-to-Face:
+    Placed: 162
+    Attempted: 184
+  Online:
+    Placed: 192
+    Attempted: 284
+  Hybrid:
+    Placed: 604
+    Attempted: 644
+
+Constraint Violations:
+  no_intent: 3688
+  teacher_busy: 149
+
+Improvements in v16.0:
+  • Improved model with deeper value network
+  • Better observation handling
+  • Fixed reward balance to prevent 70% plateau
+  • Progressive difficulty training
+  • Enhanced constraint tracking
+  • Enhanced department prefix cleaning with section detection

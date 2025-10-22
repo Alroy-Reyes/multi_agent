@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DMS_STATISTICS AND PROBABILITIES_STEM 12-S_Online,STEM 12-S,Math,"Morales, John Vincent",M,0730-0900,90,2,ZOOM018,Virtual,Z,Z,Online,Yes
+COS-DMS_STATISTICS AND PROBABILITIES_STEM 12-R_Online,STEM 12-R,Math,"Morales, John Vincent",M,1100-1230,90,2,ZOOM008,Virtual,Z,Z,Online,Yes
+COS-DMS_STATISTICS AND PROBABILITIES_STEM 12-S_Online,STEM 12-S,Math,"Morales, John Vincent",MH,1100-1230,90,2,ZOOM021,Virtual,Z,Z,Online,No
+COS-DMS_STATISTICS AND PROBABILITIES_STEM 12-S_Online,STEM 12-S,Math,"Morales, John Vincent",TF,0915-1045,90,2,ZOOM008,Virtual,Z,Z,Online,No

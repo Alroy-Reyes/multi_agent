@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL MATHEMATICS,HUMSS 11-A,Math,"Garcia, Mark Anthony",M,1430-1600,90,2,ZOOM010,Virtual,Z,Z,Online,Yes
+GENERAL MATHEMATICS,HUMSS 11-B,Math,"Garcia, Mark Anthony",M,1515-1545,30,1,ZOOM012,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,HUMSS 11-A,Math,"Garcia, Mark Anthony",MH,1515-1545,30,1,ZOOM007,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,HUMSS 11-A,Math,"Garcia, Mark Anthony",W,0800-1000,120,1,ZOOM011,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,HUMSS 11-B,Math,"Garcia, Mark Anthony",W,1345-1415,30,1,ZOOM010,Virtual,Z,Z,Online,No

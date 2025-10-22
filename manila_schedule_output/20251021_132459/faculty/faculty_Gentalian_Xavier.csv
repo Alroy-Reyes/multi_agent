@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+EARTH SCIENCE,STEM 11-N,Science,"Gentalian, Xavier",T,0730-0900,90,2,ZOOM021,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-N,Science,"Gentalian, Xavier",T,1245-1415,90,2,ZOOM019,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-M,Science,"Gentalian, Xavier",TF,0730-0900,90,2,ZOOM004,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-M,Science,"Gentalian, Xavier",W,0730-0900,90,2,ZOOM014,Virtual,Z,Z,Online,No

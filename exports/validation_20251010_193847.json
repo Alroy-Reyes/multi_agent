@@ -1,0 +1,36 @@
+{
+  "placement_summary": {
+    "total_subjects": 1375,
+    "placed_subjects": 171,
+    "placement_rate": 12.436363636363636
+  },
+  "violations": {
+    "section_duplicates": 0,
+    "invalid_day_patterns": 0,
+    "total_conflicts": 1
+  },
+  "teacher_workload": {
+    "min_load": 0,
+    "max_load": 4,
+    "avg_load": 0.9653846153846154,
+    "std_load": 1.603707797020658,
+    "range": 4
+  },
+  "modality_breakdown": {
+    "f2f": 37,
+    "hybrid": 0,
+    "online": 0,
+    "async": 45,
+    "rooms_saved": 45
+  },
+  "day_pattern_validation": {
+    "invalid_patterns": 0,
+    "valid_90min_patterns": 74,
+    "day_pattern_quality": 100.0
+  },
+  "quality_metrics": {
+    "schedule_valid": true,
+    "placement_complete": false,
+    "quality_score": 0.12436363636363636
+  }
+}

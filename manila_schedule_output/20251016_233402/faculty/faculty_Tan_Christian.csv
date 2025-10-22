@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GCOE_PRACTICAL RESEARCH 2_STEM 12-O_Hybrid,STEM 12-O,Research,"Tan, Christian",T,1245-1415,90,2,Y306,Physical,Y,Y,Hybrid,No
+GCOE_PRACTICAL RESEARCH 2_STEM 12-O_Hybrid,STEM 12-O,Research,"Tan, Christian",TF,1245-1415,90,2,ZOOM005,Virtual,Z,Z,Hybrid,No
+CCS_PRACTICAL RESEARCH 2_STEM 12-N_Hybrid,STEM 12-N,Research,"Tan, Christian",W,1100-1230,90,2,Y304,Physical,Y,Y,Hybrid,Yes
+GCOE_PRACTICAL RESEARCH 2_STEM 12-O_Hybrid,STEM 12-O,Research,"Tan, Christian",W,1430-1600,90,2,Y306,Physical,Y,Y,Hybrid,Yes

@@ -1,0 +1,4 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+CCS_PRACTICAL RESEARCH 2_STEM 12-N_Hybrid,STEM 12-N,Research,"Zafra, Reynelle Bren",H,1245-1415,90,2,Y304,Physical,Y,Y,Hybrid,No
+CCS_PRACTICAL RESEARCH 2_STEM 12-N_Hybrid,STEM 12-N,Research,"Zafra, Reynelle Bren",TF,1100-1230,90,2,ZOOM005,Virtual,Z,Z,Hybrid,No
+GCOE_PRACTICAL RESEARCH 2_STEM 12-M_Hybrid,STEM 12-M,Research,"Zafra, Reynelle Bren",W,0730-0900,90,2,ZOOM013,Virtual,Z,Z,Hybrid,Yes

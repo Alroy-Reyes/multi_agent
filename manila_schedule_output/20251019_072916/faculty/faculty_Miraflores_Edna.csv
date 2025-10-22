@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+IS-SHS_MEDIA INFORMATION AND LITERACY_ADT 12-A_Hybrid,ADT 12-A,English/Communication,"Miraflores, Edna",H,0915-1045,90,2,G101,Physical,G,G,Hybrid,No
+IS-SHS_MEDIA INFORMATION AND LITERACY_ADT 12-A_Hybrid,ADT 12-A,English/Communication,"Miraflores, Edna",MH,0915-1045,90,2,G101,Physical,G,G,Hybrid,No
+IS-SHS_MEDIA INFORMATION AND LITERACY_ADT 12-B_Hybrid,ADT 12-B,English/Communication,"Miraflores, Edna",MH,1430-1600,90,2,G102,Physical,G,G,Hybrid,No
+IS-SHS_MEDIA INFORMATION AND LITERACY_ADT 12-B_Hybrid,ADT 12-B,English/Communication,"Miraflores, Edna",T,0730-0900,90,2,G102,Physical,G,G,Hybrid,No
+IS-SHS_MEDIA INFORMATION AND LITERACY_ADT 12-A_Hybrid,ADT 12-A,English/Communication,"Miraflores, Edna",TF,0915-1045,90,2,G101,Physical,G,G,Hybrid,Yes

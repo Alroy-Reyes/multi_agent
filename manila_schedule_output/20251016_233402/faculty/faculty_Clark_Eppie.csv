@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+IS-SHS_ORGANIZATION AND MANAGEMENT_SPT 11-A_Hybrid,SPT 11-A,Business/ABM,"Clark, Eppie",MH,1430-1600,90,2,Y604,Physical,Y,Y,Hybrid,Yes
+IS-SHS_ORGANIZATION AND MANAGEMENT_SPT 11-A_Hybrid,SPT 11-A,Business/ABM,"Clark, Eppie",T,1100-1230,90,2,Y604,Physical,Y,Y,Hybrid,No
+IS-SHS_ORGANIZATION AND MANAGEMENT_SPT 11-A_Hybrid,SPT 11-A,Business/ABM,"Clark, Eppie",TF,1100-1230,90,2,Y604,Physical,Y,Y,Hybrid,No
+RVRCOB-DFM_BUSINESS FINANCE_ABM 12-J_Hybrid,ABM 12-J,Business/ABM,"Clark, Eppie",TF,1430-1600,90,2,ZOOM006,Virtual,Z,Z,Hybrid,Yes

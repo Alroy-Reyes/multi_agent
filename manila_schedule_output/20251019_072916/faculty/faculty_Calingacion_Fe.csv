@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DP_EARTH SCIENCE_STEM 11-M_Online,STEM 11-M,Science,"Calingacion, Fe",F,1245-1415,90,2,ZOOM010,Virtual,Z,Z,Online,No
+COS-DC_GENERAL CHEMISTRY 2_STEM 12-A_Hybrid,STEM 12-A,Science,"Calingacion, Fe",T,1430-1600,90,2,G101,Physical,G,G,Hybrid,No
+COS-DC_GENERAL CHEMISTRY 2_STEM 12-A_Hybrid,STEM 12-A,Science,"Calingacion, Fe",W,0730-0900,90,2,G101,Physical,G,G,Hybrid,No
+COS-DP_EARTH SCIENCE_STEM 11-M_Online,STEM 11-M,Science,"Calingacion, Fe",W,0915-1045,90,2,ZOOM010,Virtual,Z,Z,Online,No

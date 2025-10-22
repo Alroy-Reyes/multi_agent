@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+COS-DMS_GENERAL MATHEMATICS_STEM 11-A_Online,STEM 11-A,Math,"Parungao, Anita",F,0730-0900,90,2,ZOOM017,Virtual,Z,Z,Online,Yes
+COS-DMS_GENERAL MATHEMATICS_STEM 11-A_Online,STEM 11-A,Math,"Parungao, Anita",F,0915-1045,90,2,ZOOM020,Virtual,Z,Z,Online,No
+COS-DMS_GENERAL MATHEMATICS_STEM 11-A_Online,STEM 11-A,Math,"Parungao, Anita",M,1100-1230,90,2,ZOOM002,Virtual,Z,Z,Online,No
+IS-SHS_STATISTICS AND PROBABILITIES_SPT 12-A_Online,SPT 12-A,Math,"Parungao, Anita",MH,1245-1415,90,2,ZOOM016,Virtual,Z,Z,Online,Yes
