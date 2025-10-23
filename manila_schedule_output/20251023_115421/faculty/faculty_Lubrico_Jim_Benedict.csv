@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ADT 11-A,Homeroom,"Lubrico, Jim Benedict",H,1430-1500,90,2,Y303,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-H,Homeroom,"Lubrico, Jim Benedict",H,1430-1600,90,2,Y506,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-H,Homeroom,"Lubrico, Jim Benedict",MH,1100-1300,90,2,Y506,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ADT 11-A,Homeroom,"Lubrico, Jim Benedict",W,1100-1230,90,2,Y303,Physical,Y,Y,Face-to-Face,No

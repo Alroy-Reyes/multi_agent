@@ -52,7 +52,7 @@ from ray.rllib.models.torch.torch_modelv2 import TorchModelV2
 from ray.rllib.models import ModelCatalog
 from collections import OrderedDict
 
-# Import FIXED ENV v14.5
+# Import FIXED ENV v14.6
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from envs.timetabling_env import ParallelTimetablingEnv
 

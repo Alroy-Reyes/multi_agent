@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ABM 11-A,Homeroom,"Acheampong, Joan Kassey S.",F,0800-1000,90,2,G-201,Physical,G,G,Face-to-Face,No
+HOMEROOM,ADT 12-C,Homeroom,"Acheampong, Joan Kassey S.",F,1200-1230,90,2,G103,Physical,G,G,Face-to-Face,No
+HOMEROOM,ABM 11-A,Homeroom,"Acheampong, Joan Kassey S.",M,1515-1545,90,2,G-201,Physical,G,G,Face-to-Face,No
+HOMEROOM,ADT 12-C,Homeroom,"Acheampong, Joan Kassey S.",W,1015-1045,90,2,G103,Physical,G,G,Face-to-Face,No

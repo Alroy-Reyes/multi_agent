@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-S,Science,"Abrigo, Irish",M,1545-1615,90,2,ZOOM009,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-K,Science,"Abrigo, Irish",T,1345-1415,90,2,G209,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-K,Science,"Abrigo, Irish",TF,0930-1000,90,2,G209,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-S,Science,"Abrigo, Irish",TF,1345-1415,90,2,ZOOM021,Virtual,Z,Z,Online,No

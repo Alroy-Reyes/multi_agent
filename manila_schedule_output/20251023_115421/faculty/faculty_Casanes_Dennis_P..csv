@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ABM 12-G,Homeroom,"Casanes, Dennis P.",F,0830-0900,90,2,Y505,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-F,Homeroom,"Casanes, Dennis P.",M,1245-1315,90,2,Y504,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-F,Homeroom,"Casanes, Dennis P.",MH,0830-0900,90,2,Y504,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-G,Homeroom,"Casanes, Dennis P.",T,1245-1415,90,2,Y505,Physical,Y,Y,Face-to-Face,No

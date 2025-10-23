@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2,STEM 12-F,Science,"Yap, Jennifer Maries",H,1300-1330,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-E,Science,"Yap, Jennifer Maries",H,1430-1630,90,2,G203,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-F,Science,"Yap, Jennifer Maries",TF,1215-1245,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-E,Science,"Yap, Jennifer Maries",W,1245-1315,90,2,G203,Physical,G,G,Hybrid,No

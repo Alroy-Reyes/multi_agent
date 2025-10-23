@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 11-B,Homeroom,"Labog, Michael John R.",M,1345-1415,90,2,Y405,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-A,Homeroom,"Labog, Michael John R.",MH,1330-1400,90,2,Y404,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-A,Homeroom,"Labog, Michael John R.",T,1245-1415,90,2,Y404,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-B,Homeroom,"Labog, Michael John R.",TF,1430-1630,90,2,Y405,Physical,Y,Y,Face-to-Face,No

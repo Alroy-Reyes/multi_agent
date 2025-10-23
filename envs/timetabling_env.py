@@ -125,6 +125,8 @@ class ParallelTimetablingEnv(ParallelEnv):
         # Per-placement teacher tracking
         self.placement_teachers = {}
 
+        self.subject_day_usage = {}
+        self.subject_placement_count = {} 
         # Modality setup
         self.modality_labels = modality_labels or ['Face-to-Face', 'Online', 'Hybrid']
         self.modality_to_idx = {m: i for i, m in enumerate(self.modality_labels)}
@@ -474,6 +476,7 @@ class ParallelTimetablingEnv(ParallelEnv):
             return False, "max_placements_reached"
         
         return True, "ok"
+  
 
     def reset(self, seed=None, options=None):
         if seed is not None:
@@ -764,8 +767,8 @@ class ParallelTimetablingEnv(ParallelEnv):
         placed_section_times_this_step = set()
         
         # FIX #12: Track placement counts WITHIN this step to prevent duplicates
+        # FIX #12: Track placement counts within this step
         step_placement_counts = {}
-
         successful_placements = 0
 
         for agent, subj, global_t_idx, bkey, r_idx, d, ts in final_winners:
@@ -773,73 +776,63 @@ class ParallelTimetablingEnv(ParallelEnv):
             tkey = f"teacher_{global_t_idx}"
             skey = f"section_{sec_idx}"
             
-            # FIX #12: Check placement count INCLUDING this step's placements
+            # FIX #12: Check placement count including this step
             key = (subj, sec_idx)
-            
-            # Get current count from environment
             current_count = self._get_placement_count(subj, sec_idx)
-            
-            # Add any placements made in this step so far
             step_placements = step_placement_counts.get(key, 0)
             total_count = current_count + step_placements
-            
             required_count = self.subject_required_placements.get(subj, 1)
             
-            # Check if already at capacity (INCLUDING this step's placements)
             if total_count >= required_count:
                 rewards[agent] -= 20.0
                 self.fail_stats["section_duplicate"] += 1
-                if self.timestep <= 10:
-                    print(f"⚠️ FIX #12: Prevented duplicate - Subject {subj} already at {total_count}/{required_count}")
                 continue
             
-            # Check if this subject already placed on this day
-            if d in self.subject_day_placements.get(subj, set()):
-                rewards[agent] -= 50.0
-                self.fail_stats["day_duplicate"] += 1
-                if self.timestep <= 10:
-                    print(f"⚠️ Day duplicate prevented: Subject {subj} already on day {d}")
-                continue
-
-            can_place, reason = self._can_place_on_day(subj, d, ts)  # ← Should call our fixed function
+            # FIX #10: Check if subject can be placed on this day
+            can_place, reason = self._can_place_on_day(subj, d, ts)
             if not can_place:
-                rewards[agent] -= 4.0
-                self.fail_stats["section_duplicate"] += 1
+                if reason == "day_duplicate":
+                    rewards[agent] -= 50.0
+                    self.fail_stats["day_duplicate"] += 1
+                elif reason == "max_placements_reached":
+                    rewards[agent] -= 20.0
+                    self.fail_stats["max_placements"] += 1
+                else:
+                    rewards[agent] -= 10.0
                 self.fail_count[subj] += 1
                 continue
-
+            
+            # Check teacher time conflict
             if (global_t_idx, d, ts) in placed_teacher_times_this_step:
                 rewards[agent] -= 15.0
                 self.conflict_count += 1
                 continue
             
+            # Check room conflict
             if (bkey, r_idx, d, ts) in placed_room_slots_this_step:
                 rewards[agent] -= 15.0
                 self.conflict_count += 1
                 continue
             
+            # Check section time conflict
             if (sec_idx, d, ts) in placed_section_times_this_step:
                 rewards[agent] -= 15.0
                 self.conflict_count += 1
                 continue
             
+            # Check if subject already placed this step
             if subj in placed_subjects_this_step:
                 rewards[agent] -= 20.0
                 self.conflict_count += 1
                 continue
             
+            # Check if subject already fully placed
             if subj in self.placed_subjects:
                 rewards[agent] -= 20.0
                 self.fail_stats["already_placed"] += 1
                 continue
 
-            can_place, reason = self._can_place_on_day(subj, d, ts)
-            if not can_place:
-                rewards[agent] -= 4.0
-                self.fail_stats["section_duplicate"] += 1
-                self.fail_count[subj] += 1
-                continue
-
+            # Final schedule validation
             schedule = self.buildings_room_schedule[bkey]
             
             if schedule[r_idx, d, ts] != -1:
@@ -863,28 +856,25 @@ class ParallelTimetablingEnv(ParallelEnv):
             
             schedule[r_idx, d, ts] = subj
             self.teacher_schedules[tkey][d, ts] = True
+            self.section_schedules[skey][d, ts] = True
             placed_teacher_times_this_step.add((global_t_idx, d, ts))
             placed_room_slots_this_step.add((bkey, r_idx, d, ts))
             placed_section_times_this_step.add((sec_idx, d, ts))
             placed_subjects_this_step.add(subj)
-            self.section_schedules[skey][d, ts] = True
             self.teacher_classes[tkey] += 1
             self.subject_assignments[subj] = global_t_idx
             self.placement_teachers[(subj, d, ts)] = global_t_idx
             
+            # FIX #12: Update placement count
             key = (subj, sec_idx)
             current = self.subject_placement_count.get(key, 0)
             self.subject_placement_count[key] = current + 1
-            
-            # FIX #12: Increment step-local counter to prevent duplicates in this step
             step_placement_counts[key] = step_placement_counts.get(key, 0) + 1
             
+            # FIX #10: Update day usage tracking
             if subj not in self.subject_day_usage:
                 self.subject_day_usage[subj] = set()
             self.subject_day_usage[subj].add(d)
-            
-            # Record day placement
-            self.subject_day_placements[subj].add(d)
             
             if self._is_subject_fully_placed(subj):
                 self.placed_subjects.add(subj)
@@ -893,13 +883,9 @@ class ParallelTimetablingEnv(ParallelEnv):
             successful_placements += 1
 
             modality = self.subject_modalities[subj]
-            
-            # Track unique subjects placed (not placements)
             if subj not in self.modality_subjects_placed[modality]:
                 self.modality_stats[modality]['placed'] += 1
                 self.modality_subjects_placed[modality].add(subj)
-            
-            # Track total placements separately
             self.modality_stats[modality]['total_placements'] += 1
 
             # Calculate rewards

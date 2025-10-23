@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 11-F,Homeroom,"Jimenez, Criselda R.",F,0830-0900,90,2,Y504,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-E,Homeroom,"Jimenez, Criselda R.",H,0800-1000,90,2,Y503,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-E,Homeroom,"Jimenez, Criselda R.",MH,0915-0945,90,2,Y503,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-F,Homeroom,"Jimenez, Criselda R.",TF,1000-1200,90,2,Y504,Physical,Y,Y,Face-to-Face,No

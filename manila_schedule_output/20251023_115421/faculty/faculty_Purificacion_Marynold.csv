@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+EARTH SCIENCE,STEM 11-L,Science,"Purificacion, Marynold",MH,1330-1530,90,2,ZOOM017,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-M,Science,"Purificacion, Marynold",MH,1600-1630,90,2,ZOOM002,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-L,Science,"Purificacion, Marynold",T,0830-0900,90,2,ZOOM006,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-M,Science,"Purificacion, Marynold",W,1245-1315,90,2,ZOOM011,Virtual,Z,Z,Online,No

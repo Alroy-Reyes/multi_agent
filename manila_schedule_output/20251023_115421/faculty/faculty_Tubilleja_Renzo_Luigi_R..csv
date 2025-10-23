@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 12-E,Homeroom,"Tubilleja, Renzo Luigi R.",F,1615-1745,90,2,G-203,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-E,Homeroom,"Tubilleja, Renzo Luigi R.",MH,1000-1200,90,2,G-203,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-F,Homeroom,"Tubilleja, Renzo Luigi R.",T,1215-1245,90,2,G-204,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-F,Homeroom,"Tubilleja, Renzo Luigi R.",TF,1430-1500,90,2,G-204,Physical,G,G,Face-to-Face,No

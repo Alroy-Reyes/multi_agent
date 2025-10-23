@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 12-A,Homeroom,"Villanueva, Chrizelle M.",H,0930-1000,90,2,G101,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-B,Homeroom,"Villanueva, Chrizelle M.",M,1245-1445,90,2,G102,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-B,Homeroom,"Villanueva, Chrizelle M.",MH,0800-1000,90,2,G102,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-A,Homeroom,"Villanueva, Chrizelle M.",MH,0915-0945,90,2,G101,Physical,G,G,Face-to-Face,No
