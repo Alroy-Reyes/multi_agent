@@ -454,27 +454,60 @@ class ParallelTimetablingEnv(ParallelEnv):
         required = self.subject_required_placements.get(subject_idx, 1)
         return current >= required
 
-    def _can_place_on_day(self, subject_idx, day_idx, timeslot_idx) -> Tuple[bool, str]:
-        """Check if subject can be placed - FIXED VERSION"""
-        used_days = self.subject_day_usage.get(subject_idx, set())
+    def _can_place_on_day(self, subject_idx: int, day_idx: int, timeslot_idx: int) -> Tuple[bool, str]:
+        """
+        Check if subject can be placed on specified day
         
-        if not used_days:
-            return True, "first_placement"
+        Implements two critical checks:
+        - FIX #12: Prevents over-scheduling (checks FIRST)
+        - FIX #10: Prevents same-day duplicates (checks SECOND)
         
-        # ============================================================
-        # FIX #10: CRITICAL CHECK FOR SAME-DAY DUPLICATE
-        # ============================================================
-        if day_idx in used_days:
-            return False, "day_duplicate"
-        # ============================================================
+        Order matters! Placement count must be checked before day usage
+        because day usage might be empty due to bugs, but placement count
+        is always authoritative.
         
+        Args:
+            subject_idx: Index of subject to place
+            day_idx: Day index (0=Monday, 1=Tuesday, etc.)
+            timeslot_idx: Timeslot index within the day
+            
+        Returns:
+            (can_place, reason): Tuple of boolean and reason string
+                - (False, "max_placements_reached"): Subject at required count
+                - (False, "day_duplicate"): Subject already on this day
+                - (True, "first_placement"): First time placing this subject
+                - (True, "ok"): Can place, all checks passed
+        """
+        # ============================================================
+        # FIX #12: CHECK MAX PLACEMENTS FIRST
+        # CRITICAL: Must check this BEFORE day checks
+        # ============================================================
         sec_idx = self.subject_section_idx[subject_idx]
         current_count = self._get_placement_count(subject_idx, sec_idx)
         required_count = self.subject_required_placements.get(subject_idx, 1)
         
         if current_count >= required_count:
+            # Subject has reached maximum required placements
             return False, "max_placements_reached"
+        # ============================================================
         
+        # ============================================================
+        # FIX #10: CHECK SAME-DAY DUPLICATES
+        # Only relevant if subject hasn't hit max placements yet
+        # ============================================================
+        used_days = self.subject_day_usage.get(subject_idx, set())
+        
+        # First placement is always allowed (if under max)
+        if not used_days:
+            return True, "first_placement"
+        
+        # Check if this specific day is already used
+        if day_idx in used_days:
+            # Students can't attend same subject twice on one day
+            return False, "day_duplicate"
+        # ============================================================
+        
+        # All checks passed - can place
         return True, "ok"
   
 

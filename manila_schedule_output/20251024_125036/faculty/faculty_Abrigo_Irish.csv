@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-A2,Science,"Abrigo, Irish",F,0730-0930,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-A1,Science,"Abrigo, Irish",F,1100-1130,90,2,J411,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-A1,Science,"Abrigo, Irish",T,1300-1330,90,2,J411,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-A2,Science,"Abrigo, Irish",T,1345-1415,90,2,J410,Physical,J,J,Hybrid,No

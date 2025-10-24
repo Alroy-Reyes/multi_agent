@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 12-O,Homeroom,"Mapugay, Ma. Jayanne C.",F,0915-0945,90,2,Y306,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 12-O,Homeroom,"Mapugay, Ma. Jayanne C.",H,1430-1630,90,2,Y306,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 12-N,Homeroom,"Mapugay, Ma. Jayanne C.",TF,1430-1600,90,2,Y304,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 12-N,Homeroom,"Mapugay, Ma. Jayanne C.",W,1545-1615,90,2,Y304,Physical,Y,Y,Face-to-Face,No

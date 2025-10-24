@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ABM 12-B,Homeroom,"Navarro, Joanna Christelle D.",F,0800-0930,90,2,Y405,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-A,Homeroom,"Navarro, Joanna Christelle D.",F,1015-1045,90,2,Y404,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-A,Homeroom,"Navarro, Joanna Christelle D.",M,1430-1630,90,2,Y404,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-B,Homeroom,"Navarro, Joanna Christelle D.",T,1345-1415,90,2,Y405,Physical,Y,Y,Face-to-Face,No

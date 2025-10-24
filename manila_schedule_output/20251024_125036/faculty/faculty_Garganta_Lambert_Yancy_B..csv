@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,SPT 12-A,Homeroom,"Garganta, Lambert Yancy B.",H,0930-1000,90,2,Y606,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-A,Homeroom,"Garganta, Lambert Yancy B.",H,1100-1230,90,2,Y404,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,SPT 12-A,Homeroom,"Garganta, Lambert Yancy B.",M,1145-1215,90,2,Y606,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-A,Homeroom,"Garganta, Lambert Yancy B.",MH,1245-1415,90,2,Y404,Physical,Y,Y,Face-to-Face,No

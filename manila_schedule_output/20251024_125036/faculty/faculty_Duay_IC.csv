@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-N,Science,"Duay, IC",M,0830-0900,90,2,ZOOM018,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-M,Science,"Duay, IC",MH,1330-1530,90,2,ZOOM016,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-N,Science,"Duay, IC",T,1000-1200,90,2,ZOOM009,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-M,Science,"Duay, IC",T,1200-1230,90,2,ZOOM021,Virtual,Z,Z,Online,No

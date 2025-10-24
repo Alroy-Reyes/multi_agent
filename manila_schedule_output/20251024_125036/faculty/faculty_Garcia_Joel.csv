@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-H2,Science,"Garcia, Joel",M,1245-1315,90,2,J411,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-H1,Science,"Garcia, Joel",MH,1515-1545,90,2,J404,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-H2,Science,"Garcia, Joel",TF,1000-1200,90,2,J411,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-H1,Science,"Garcia, Joel",TF,1430-1500,90,2,J404,Physical,J,J,Hybrid,No

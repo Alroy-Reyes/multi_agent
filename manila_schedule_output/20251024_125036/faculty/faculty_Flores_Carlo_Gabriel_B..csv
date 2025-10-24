@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 12-I,Homeroom,"Flores, Carlo Gabriel B.",H,1345-1415,90,2,G-207,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-K,Homeroom,"Flores, Carlo Gabriel B.",M,1330-1400,90,2,G-209,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-K,Homeroom,"Flores, Carlo Gabriel B.",T,0915-0945,90,2,G-209,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-I,Homeroom,"Flores, Carlo Gabriel B.",T,1515-1545,90,2,G-207,Physical,G,G,Face-to-Face,No
