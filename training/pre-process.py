@@ -171,8 +171,8 @@ def preprocess_manila_schedule(
     print("DAY PATTERN PROCESSING")
     print("=" * 40)
     
-    DAY_TOKENS_ORDER = ["MH", "TF", "TTH", "T", "H", "F", "M", "W", "S"]
-    DAY_REGEX = r"TTH|MH|TF|M|T|W|H|F|S"
+    DAY_TOKENS_ORDER = ["M", "T", "W", "H", "F"]
+    DAY_REGEX = r"M|T|W|H|F"
     
     def tokenize_days_exact(cell: str) -> list:
         return re.findall(DAY_REGEX, (str(cell) or "").upper())
@@ -755,7 +755,7 @@ if __name__ == "__main__":
         print(f"  • ~{result['avg_days_per_subject']:.2f} days per subject")
         print(f"  • NO day suffixes in subject names")
         print("\nNext steps:")
-        print("1. Run: python create_timeslots_manila.py")
-        print("2. Train: python train_manila_schedule.py --iterations 300")
+        print("1. Run: python timeslots.py")
+        print("2. Train: python train_ppo.py --iterations 300")
     else:
         print("❌ Preprocessing failed. Check your CSV file.")

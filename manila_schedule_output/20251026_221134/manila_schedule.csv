@@ -1,0 +1,746 @@
+Subject,Faculty,Section,Days,Time,Room,Campus,Modality,Room_Type,Is_Async,Meetings_Per_Week,Duration_Min,Subject_Area,Building
+DISASTER READINESS AND RISK REDUCTION,"Maglaya, Archie",STEM 12-A,TF,0730-0900,G101,G,Hybrid,Physical,No,2,90,Science,G
+ORGANIZATION AND MANAGEMENT,"Ang, Charisse Jollins",ABM 11-C,H,0730-0900,G204,G,Hybrid,Physical,No,2,90,Business/ABM,G
+GENERAL PHYSICS 1,"Natividad, Michelle",STEM 12-J,F,0730-0900,G208,G,Hybrid,Physical,No,2,90,Science,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Reyes, Arvin",STEM 12-I,M,0730-0900,G302A&B,G,Hybrid,Physical,No,2,90,Other,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Bertumen, Estefanie",STEM 12-A,MH,0730-0900,G306A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Villanueva, Ren Mark",STEM 12-J1,MH,0730-0900,J404,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Bonto, Aldrin",STEM 12-H1,F,0730-0900,J404,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Bonto, Aldrin",STEM 12-H1,W,0730-0900,J404,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Pucot, Jayson",STEM 12-B2,F,0730-0900,J410,J,Hybrid,Physical,No,2,90,Science,J
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Bertumen, Estefanie",HUMSS 11-E,H,0730-0900,L335,L,Hybrid,Physical,No,2,90,Other,L
+ORGANIZATION AND MANAGEMENT,"Delantar, Edna",ABM 11-I,F,0730-0900,V502,V,Hybrid,Physical,No,2,90,Business/ABM,V
+HOMEROOM,"Perlas, Ricalyn A.",STEM 12-S,W,0730-0900,V503,V,Face-to-Face,Physical,No,2,90,Homeroom,V
+CREATIVE INDUSTRIES 1 APPLIED ARTS DESIGN,"Marcial, Joshua",ADT 11-A,T,0730-0900,Y303,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Tolentino, Christian",ADT 11-A,M,0730-0900,Y303,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Umlas, Christian",STEM 11-D,MH,0730-0900,Y502,Y,Hybrid,Physical,No,2,90,Research,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Velasco, Elsie",ABM 12-G,W,0730-0900,Y505,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Calindro, Myrille",STEM 11-H,H,0730-0900,Y506,Y,Hybrid,Physical,No,2,90,Research,Y
+CHRISTIAN LIVING 4,"Rosales, John Mark",ABM 12-J,TF,0730-0900,Y606,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Baylon, Dioscoro",ABM 12-J,F,0730-0900,Y606,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+EARTH SCIENCE,"Matulac, John Marc",STEM 11-A,M,0730-0900,ZOOM003,Z,Online,Virtual,No,2,90,Science,Z
+GENERAL MATHEMATICS,"Razon, Luis F.",STEM 11-M,F,0730-0900,ZOOM010,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Candellaria, Luisette",ABM 11-F,T,0730-0900,ZOOM011,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Magpantay, Hilbert",STEM 11-E,TF,0730-0900,ZOOM021,Z,Online,Virtual,No,2,90,Science,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Santos, Russell",STEM 12-B,M,0730-0930,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Laude, Claver",STEM 12-Q,T,0730-0930,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 3,"Navarro, Joanna",ABM 11-J,M,0730-0930,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PRACTICAL RESEARCH 2,"Pamaos, Angela Mae",ADT 12-B,F,0730-0930,G102,G,Hybrid,Physical,No,2,90,Research,G
+DISASTER READINESS AND RISK REDUCTION,"Duay, IC",STEM 12-I,H,0730-0930,G207,G,Hybrid,Physical,No,2,90,Science,G
+CHRISTIAN LIVING 4,"Delocario, Martina Rose",STEM 12-L,TF,0730-0930,G211,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+GENERAL PHYSICS 1-LABORATORY,"Querubin, Florabelle",STEM 12-F2,TF,0730-0930,J410,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Pucot, Jayson",STEM 12-A2,F,0730-0930,J410,J,Hybrid,Physical,No,2,90,Science,J
+ORAL COMMUNICATION IN CONTEXT,"Bensal, Edwina",HUMSS 11-B,TF,0730-0930,L208,L,Hybrid,Physical,No,2,90,English/Communication,L
+HOMEROOM,"Rosales, Jhon Mark M.",STEM 12-O,TF,0730-0930,Y306,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+HOMEROOM,"Buencibello, Joenel B.",HUMSS 12-C,T,0730-0930,Y402,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+HOMEROOM,"Marcial, Joshua R.",STEM 11-F,H,0730-0930,Y504,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"Seumal, Anthony",ABM 12-H,W,0730-0930,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+BUSINESS FINANCE,"Nario, Jem Marie",ABM 12-J,W,0730-0930,Y606,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+STATISTICS AND PROBABILITIES,"Pacao, Shaine",STEM 12-N,TF,0730-0930,ZOOM008,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Cruz, Eduardo",HUMSS 11-A,H,0730-0930,ZOOM012,Z,Online,Virtual,No,2,90,Math,Z
+STATISTICS AND PROBABILITIES,"Gatchalian, Clarence",STEM 12-S,W,0730-0930,ZOOM017,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Garvez, Allen",STEM 12-G,T,0800-0930,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Garvez, Allen",STEM 12-F,F,0800-0930,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 3,"Flores, Carlo",ABM 11-E,F,0800-0930,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+HOMEROOM,"Azucena, Jemmar T.",STEM 12-F,M,0800-0930,G-204,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+HOMEROOM,"Torres, Myrla",STEM 12-K,MH,0800-0930,G-209,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+MEDIA INFORMATION AND LITERACY,"Rosales, Dynessa",ADT 12-A,W,0800-0930,G101,G,Hybrid,Physical,No,2,90,English/Communication,G
+HOMEROOM,"Cacal, Ralph Anthony C.",STEM 12-B,M,0800-0930,G102,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+GENERAL PHYSICS 1,"Fabia, Jose Noel",STEM 12-E,W,0800-0930,G203,G,Hybrid,Physical,No,2,90,Science,G
+GENERAL PHYSICS 1,"Inocencio, Eric",STEM 12-H,T,0800-0930,G206,G,Hybrid,Physical,No,2,90,Science,G
+ORAL COMMUNICATION IN CONTEXT,"Perez, Candice",ABM 11-F,MH,0800-0930,G207,G,Hybrid,Physical,No,2,90,English/Communication,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Sipin, Glenn",STEM 12-B,F,0800-0930,G306A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Villanueva, Ren Mark",STEM 12-J1,W,0800-0930,J404,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Toral, Kenneth",STEM 12-I2,T,0800-0930,J410,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Bonto, Aldrin",STEM 12-H2,W,0800-0930,J411,J,Hybrid,Physical,No,2,90,Science,J
+CHRISTIAN LIVING 1,"Domingo, Rosalia",STEM 11-N,W,0800-0930,L228,L,Face-to-Face,Physical,No,2,90,Social Studies,L
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"Rivera, Pauline",ABM 12-E,H,0800-0930,L335,L,Hybrid,Physical,No,2,90,Other,L
+PRACTICAL RESEARCH 2,"Salvador, Mark Anthony",STEM 12-R,MH,0800-0930,V502,V,Hybrid,Physical,No,2,90,Research,V
+ORGANIZATION AND MANAGEMENT,"Delantar, Edna",ABM 11-I,H,0800-0930,V502,V,Hybrid,Physical,No,2,90,Business/ABM,V
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTCWR-1,"Diolazo, Justin Ray S",T-ADTCWR-1,W,0800-0930,V502,V,Hybrid,Physical,No,2,90,Arts/Design,V
+DISCIPLINE AND IDEAS IN THE APPLIED SOCIAL SCIENCE,"Go, Johnalyn",HUMSS 12-A,TF,0800-0930,Y304,Y,Hybrid,Physical,No,2,90,Science,Y
+HOMEROOM,"Jimenez, Criselda R.",HUMSS 12-D,W,0800-0930,Y403,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+PRACTICAL RESEARCH 2,"Ong, Ethel",ABM 12-B,T,0800-0930,Y405,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Garganta, Lambert Yancy B.",STEM 11-B,H,0800-0930,Y405,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+ORAL COMMUNICATION IN CONTEXT,"Go, Christian",STEM 11-B,M,0800-0930,Y405,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+CREATIVE WRITING,"Gojo-Cruz, Genaro",HUMSS 12-B2,TF,0800-0930,Y501,Y,Hybrid,Physical,No,2,90,Literature,Y
+HOMEROOM,"Samson, Paul Vincent R.",STEM 11-G,W,0800-0930,Y505,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+PRACTICAL RESEARCH 2,"Azcarraga, Judith",ABM 12-H,MH,0800-0930,Y506,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Perlas, Ricalyn",STEM 11-H,W,0800-0930,Y506,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+EARTH SCIENCE,"Dela Cruz, Mannelyn",STEM 11-F,TF,0800-0930,ZOOM004,Z,Online,Virtual,No,2,90,Science,Z
+EARTH SCIENCE,"Dela Cruz, Mannelyn",STEM 11-G,H,0800-0930,ZOOM004,Z,Online,Virtual,No,2,90,Science,Z
+GENERAL MATHEMATICS,"Ponsones, Rigor",ABM 11-E,M,0800-0930,ZOOM011,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Ponsones, Rigor",ABM 11-E,MH,0800-0930,ZOOM013,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Tabuloc, Maria Cristina",ABM 11-I,TF,0800-0930,ZOOM017,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Fabroa, Kate",STEM 12-E,H,0800-1000,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Santos, Russell",STEM 12-B,F,0800-1000,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PRACTICAL RESEARCH 2,"Pamaos, Angela Mae",ADT 12-A,M,0800-1000,G101,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL PHYSICS 1,"Fabia, Jose Noel",STEM 12-E,MH,0800-1000,G203,G,Hybrid,Physical,No,2,90,Science,G
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTVMA-1,"Cabatingan, Camille / Cacal, Ralph",T-ADTVMA-1,W,0800-1000,G207,G,Hybrid,Physical,No,2,90,Arts/Design,G
+CHRISTIAN LIVING 4,"Samson, Paul Vincent",STEM 12-J,TF,0800-1000,G208,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+ORAL COMMUNICATION IN CONTEXT,"Perez, Candice",ABM 11-G,F,0800-1000,G208,G,Hybrid,Physical,No,2,90,English/Communication,G
+ORAL COMMUNICATION IN CONTEXT,"Evangelista, Tyrone",STEM 11-L,W,0800-1000,L210,L,Hybrid,Physical,No,2,90,English/Communication,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cheng, Charibeth",STEM 11-N,W,0800-1000,L228,L,Hybrid,Physical,No,2,90,Research,L
+ORAL COMMUNICATION IN CONTEXT,"Miraflores, Edna",ADT 11-A,H,0800-1000,Y303,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+HOMEROOM,"Miranda, Janeson M.",STEM 12-M,F,0800-1000,Y303,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+PRACTICAL RESEARCH 2,"Mayol, Andres Philip",STEM 12-O,H,0800-1000,Y306,Y,Hybrid,Physical,No,2,90,Research,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Garcia, Emmanuel V.",STEM 11-A,W,0800-1000,Y404,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Go, Christian",STEM 11-B,H,0800-1000,Y405,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+CHRISTIAN LIVING 4,"Garganta,Yancy",ABM 12-E,TF,0800-1000,Y503,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+MEDIA AND INFORMATION LITERACY,"Rosales, Dynessa",ABM 12-E,F,0800-1000,Y503,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+CREATIVE WRITING,"Guevarra, Mary Harmony",HUMSS 12-D2,MH,0800-1000,Y504,Y,Hybrid,Physical,No,2,90,Literature,Y
+BUSINESS FINANCE,"Golamco, Angelina",ABM 12-H,MH,0800-1000,Y506,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+STATISTICS AND PROBABILITIES,"Concepcion, Edward",STEM 12-L,MH,0800-1000,ZOOM007,Z,Online,Virtual,No,2,90,Math,Z
+STATISTICS AND PROBABILITIES,"Jimenez, Criselda",STEM 12-K,T,0800-1000,ZOOM015,Z,Online,Virtual,No,2,90,Math,Z
+HOMEROOM,"Olo, Marial Grace R.",STEM 12-G,W,0830-0900,G-205,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+MEDIA INFORMATION AND LITERACY,"Rosales, Dynessa",ADT 12-A,F,0830-0900,G101,G,Hybrid,Physical,No,2,90,English/Communication,G
+DISASTER READINESS AND RISK REDUCTION,"Maglaya, Archie",STEM 12-B,TF,0830-0900,G102,G,Hybrid,Physical,No,2,90,Science,G
+CHRISTIAN LIVING 4,"Villacorta, Ernest",ADT 12-B,W,0830-0900,G102,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+MEDIA INFORMATION AND LITERACY,"Garcia, Miguel",ADT 12-C,W,0830-0900,G103,G,Hybrid,Physical,No,2,90,English/Communication,G
+PRACTICAL RESEARCH 2,"Go, Stella P.",STEM 12-D,H,0830-0900,G201,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL PHYSICS 1,"Recuenco, Frances C.",STEM 12-D,F,0830-0900,G201,G,Hybrid,Physical,No,2,90,Science,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Tighe, Edward",STEM 12-G,T,0830-0900,G306A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Abrigo, Irish",STEM 12-A1,W,0830-0900,J411,J,Hybrid,Physical,No,2,90,Science,J
+"COMMUNITY, ENGAGEMENT,SOLIDARITY AND CITIZENSHIP","Unson, Cesar",HUMSS 12-D,MH,0830-0900,Y403,Y,Hybrid,Physical,No,2,90,Social Studies,Y
+CHRISTIAN LIVING 4,"Dillena, Kennith",STEM 12-Q,F,0830-0900,Y403,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+PRACTICAL RESEARCH 2,"Ong, Ethel",ABM 12-A,T,0830-0900,Y404,Y,Hybrid,Physical,No,2,90,Research,Y
+CHRISTIAN LIVING 4,"Malbarosa, Jose Ma. Acardio",ABM 12-B,H,0830-0900,Y405,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Lim, Cristina Teresa",STEM 11-F,H,0830-0900,Y504,Y,Hybrid,Physical,No,2,90,Research,Y
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTMUS-1,"Lacsama, Virginia / Buted, Jerilou",T-ADTMUS-1,TF,0830-0900,Y505,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Marcial, Joshua",SPT 11-A,H,0830-0900,Y604,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+STATISTICS AND PROBABILITIES,"Gatchalian, Clarence",STEM 12-S,H,0830-0900,ZOOM011,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Garcia, Mark Anthony",SPT 11-A,W,0830-0900,ZOOM011,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Hernandez, Alana Margarita",STEM 11-I,T,0830-0900,ZOOM020,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Santos, Russell",STEM 12-A,M,0915-0945,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Acheampong, Joan",STEM 12-N,T,0915-0945,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Parco, Olga",STEM 12-H,F,0915-0945,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+CHRISTIAN LIVING 4,"Yap, Richie",STEM 12-A,MH,0915-0945,G101,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+CHRISTIAN LIVING 4,"Yap, Richie",STEM 12-A,T,0915-0945,G101,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+DISASTER READINESS AND RISK REDUCTION,"Ong, Russel",STEM 12-D,F,0915-0945,G201,G,Hybrid,Physical,No,2,90,Science,G
+GENERAL PHYSICS 1,"Limbauan, Jaryna O",STEM 12-B,M,0915-0945,G201,G,Hybrid,Physical,No,2,90,Science,G
+ORGANIZATION AND MANAGEMENT,"Clark, Eppie",ABM 11-E,F,0915-0945,G206,G,Hybrid,Physical,No,2,90,Business/ABM,G
+GENERAL PHYSICS 1-LABORATORY,"Toral, Kenneth",STEM 12-I1,M,0915-0945,J411,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Bonto, Aldrin",STEM 12-G2,W,0915-0945,J411,J,Hybrid,Physical,No,2,90,Science,J
+ORAL COMMUNICATION IN CONTEXT,"Dizon, Melba",HUMSS 11-A,W,0915-0945,L204,L,Hybrid,Physical,No,2,90,English/Communication,L
+HOMEROOM,"Santos, Jennifer A.",STEM 11-M,T,0915-0945,L211,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+CHRISTIAN LIVING 4,"Casanes, Dennis",STEM 12-N,H,0915-0945,Y304,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+HOMEROOM,"Laude, John Claver T.",HUMSS 12-A,M,0915-0945,Y304,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+PRACTICAL RESEARCH 2,"Mayol, Andres Philip",STEM 12-O,MH,0915-0945,Y306,Y,Hybrid,Physical,No,2,90,Research,Y
+CREATIVE WRITING,"Chua, Johannes",HUMSS 12-C1,H,0915-0945,Y402,Y,Hybrid,Physical,No,2,90,Literature,Y
+MEDIA AND INFORMATION LITERACY,"Aguiflor, Danica",ABM 12-B,T,0915-0945,Y405,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+CHRISTIAN LIVING 4,"Malbarosa, Jose Ma. Acardio",ABM 12-C,T,0915-0945,Y501,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Villaluz, Brian",ABM 12-E,MH,0915-0945,Y503,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+PRACTICAL RESEARCH 2,"Mapugay, Ma. Jayanne",ABM 12-G,M,0915-0945,Y505,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Dalisay, Alfred",SPT 11-A,M,0915-0945,Y604,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+STATISTICS AND PROBABILITIES,"Pacao, Shaine",STEM 12-M,TF,0915-0945,ZOOM003,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Parungao, Anita",STEM 11-H,H,0915-0945,ZOOM007,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Matulac, John Marc",STEM 11-A,H,0915-0945,ZOOM011,Z,Online,Virtual,No,2,90,Science,Z
+GENERAL MATHEMATICS,"Candelaria, Luisette",STEM 11-B,W,0915-0945,ZOOM016,Z,Online,Virtual,No,2,90,Math,Z
+HOMEROOM,"Torres, Myrla",STEM 12-I,T,0915-1045,G-207,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+PRACTICAL RESEARCH 2,"Pamaos, Angela Mae",ADT 12-A,MH,0915-1045,G101,G,Hybrid,Physical,No,2,90,Research,G
+CHRISTIAN LIVING 4,"Rosales, John Mark",ADT 12-A,W,0915-1045,G101,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+GENERAL PHYSICS 1,"Limbauan, Jaryna O",STEM 12-B,H,0915-1045,G201,G,Hybrid,Physical,No,2,90,Science,G
+ORGANIZATION AND MANAGEMENT,"Ang, Charisse Jollins",ABM 11-C,F,0915-1045,G204,G,Hybrid,Physical,No,2,90,Business/ABM,G
+GENERAL PHYSICS 1,"Inocencio, Eric",STEM 12-G,T,0915-1045,G205,G,Hybrid,Physical,No,2,90,Science,G
+ORAL COMMUNICATION IN CONTEXT,"Perez, Candice",ABM 11-G,T,0915-1045,G208,G,Hybrid,Physical,No,2,90,English/Communication,G
+CHRISTIAN LIVING 4,"Samson, Paul Vincent",STEM 12-K,F,0915-1045,G209,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+GENERAL PHYSICS 1-LABORATORY,"Fajardo, Raiseth",STEM 12-C1,TF,0915-1045,J404,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Fajardo, Raiseth",STEM 12-C2,MH,0915-1045,J410,J,Hybrid,Physical,No,2,90,Science,J
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Dimaculangan, Arvy / Tolentino, Gabriel",ADT 11-B,TF,0915-1045,L228,L,Hybrid,Physical,No,2,90,Arts/Design,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cheng, Charibeth",STEM 11-N,T,0915-1045,L228,L,Hybrid,Physical,No,2,90,Research,L
+CREATIVE WRITING,"Nunez, Ana Margarita",HUMSS 12-A1,F,0915-1045,Y304,Y,Hybrid,Physical,No,2,90,Literature,Y
+CHRISTIAN LIVING 4,"Eballo, Mia",HUMSS 12-B,F,0915-1045,Y306,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+APPLIED ECONOMICS,"Ocampo Tan, Michelle Brendy",ABM 12-C,H,0915-1045,Y501,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+PRACTICAL RESEARCH 2,"Palabrica, Jose Maria",ABM 12-C,F,0915-1045,Y501,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Purpura, Jeanne",STEM 11-D,MH,0915-1045,Y502,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+APPLIED ECONOMICS,"Maranon, Christine Ann",ABM 12-D,TF,0915-1045,Y502,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+HOMEROOM,"Saron, Gracelyn D.",STEM 11-D,W,0915-1045,Y502,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+BUSINESS FINANCE,"Golamco, Angelina",ABM 12-G,MH,0915-1045,Y505,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+SPORTS OFFICIATING AND ACTIVITY MANAGEMENT,"Bedia, Noel",SPT 12-A,W,0915-1045,Y606,Y,Hybrid,Physical,No,2,90,PE/Health,Y
+STATISTICS AND PROBABILITIES,"Candelaria, Luisette",SPT 12-A,TF,0915-1045,ZOOM003,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Reyes, Maria Angeli",ABM 11-H,TF,0915-1045,ZOOM010,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Morales, John Vincent",HUMSS 11-C,W,0915-1045,ZOOM011,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL PHYSICS 1-LABORATORY,"Alcantara, Norberto",STEM 12-E2,TF,0930-1000,A101,A,Hybrid,Physical,No,2,90,Science,A
+PHYSICAL EDUCATION AND HEALTH 4,"Santos, Russell",STEM 12-C,W,0930-1000,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 3,"Tubilleja, Renzo Luigi",ABM 11-G,M,0930-1000,E7B,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 3,"Flores, Carlo",ABM 11-E,W,0930-1000,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+HOMEROOM,"Olo, Marial Grace R.",STEM 12-H,M,0930-1000,G-206,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+GENERAL PHYSICS 1,"Limbauan, Jaryna O",STEM 12-A,T,0930-1000,G203,G,Hybrid,Physical,No,2,90,Science,G
+CHRISTIAN LIVING 4,"Mansukhani, Gansham",STEM 12-G,MH,0930-1000,G205,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+HOMEROOM,"Pamaos, Angela Mae A.",STEM 11-I,H,0930-1000,L204,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Belo, Lawrence",STEM 11-K,F,0930-1000,L209,L,Hybrid,Physical,No,2,90,Research,L
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Olo, Marial Grace",HUMSS 11-C,M,0930-1000,L209,L,Hybrid,Physical,No,2,90,Arts/Design,L
+ORAL COMMUNICATION IN CONTEXT,"Dizon, Melba",ADT 11-B,MH,0930-1000,L228,L,Hybrid,Physical,No,2,90,English/Communication,L
+21ST CENTURY LITERATURE FROM THE PHILIPPINES AND THE WORLD,"Atalia, Eros",ABM 11-I,T,0930-1000,V502,V,Hybrid,Physical,No,2,90,Literature,V
+PRACTICAL RESEARCH 2,"Zafra, Reynelle Bren",STEM 12-N,M,0930-1000,Y304,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Miranda, Janeson M.",STEM 12-N,W,0930-1000,Y304,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+CREATIVE WRITING,"Chua, Johannes",HUMSS 12-C1,T,0930-1000,Y402,Y,Hybrid,Physical,No,2,90,Literature,Y
+PRACTICAL RESEARCH 2,Cyrill Escolano <cyrill.escolano@dlsu.edu.ph>,HUMSS 12-D,W,0930-1000,Y403,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Purpura, Jeanne",STEM 11-D,H,0930-1000,Y502,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+MEDIA INFORMATION AND LITERACY,"Dalisay, Alfred",SPT 12-A,TF,0930-1000,Y606,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+HOMEROOM,"Jimenez, Criselda R.",SPT 12-A,H,0930-1000,Y606,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+GENERAL MATHEMATICS,"Candelaria, Luisette",STEM 11-B,F,0930-1000,ZOOM003,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Morales, John Vincent",HUMSS 11-D,M,0930-1000,ZOOM020,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL PHYSICS 1-LABORATORY,"Roquel, Kritel Ian",STEM 12-D2,F,0945-1015,A101,A,Hybrid,Physical,No,2,90,Science,A
+PRACTICAL RESEARCH 2,"Alberto, Angelo",STEM 12-B,M,0945-1015,G102,G,Hybrid,Physical,No,2,90,Research,G
+PRACTICAL RESEARCH 2,"Tan, Christian",STEM 12-C,T,0945-1015,G103,G,Hybrid,Physical,No,2,90,Research,G
+ORGANIZATION AND MANAGEMENT,"Betita, Rene",ABM 11-G,W,0945-1015,G208,G,Hybrid,Physical,No,2,90,Business/ABM,G
+ORAL COMMUNICATION IN CONTEXT,"Perlas, Ricalyn",STEM 11-I,H,0945-1015,L204,L,Hybrid,Physical,No,2,90,English/Communication,L
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Espejo, Lance Isaac F",HUMSS 11-A,M,0945-1015,L204,L,Hybrid,Physical,No,2,90,Arts/Design,L
+ORAL COMMUNICATION IN CONTEXT,"Flores, Gene",STEM 11-N,W,0945-1015,L228,L,Hybrid,Physical,No,2,90,English/Communication,L
+21ST CENTURY LITERATURE FROM THE PHILIPPINES AND THE WORLD,"Atalia, Eros",ABM 11-J,TF,0945-1015,V503,V,Hybrid,Physical,No,2,90,Literature,V
+PRACTICAL RESEARCH 2,"Choi, Angelo Earvin S.",STEM 12-S,F,0945-1015,V503,V,Hybrid,Physical,No,2,90,Research,V
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTVMA-2,"Ferrer, Jihan Marie",T-ADTVMA-2,F,0945-1015,Y303,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Felicilda, Joshua",ADT 11-A,M,0945-1015,Y303,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Miraflores, Edna",ADT 11-A,W,0945-1015,Y303,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+MEDIA INFORMATION AND LITERACY,"Tan, Lindsey",HUMSS 12-D,MH,0945-1015,Y403,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+"COMMUNITY, ENGAGEMENT,SOLIDARITY AND CITIZENSHIP","Unson, Cesar",HUMSS 12-D,T,0945-1015,Y403,Y,Hybrid,Physical,No,2,90,Social Studies,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Umlas, Christian",STEM 11-D,T,0945-1015,Y502,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Marcial, Joshua R.",STEM 11-F,MH,0945-1015,Y504,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+ORAL COMMUNICATION IN CONTEXT,"Perlas, Ricalyn",STEM 11-H,TF,0945-1015,Y506,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+PRACTICAL RESEARCH 2,"Limson, Brian",ABM 12-I,M,0945-1015,Y604,Y,Hybrid,Physical,No,2,90,Research,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Baluran, Fe Violeta",ABM 12-I,W,0945-1015,Y604,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+PRACTICAL RESEARCH 2,"Limson, Brian",ABM 12-J,T,0945-1015,Y606,Y,Hybrid,Physical,No,2,90,Research,Y
+MEDIA INFORMATION AND LITERACY,"Dalisay, Alfred",SPT 12-A,F,0945-1015,Y606,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+GENERAL MATHEMATICS,"Razon, Luis F.",STEM 11-M,T,0945-1015,ZOOM003,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Cabrera, Emil John",STEM 11-D,T,0945-1015,ZOOM012,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Roces, Susan A.",STEM 11-J,H,0945-1015,ZOOM015,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Briones, Richard",STEM 11-F,F,0945-1015,ZOOM020,Z,Online,Virtual,No,2,90,Math,Z
+HOMEROOM,"Cacal, Ralph Anthony C.",STEM 12-C,TF,1000-1200,G103,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+PRACTICAL RESEARCH 2,"Rodulfo, Flordeliza",STEM 12-G,H,1000-1200,G205,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL PHYSICS 1,"Natividad, Michelle",STEM 12-I,T,1000-1200,G207,G,Hybrid,Physical,No,2,90,Science,G
+GENERAL CHEMISTRY 2,"Matulac, John Marc",STEM 12-J,MH,1000-1200,G208,G,Hybrid,Physical,No,2,90,Science,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Reyes, Arvin",STEM 12-J,MH,1000-1200,G302 A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Villanueva, Ren Mark",STEM 12-J2,F,1000-1200,J410,J,Hybrid,Physical,No,2,90,Science,J
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Choi, Angelo Earvin S.",HUMSS 11-A,W,1000-1200,L204,L,Hybrid,Physical,No,2,90,Research,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"De Guzman, Billy",HUMSS 11-B,W,1000-1200,L208,L,Hybrid,Physical,No,2,90,Research,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cheng, Charibeth",STEM 11-M,TF,1000-1200,L211,L,Hybrid,Physical,No,2,90,Research,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Alcantara, Norberto",HUMSS 11-E,T,1000-1200,L211,L,Hybrid,Physical,No,2,90,Research,L
+PRACTICAL RESEARCH 2,"Cheng, Charibeth",HUMSS 12-A,M,1000-1200,Y304,Y,Hybrid,Physical,No,2,90,Research,Y
+CHRISTIAN LIVING 4,"Garganta,Yancy",ABM 12-D,TF,1000-1200,Y502,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Villaluz, Brian",ABM 12-E,W,1000-1200,Y503,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+CHRISTIAN LIVING 4,"Buencibello, Joenel",ABM 12-H,MH,1000-1200,Y506,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"Seumal, Anthony",ABM 12-H,MH,1000-1200,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"Rivera, Pauline",ABM 12-D,M,1000-1200,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+GENERAL MATHEMATICS,"Reyes, Maria Angeli",ABM 11-H,MH,1000-1200,ZOOM006,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Candellaria, Luisette",ABM 11-F,H,1000-1200,ZOOM007,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Jimenez, Criselda",HUMSS 11-B,H,1000-1200,ZOOM009,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Razon, Luis F.",STEM 11-L,H,1000-1200,ZOOM010,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Hernandez, Alana Margarita",STEM 11-I,W,1000-1200,ZOOM016,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Candellaria, Luisette",ABM 11-G,TF,1000-1200,ZOOM021,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 3,"Flores, Carlo",ABM 11-F,T,1015-1045,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+LEADERSHIP AND MANAGEMENT IN DIFFERENT ARTS FIELD 1,"Cacal, Ralph / Cabatingan, Camille",ADT 12-A,F,1015-1045,G101,G,Hybrid,Physical,No,2,90,Arts/Design,G
+PRACTICAL RESEARCH 2,"Go, Stella P.",STEM 12-D,M,1015-1045,G201,G,Hybrid,Physical,No,2,90,Research,G
+CHRISTIAN LIVING 4,"Yogyo-Alonzo, Leah",STEM 12-D,W,1015-1045,G201,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+PRACTICAL RESEARCH 2,"Rodulfo, Flordeliza",STEM 12-H,TF,1015-1045,G206,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL CHEMISTRY 2,"Moreno, Joaquin",STEM 12-I,H,1015-1045,G207,G,Hybrid,Physical,No,2,90,Science,G
+ORAL COMMUNICATION IN CONTEXT,"Go, Joanna",ABM 11-H,W,1015-1045,G209,G,Hybrid,Physical,No,2,90,English/Communication,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Tighe, Edward",STEM 12-G,H,1015-1045,G306A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Alcantara, Norberto",STEM 12-F1,M,1015-1045,J404,J,Hybrid,Physical,No,2,90,Science,J
+ORAL COMMUNICATION IN CONTEXT,"Dizon, Melba",HUMSS 11-A,T,1015-1045,L204,L,Hybrid,Physical,No,2,90,English/Communication,L
+ORAL COMMUNICATION IN CONTEXT,"Acala, Jefferson",STEM 11-J,T,1015-1045,L208,L,Hybrid,Physical,No,2,90,English/Communication,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cheng, Charibeth",HUMSS 11-C,M,1015-1045,L209,L,Hybrid,Physical,No,2,90,Research,L
+CHRISTIAN LIVING 1,"Domingo, Rosalia",STEM 11-N,MH,1015-1045,L228,L,Face-to-Face,Physical,No,2,90,Social Studies,L
+CREATIVE INDUSTRIES 1 APPLIED ARTS DESIGN,"Diolazo, Justin Ray S",ADT 11-B,T,1015-1045,L228,L,Hybrid,Physical,No,2,90,Arts/Design,L
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTCWR-1,"Diolazo, Justin Ray S",T-ADTCWR-1,H,1015-1045,V502,V,Hybrid,Physical,No,2,90,Arts/Design,V
+ORGANIZATION AND MANAGEMENT,"Villamil, Winfred",ABM 11-J,TF,1015-1045,V503,V,Hybrid,Physical,No,2,90,Business/ABM,V
+PRACTICAL RESEARCH 2,"Zafra, Reynelle Bren",STEM 12-N,W,1015-1045,Y304,Y,Hybrid,Physical,No,2,90,Research,Y
+CREATIVE WRITING,"Gojo-Cruz, Genaro",HUMSS 12-B1,MH,1015-1045,Y306,Y,Hybrid,Physical,No,2,90,Literature,Y
+PRACTICAL RESEARCH 2,"Azcarraga, Judith",ABM 12-F,H,1015-1045,Y504,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Sioson, Ivory",STEM 11-G,W,1015-1045,Y505,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Marcial, Joshua",SPT 11-A,TF,1015-1045,Y604,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+GENERAL MATHEMATICS,"Cruz, Eduardo",HUMSS 11-A,M,1015-1045,ZOOM002,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Roces, Susan A.",STEM 11-N,M,1015-1045,ZOOM006,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Razon, Luis F.",STEM 11-L,M,1015-1045,ZOOM013,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Tabuloc, Maria Cristina",ADT 11-A,T,1015-1045,ZOOM017,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Cabanas, Al John",STEM 11-J,H,1015-1045,ZOOM021,Z,Online,Virtual,No,2,90,Science,Z
+GENERAL PHYSICS 1-LABORATORY,"Alcantara, Norberto",STEM 12-E2,W,1100-1130,A101,A,Hybrid,Physical,No,2,90,Science,A
+HOMEROOM,"Torres, Myrla",STEM 12-L,W,1100-1130,G-211,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTDNC-1,"Diolazo, Justin Ray",T-ADTDNC-1,F,1100-1130,G102,G,Hybrid,Physical,No,2,90,Arts/Design,G
+HOMEROOM,"Cacal, Ralph Anthony C.",STEM 12-C,M,1100-1130,G103,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+LEADERSHIP AND MANAGEMENT IN DIFFERENT ARTS FIELD 1,"Albao, Bluelean",ADT 12-C,W,1100-1130,G103,G,Hybrid,Physical,No,2,90,Arts/Design,G
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTVMA-1,"Olo, Marial Grace",T-ADTVMA-1,MH,1100-1130,G204,G,Hybrid,Physical,No,2,90,Arts/Design,G
+CHRISTIAN LIVING 4,"Enriquez, Weegee",STEM 12-I,T,1100-1130,G207,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+ORGANIZATION AND MANAGEMENT,"Betita, Rene",ABM 11-G,H,1100-1130,G208,G,Hybrid,Physical,No,2,90,Business/ABM,G
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"De Guzman, Billy",HUMSS 11-D,M,1100-1130,L210,L,Hybrid,Physical,No,2,90,Research,L
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Buso, Nelso Jr.",HUMSS 11-E,TF,1100-1130,L211,L,Hybrid,Physical,No,2,90,Arts/Design,L
+HOMEROOM,"Santos, Jennifer A.",STEM 11-N,W,1100-1130,L228,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+"COMMUNITY, ENGAGEMENT,SOLIDARITY AND CITIZENSHIP","Unson, Cesar",HUMSS 12-C,M,1100-1130,Y402,Y,Hybrid,Physical,No,2,90,Social Studies,Y
+HOMEROOM,"Perlas, Ricalyn A.",STEM 12-Q,F,1100-1130,Y403,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+CREATIVE WRITING,"Gojo-Cruz, Genaro",HUMSS 12-B2,H,1100-1130,Y501,Y,Hybrid,Physical,No,2,90,Literature,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Velasco, Elsie",ABM 12-F,W,1100-1130,Y504,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Baluran, Fe Violeta",ABM 12-I,MH,1100-1130,Y604,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+SPORTS OFFICIATING AND ACTIVITY MANAGEMENT,"Bedia, Noel",SPT 12-A,F,1100-1130,Y606,Y,Hybrid,Physical,No,2,90,PE/Health,Y
+GENERAL MATHEMATICS,"Ponsones, Rigor",ABM 11-C,M,1100-1130,ZOOM003,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Carpio, Avegail",ABM 11-A,M,1100-1130,ZOOM016,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Azucena, Jemmar",STEM 12-J,T,1100-1230,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Azucena, Jemmar",STEM 12-J,H,1100-1230,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Fabroa, Kate",STEM 12-E,M,1100-1230,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Azucena, Jemmar",STEM 12-K,W,1100-1230,E7T,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+HOMEROOM,"Azucena, Jemmar T.",STEM 12-D,F,1100-1230,G-201,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+LEADERSHIP AND MANAGEMENT IN DIFFERENT ARTS FIELD 1,"Albao, Bluelean",ADT 12-B,T,1100-1230,G102,G,Hybrid,Physical,No,2,90,Arts/Design,G
+DISASTER READINESS AND RISK REDUCTION,"Maglaya, Archie",STEM 12-B,M,1100-1230,G102,G,Hybrid,Physical,No,2,90,Science,G
+MEDIA INFORMATION AND LITERACY,"Garcia, Miguel",ADT 12-C,H,1100-1230,G103,G,Hybrid,Physical,No,2,90,English/Communication,G
+GENERAL PHYSICS 1,"Recuenco, Frances C.",STEM 12-D,TF,1100-1230,G201,G,Hybrid,Physical,No,2,90,Science,G
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTTAR-1,"Lacsama, Virginia / Buted, Jerilou",T-ADTTAR-1,H,1100-1230,G201,G,Hybrid,Physical,No,2,90,Arts/Design,G
+CHRISTIAN LIVING 4,"Yogyo-Alonzo, Leah",STEM 12-E,TF,1100-1230,G203,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+PRACTICAL RESEARCH 2,"Go, Stella P.",STEM 12-E,H,1100-1230,G203,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL PHYSICS 1,"Limbauan, Jaryna O",STEM 12-A,W,1100-1230,G203,G,Hybrid,Physical,No,2,90,Science,G
+GENERAL PHYSICS 1,"Recuenco, Frances C.",STEM 12-C,H,1100-1230,G206,G,Hybrid,Physical,No,2,90,Science,G
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTTAR-1,"Cabatingan, Camille / Cacal, Ralph",T-ADTTAR-1,W,1100-1230,G206,G,Hybrid,Physical,No,2,90,Arts/Design,G
+GENERAL PHYSICS 1,"Natividad, Michelle",STEM 12-J,M,1100-1230,G208,G,Hybrid,Physical,No,2,90,Science,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Tighe, Edward",STEM 12-H,H,1100-1230,G306A&B,G,Hybrid,Physical,No,2,90,Other,G
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Tolentino, Christian",HUMSS 11-B,TF,1100-1230,L208,L,Hybrid,Physical,No,2,90,Arts/Design,L
+ORAL COMMUNICATION IN CONTEXT,"Villacorta, Dennis",HUMSS 11-E,W,1100-1230,L211,L,Hybrid,Physical,No,2,90,English/Communication,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Felicilda, Joshua",ADT 11-B,T,1100-1230,L228,L,Hybrid,Physical,No,2,90,Research,L
+HOMEROOM,"Santos, Jennifer A.",STEM 11-N,H,1100-1230,L228,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+CREATIVE INDUSTRIES 1 APPLIED ARTS DESIGN,"Diolazo, Justin Ray S",ADT 11-B,W,1100-1230,L228,L,Hybrid,Physical,No,2,90,Arts/Design,L
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Tabora, Liandro",HUMSS 11-D,H,1100-1230,L335,L,Hybrid,Physical,No,2,90,Other,L
+MEDIA INFORMATION AND LITERACY,"Hugo, Alleona",HUMSS 12-A,TF,1100-1230,Y304,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+PRACTICAL RESEARCH 2,"Salvador, Mark Anthony",STEM 12-P,MH,1100-1230,Y402,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Jimenez, Criselda R.",HUMSS 12-D,F,1100-1230,Y403,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+CHRISTIAN LIVING 4,"Malbarosa, Jose Ma. Acardio",ABM 12-A,T,1100-1230,Y404,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+CREATIVE WRITING,"Nunez, Ana Margarita",HUMSS 12-A2,MH,1100-1230,Y405,Y,Hybrid,Physical,No,2,90,Literature,Y
+ORAL COMMUNICATION IN CONTEXT,"Purpura, Jeanne",STEM 11-E,T,1100-1230,Y503,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Lim, Cristina Teresa",STEM 11-F,MH,1100-1230,Y504,Y,Hybrid,Physical,No,2,90,Research,Y
+PRACTICAL RESEARCH 2,"Mapugay, Ma. Jayanne",ABM 12-G,T,1100-1230,Y505,Y,Hybrid,Physical,No,2,90,Research,Y
+FUNDAMENTALS OF COACHING,"Perez, Joseph",SPT 12-A,H,1100-1230,Y606,Y,Hybrid,Physical,No,2,90,Fundamentals,Y
+STATISTICS AND PROBABILITIES,"Pacao, Shaine",STEM 12-M,F,1100-1230,ZOOM002,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Cabrera, Emil John",STEM 11-C,W,1100-1230,ZOOM004,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Garcia, Mark Anthony",SPT 11-A,TF,1100-1230,ZOOM016,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Inocencio, eric",STEM 11-L,F,1100-1230,ZOOM019,Z,Online,Virtual,No,2,90,Science,Z
+GENERAL MATHEMATICS,"Hernandez, Alana Margarita",STEM 11-G,T,1100-1230,ZOOM021,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Laude, Claver",STEM 12-R,M,1100-1300,E7T,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Mendoza, Lourdes",STEM 12-D,M,1100-1300,G302 A&B,G,Hybrid,Physical,No,2,90,Other,G
+ORAL COMMUNICATION IN CONTEXT,"Acala, Jefferson",STEM 11-K,T,1100-1300,L209,L,Hybrid,Physical,No,2,90,English/Communication,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"De Guzman, Billy",HUMSS 11-D,H,1100-1300,L210,L,Hybrid,Physical,No,2,90,Research,L
+HOMEROOM,"Buted, Jerilou A",STEM 11-L,W,1100-1300,L210,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Aguilar, Noah",HUMSS 11-B,H,1100-1300,L335,L,Hybrid,Physical,No,2,90,Other,L
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTVMA-2,"Ferrer, Jihan Marie",T-ADTVMA-2,W,1100-1300,Y303,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+DISCIPLINE AND IDEAS IN THE APPLIED SOCIAL SCIENCE,"Caras, Jamaica",HUMSS 12-C,TF,1100-1300,Y402,Y,Hybrid,Physical,No,2,90,Science,Y
+CHRISTIAN LIVING 4,"Dillena, Kennith",STEM 12-P,W,1100-1300,Y402,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+DISCIPLINE AND IDEAS IN THE APPLIED SOCIAL SCIENCE,"Caras, Jamaica",HUMSS 12-D,H,1100-1300,Y403,Y,Hybrid,Physical,No,2,90,Science,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"Seumal, Anthony",ABM 12-J,TF,1100-1300,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Alcantara, Norberto",SPT 11-A,M,1100-1300,Y604,Y,Hybrid,Physical,No,2,90,Research,Y
+PRACTICAL RESEARCH 2,Cyrill Escolano <cyrill.escolano@dlsu.edu.ph>,SPT 12-A,H,1100-1300,Y606,Y,Hybrid,Physical,No,2,90,Research,Y
+GENERAL MATHEMATICS,"Roces, Susan A.",STEM 11-J,TF,1100-1300,ZOOM004,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Acheampong, Joan",STEM 12-M,H,1145-1215,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Garvez, Allen",STEM 12-F,MH,1145-1215,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Bedia, Noel",STEM 12-S,F,1145-1215,E7T,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 3,"Flores, Carlo",ABM 11-F,H,1145-1215,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+CHRISTIAN LIVING 4,"Villacorta, Ernest",ADT 12-C,TF,1145-1215,G103,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+ORGANIZATION AND MANAGEMENT,"Nario, Jem Marie",ABM 11-A,TF,1145-1215,G201,G,Hybrid,Physical,No,2,90,Business/ABM,G
+DISASTER READINESS AND RISK REDUCTION,"Labog, Michael John",STEM 12-E,T,1145-1215,G203,G,Hybrid,Physical,No,2,90,Science,G
+ORGANIZATION AND MANAGEMENT,"Clark, Eppie",ABM 11-D,H,1145-1215,G205,G,Hybrid,Physical,No,2,90,Business/ABM,G
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTTAR-1,"Cabatingan, Camille / Cacal, Ralph",T-ADTTAR-1,T,1145-1215,G206,G,Hybrid,Physical,No,2,90,Arts/Design,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Sipin, Glenn",STEM 12-C,TF,1145-1215,G302A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Querubin, Florabelle",STEM 12-F2,F,1145-1215,J410,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Bonto, Aldrin",STEM 12-H2,F,1145-1215,J411,J,Hybrid,Physical,No,2,90,Science,J
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cheng, Charibeth",HUMSS 11-C,MH,1145-1215,L209,L,Hybrid,Physical,No,2,90,Research,L
+ORAL COMMUNICATION IN CONTEXT,"Evangelista, Tyrone",STEM 11-L,MH,1145-1215,L210,L,Hybrid,Physical,No,2,90,English/Communication,L
+CHRISTIAN LIVING 4,"Mobilla, Joy",STEM 12-S,W,1145-1215,V503,V,Face-to-Face,Physical,No,2,90,Social Studies,V
+"COMMUNITY, ENGAGEMENT,SOLIDARITY AND CITIZENSHIP","Pilapil, Charlene",HUMSS 12-A,T,1145-1215,Y304,Y,Hybrid,Physical,No,2,90,Social Studies,Y
+CHRISTIAN LIVING 4,"Casanes, Dennis",STEM 12-O,M,1145-1215,Y306,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+PRACTICAL RESEARCH 2,"Gallego, Roman",HUMSS 12-C,TF,1145-1215,Y402,Y,Hybrid,Physical,No,2,90,Research,Y
+PRACTICAL RESEARCH 2,"Zafra, Reynelle Bren",STEM 12-Q,MH,1145-1215,Y403,Y,Hybrid,Physical,No,2,90,Research,Y
+CREATIVE WRITING,"Nunez, Ana Margarita",HUMSS 12-A2,M,1145-1215,Y405,Y,Hybrid,Physical,No,2,90,Literature,Y
+ORAL COMMUNICATION IN CONTEXT,"Purpura, Jeanne",STEM 11-E,F,1145-1215,Y503,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+CHRISTIAN LIVING 4,"Dolor, Ramon Rafael",ABM 12-F,MH,1145-1215,Y504,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+BUSINESS FINANCE,"Baylon, Dioscoro",ABM 12-F,T,1145-1215,Y504,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+BUSINESS FINANCE,"Baylon, Dioscoro",ABM 12-F,W,1145-1215,Y504,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+PRACTICAL RESEARCH 2,"Azcarraga, Judith",ABM 12-H,T,1145-1215,Y506,Y,Hybrid,Physical,No,2,90,Research,Y
+CHRISTIAN LIVING 4,"Buencibello, Joenel",ABM 12-H,W,1145-1215,Y506,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+PRACTICAL RESEARCH 2,"Limson, Brian",ABM 12-J,F,1145-1215,Y606,Y,Hybrid,Physical,No,2,90,Research,Y
+BUSINESS FINANCE,"Nario, Jem Marie",ABM 12-J,M,1145-1215,Y606,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+GENERAL MATHEMATICS,"Morales, John Vincent",HUMSS 11-D,H,1145-1215,ZOOM001,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Elviña, Mikka Angela",STEM 11-I,M,1145-1215,ZOOM003,Z,Online,Virtual,No,2,90,Science,Z
+GENERAL MATHEMATICS,"Tabuloc, Maria Cristina",ADT 11-A,TF,1145-1215,ZOOM004,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Ponsones, Rigor",ABM 11-C,T,1145-1215,ZOOM021,Z,Online,Virtual,No,2,90,Math,Z
+STATISTICS AND PROBABILITIES,"Pacao, Shaine",STEM 12-N,H,1145-1215,ZOOM021,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Santos, Russell",STEM 12-C,TF,1200-1230,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Fabroa, Kate",STEM 12-D,T,1200-1230,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PRACTICAL RESEARCH 2,"Rodulfo, Flordeliza",STEM 12-G,TF,1200-1230,G205,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL PHYSICS 1,"Inocencio, Eric",STEM 12-G,W,1200-1230,G205,G,Hybrid,Physical,No,2,90,Science,G
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTVMA-1,"Cabatingan, Camille / Cacal, Ralph",T-ADTVMA-1,H,1200-1230,G207,G,Hybrid,Physical,No,2,90,Arts/Design,G
+PRACTICAL RESEARCH 2,"Lubrico, Jim Benedick",STEM 12-J,MH,1200-1230,G208,G,Hybrid,Physical,No,2,90,Research,G
+ORGANIZATION AND MANAGEMENT,"Delantar, Edna",ABM 11-H,M,1200-1230,G209,G,Hybrid,Physical,No,2,90,Business/ABM,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Mendoza, Lourdes",STEM 12-E,F,1200-1230,G306A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Abrigo, Irish",STEM 12-A1,T,1200-1230,J411,J,Hybrid,Physical,No,2,90,Science,J
+ORAL COMMUNICATION IN CONTEXT,"Acala, Jefferson",STEM 11-K,M,1200-1230,L209,L,Hybrid,Physical,No,2,90,English/Communication,L
+ORAL COMMUNICATION IN CONTEXT,"Evangelista, Tyrone",STEM 11-M,F,1200-1230,L211,L,Hybrid,Physical,No,2,90,English/Communication,L
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTVMA-3,"Cacal, Ralph / Cabatingan, Camille",T-ADTVMA-3,TF,1200-1230,L228,L,Hybrid,Physical,No,2,90,Arts/Design,L
+CHRISTIAN LIVING 4,"Mobilla, Joy",STEM 12-S,M,1200-1230,V503,V,Face-to-Face,Physical,No,2,90,Social Studies,V
+"COMMUNITY, ENGAGEMENT,SOLIDARITY AND CITIZENSHIP","Pilapil, Charlene",HUMSS 12-B,M,1200-1230,Y306,Y,Hybrid,Physical,No,2,90,Social Studies,Y
+HOMEROOM,"Buencibello, Joenel B.",HUMSS 12-C,MH,1200-1230,Y402,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+PRACTICAL RESEARCH 2,"Salvador, Mark Anthony",STEM 12-P,W,1200-1230,Y402,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Villacorta, Dennis",STEM 11-A,H,1200-1230,Y404,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+MEDIA AND INFORMATION LITERACY,"Aguiflor, Danica",ABM 12-B,W,1200-1230,Y405,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+CHRISTIAN LIVING 4,"Malbarosa, Jose Ma. Acardio",ABM 12-C,MH,1200-1230,Y501,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+APPLIED ECONOMICS,"Ocampo Tan, Michelle Brendy",ABM 12-C,TF,1200-1230,Y501,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTVMA-2,"Albao, Blulean T.",T-ADTVMA-2,MH,1200-1230,Y502,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+HOMEROOM,"Marcial, Joshua R.",STEM 11-E,W,1200-1230,Y503,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+PRACTICAL RESEARCH 2,"Azcarraga, Judith",ABM 12-F,W,1200-1230,Y504,Y,Hybrid,Physical,No,2,90,Research,Y
+CHRISTIAN LIVING 4,"Dolor, Ramon Rafael",ABM 12-G,W,1200-1230,Y505,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"RIVERA, JOANNA PAULINE",ABM 12-G,H,1200-1230,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+CHRISTIAN LIVING 4,"Clamor, Wilfred Louie",SPT 12-A,TF,1200-1230,Y606,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+FUNDAMENTALS OF COACHING,"Perez, Joseph",SPT 12-A,W,1200-1230,Y606,Y,Hybrid,Physical,No,2,90,Fundamentals,Y
+STATISTICS AND PROBABILITIES,"Tabuloc, Maria Cristina",STEM 12-P,T,1200-1230,ZOOM013,Z,Online,Virtual,No,2,90,Math,Z
+CHRISTIAN LIVING 4,"Villacorta, Ernest",ADT 12-B,TF,1215-1245,G102,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+DISASTER READINESS AND RISK REDUCTION,"Ong, Russel",STEM 12-C,MH,1215-1245,G103,G,Hybrid,Physical,No,2,90,Science,G
+CHRISTIAN LIVING 4,"Mansukhani, Gansham",STEM 12-F,TF,1215-1245,G204,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+GENERAL PHYSICS 1,"Fabia, Jose Noel",STEM 12-F,M,1215-1245,G204,G,Hybrid,Physical,No,2,90,Science,G
+DISASTER READINESS AND RISK REDUCTION,"Duay, IC",STEM 12-J,W,1215-1245,G208,G,Hybrid,Physical,No,2,90,Science,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Reyes, Arvin",STEM 12-J,H,1215-1245,G302 A&B,G,Hybrid,Physical,No,2,90,Other,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Sipin, Glenn",STEM 12-C,H,1215-1245,G302A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Roquel, Kritel Ian",STEM 12-E1,TF,1215-1245,J404,J,Hybrid,Physical,No,2,90,Science,J
+ORAL COMMUNICATION IN CONTEXT,"Perlas, Ricalyn",STEM 11-I,W,1215-1245,L204,L,Hybrid,Physical,No,2,90,English/Communication,L
+HOMEROOM,"Buted, Jerilou A",STEM 11-K,M,1215-1245,L209,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cruz, Ruth Angelie",STEM 11-L,W,1215-1245,L210,L,Hybrid,Physical,No,2,90,Research,L
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTVMA-3,"Cacal, Ralph / Cabatingan, Camille",T-ADTVMA-3,F,1215-1245,L228,L,Hybrid,Physical,No,2,90,Arts/Design,L
+ORAL COMMUNICATION IN CONTEXT,"Dizon, Melba",ADT 11-B,M,1215-1245,L228,L,Hybrid,Physical,No,2,90,English/Communication,L
+ORGANIZATION AND MANAGEMENT,"Villamil, Winfred",ABM 11-J,H,1215-1245,V503,V,Hybrid,Physical,No,2,90,Business/ABM,V
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Tolentino, Christian",ADT 11-A,W,1215-1245,Y303,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+MEDIA INFORMATION AND LITERACY,"Hugo, Alleona",HUMSS 12-A,F,1215-1245,Y304,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+PRACTICAL RESEARCH 2,"Gallego, Roman",HUMSS 12-C,W,1215-1245,Y402,Y,Hybrid,Physical,No,2,90,Research,Y
+MEDIA AND INFORMATION LITERACY,"Flores, Gene",ABM 12-A,MH,1215-1245,Y404,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+CHRISTIAN LIVING 4,"Malbarosa, Jose Ma. Acardio",ABM 12-A,F,1215-1245,Y404,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+MEDIA AND INFORMATION LITERACY,"Rosales, Dynessa",ABM 12-D,T,1215-1245,Y502,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTVMA-2,"Albao, Blulean T.",T-ADTVMA-2,H,1215-1245,Y502,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+CHRISTIAN LIVING 4,"Garganta,Yancy",ABM 12-E,W,1215-1245,Y503,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Lim, Cristina Teresa",STEM 11-G,M,1215-1245,Y505,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Samson, Paul Vincent R.",STEM 11-H,MH,1215-1245,Y506,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+CHRISTIAN LIVING 4,"Buencibello, Joenel",ABM 12-I,H,1215-1245,Y604,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+GENERAL MATHEMATICS,"Briones, Richard",STEM 11-F,MH,1215-1245,ZOOM004,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Tresvalles, Regina",STEM 11-A,MH,1215-1245,ZOOM007,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Tabuloc, Maria Cristina",ABM 11-I,T,1215-1245,ZOOM007,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Elviña, Mikka Angela",STEM 11-I,H,1215-1245,ZOOM011,Z,Online,Virtual,No,2,90,Science,Z
+EARTH SCIENCE,"Cabanas, Al John",STEM 11-K,M,1215-1245,ZOOM021,Z,Online,Virtual,No,2,90,Science,Z
+LEADERSHIP AND MANAGEMENT IN DIFFERENT ARTS FIELD 1,"Cacal, Ralph / Cabatingan, Camille",ADT 12-A,TF,1245-1315,G101,G,Hybrid,Physical,No,2,90,Arts/Design,G
+DISASTER READINESS AND RISK REDUCTION,"Ong, Russel",STEM 12-C,F,1245-1315,G103,G,Hybrid,Physical,No,2,90,Science,G
+PRACTICAL RESEARCH 2,"Lubrico, Jim Benedick",STEM 12-F,T,1245-1315,G204,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL PHYSICS 1-LABORATORY,"Pucot, Jayson",STEM 12-B1,W,1245-1315,J411,J,Hybrid,Physical,No,2,90,Science,J
+HOMEROOM,"Santos, Jennifer A.",STEM 11-M,F,1245-1315,L211,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cheng, Charibeth",STEM 11-M,W,1245-1315,L211,L,Hybrid,Physical,No,2,90,Research,L
+HOMEROOM,"Perlas, Ricalyn A.",STEM 12-R,H,1245-1315,V502,V,Face-to-Face,Physical,No,2,90,Homeroom,V
+CHRISTIAN LIVING 4,"Casanes, Dennis",STEM 12-N,F,1245-1315,Y304,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+CHRISTIAN LIVING 4,"Casanes, Dennis",STEM 12-O,MH,1245-1315,Y306,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+PRACTICAL RESEARCH 2,"Zafra, Reynelle Bren",STEM 12-Q,H,1245-1315,Y403,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Go, Christian",STEM 11-C,MH,1245-1315,Y501,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+PRACTICAL RESEARCH 2,"Palabrica, Jose Maria",ABM 12-E,TF,1245-1315,Y503,Y,Hybrid,Physical,No,2,90,Research,Y
+APPLIED ECONOMICS,"Maranon, Christine Ann",ABM 12-E,T,1245-1315,Y503,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Umlas, Christian",STEM 11-E,H,1245-1315,Y503,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Sioson, Ivory",STEM 11-G,M,1245-1315,Y505,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+GENERAL MATHEMATICS,"Morales, John Vincent",HUMSS 11-C,MH,1245-1315,ZOOM004,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Tresvalles, Regina",STEM 11-A,TF,1245-1315,ZOOM004,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Magpantay, Hilbert",STEM 11-B,M,1245-1315,ZOOM009,Z,Online,Virtual,No,2,90,Science,Z
+PHYSICAL EDUCATION AND HEALTH 3,"Navarro, Joanna",ABM 11-I,H,1245-1415,E7B,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 3,"Navarro, Joanna",ABM 11-J,TF,1245-1415,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+HOMEROOM,"Azucena, Jemmar T.",STEM 12-F,TF,1245-1415,G-204,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTCWR-1,"Olo, Marial Grace",T-ADTCWR-1,F,1245-1415,G101,G,Hybrid,Physical,No,2,90,Arts/Design,G
+MEDIA INFORMATION AND LITERACY,"Garcia, Miguel",ADT 12-B,M,1245-1415,G102,G,Hybrid,Physical,No,2,90,English/Communication,G
+CHRISTIAN LIVING 4,"Villacorta, Ernest",ADT 12-C,F,1245-1415,G103,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+DISASTER READINESS AND RISK REDUCTION,"Duay, IC",STEM 12-I,MH,1245-1415,G207,G,Hybrid,Physical,No,2,90,Science,G
+CHRISTIAN LIVING 4,"Delocario, Martina Rose",STEM 12-L,T,1245-1415,G211,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Mendoza, Lourdes",STEM 12-D,MH,1245-1415,G302 A&B,G,Hybrid,Physical,No,2,90,Other,G
+ORAL COMMUNICATION IN CONTEXT,"Bensal, Edwina",HUMSS 11-C,H,1245-1415,L209,L,Hybrid,Physical,No,2,90,English/Communication,L
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Buso, Nelso Jr.",HUMSS 11-D,MH,1245-1415,L210,L,Hybrid,Physical,No,2,90,Arts/Design,L
+CHRISTIAN LIVING 1,"Domingo, Rosalia",STEM 11-M,H,1245-1415,L211,L,Face-to-Face,Physical,No,2,90,Social Studies,L
+ORAL COMMUNICATION IN CONTEXT,"Flores, Gene",STEM 11-N,MH,1245-1415,L228,L,Hybrid,Physical,No,2,90,English/Communication,L
+"COMMUNITY, ENGAGEMENT,SOLIDARITY AND CITIZENSHIP","Unson, Cesar",HUMSS 12-C,H,1245-1415,Y402,Y,Hybrid,Physical,No,2,90,Social Studies,Y
+MEDIA AND INFORMATION LITERACY,"Flores, Gene",ABM 12-A,T,1245-1415,Y404,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Garcia, Emmanuel V.",STEM 11-A,F,1245-1415,Y404,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Garganta, Lambert Yancy B.",STEM 11-B,MH,1245-1415,Y405,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+HOMEROOM,"Samson, Paul Vincent R.",STEM 11-G,T,1245-1415,Y505,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Baluran, Fe Violeta",ABM 12-H,MH,1245-1415,Y506,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+GENERAL MATHEMATICS,"Candellaria, Luisette",ABM 11-G,M,1245-1415,ZOOM001,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Parungao, Anita",STEM 11-K,MH,1245-1415,ZOOM013,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Cruz, Eduardo",ABM 11-J,F,1245-1415,ZOOM016,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Aquino, Marvin",STEM 12-P,TF,1245-1445,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Aquino, Marvin",STEM 12-P,T,1245-1445,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTCWR-1,"Olo, Marial Grace",T-ADTCWR-1,TF,1245-1445,G101,G,Hybrid,Physical,No,2,90,Arts/Design,G
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTMUS-1,"Diolazo, Justin Ray",T-ADTMUS-1,W,1245-1445,G103,G,Hybrid,Physical,No,2,90,Arts/Design,G
+DISASTER READINESS AND RISK REDUCTION,"Alfaro, Shelah",STEM 12-H,TF,1245-1445,G206,G,Hybrid,Physical,No,2,90,Science,G
+ORGANIZATION AND MANAGEMENT,"Clark, Eppie",ABM 11-E,M,1245-1445,G206,G,Hybrid,Physical,No,2,90,Business/ABM,G
+CHRISTIAN LIVING 4,"Enriquez, Weegee",STEM 12-H,W,1245-1445,G206,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+HOMEROOM,"Pamaos, Angela Mae A.",STEM 11-J,TF,1245-1445,L208,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+HOMEROOM,"Pamaos, Angela Mae A.",STEM 11-J,M,1245-1445,L208,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Olo, Marial Grace",HUMSS 11-C,F,1245-1445,L209,L,Hybrid,Physical,No,2,90,Arts/Design,L
+HOMEROOM,"Miranda, Janeson M.",STEM 12-N,MH,1245-1445,Y304,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+"COMMUNITY, ENGAGEMENT,SOLIDARITY AND CITIZENSHIP","Pilapil, Charlene",HUMSS 12-A,F,1245-1445,Y304,Y,Hybrid,Physical,No,2,90,Social Studies,Y
+"COMMUNITY, ENGAGEMENT,SOLIDARITY AND CITIZENSHIP","Pilapil, Charlene",HUMSS 12-B,H,1245-1445,Y306,Y,Hybrid,Physical,No,2,90,Social Studies,Y
+MEDIA INFORMATION AND LITERACY,"Tan, Lindsey",HUMSS 12-D,T,1245-1445,Y403,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+CREATIVE WRITING,"Guevarra, Mary Harmony",HUMSS 12-D1,F,1245-1445,Y403,Y,Hybrid,Physical,No,2,90,Literature,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Villaluz, Brian",ABM 12-D,T,1245-1445,Y502,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+PRACTICAL RESEARCH 2,"Azcarraga, Judith",ABM 12-D,F,1245-1445,Y502,Y,Hybrid,Physical,No,2,90,Research,Y
+MEDIA AND INFORMATION LITERACY,"Rosales, Dynessa",ABM 12-E,T,1245-1445,Y503,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"RIVERA, JOANNA PAULINE",ABM 12-F,M,1245-1445,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Baylon, Dioscoro",ABM 12-J,W,1245-1445,Y606,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+STATISTICS AND PROBABILITIES,"Tabuloc, Maria Cristina",STEM 12-P,M,1245-1445,ZOOM005,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Jimenez, Criselda",ADT 11-B,F,1245-1445,ZOOM011,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Cabanas, Al John",STEM 11-J,T,1245-1445,ZOOM021,Z,Online,Virtual,No,2,90,Science,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Fabroa, Kate",STEM 12-D,TF,1300-1330,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PRACTICAL RESEARCH 2,"Pamaos, Angela Mae",ADT 12-B,H,1300-1330,G102,G,Hybrid,Physical,No,2,90,Research,G
+ORGANIZATION AND MANAGEMENT,"Ang, Charisse Jollins",ABM 11-B,M,1300-1330,G203,G,Hybrid,Physical,No,2,90,Business/ABM,G
+DISASTER READINESS AND RISK REDUCTION,"Labog, Michael John",STEM 12-F,M,1300-1330,G204,G,Hybrid,Physical,No,2,90,Science,G
+PRACTICAL RESEARCH 2,"Lubrico, Jim Benedick",STEM 12-F,W,1300-1330,G204,G,Hybrid,Physical,No,2,90,Research,G
+CHRISTIAN LIVING 4,"Samson, Paul Vincent",STEM 12-J,F,1300-1330,G208,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Tighe, Edward",STEM 12-F,F,1300-1330,G306A&B,G,Hybrid,Physical,No,2,90,Other,G
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Tolentino, Christian",HUMSS 11-B,M,1300-1330,L208,L,Hybrid,Physical,No,2,90,Arts/Design,L
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Dimaculangan, Arvy / Tolentino, Gabriel",ADT 11-B,W,1300-1330,L228,L,Hybrid,Physical,No,2,90,Arts/Design,L
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTDNC-1,"Olo, Marial Grace",T-ADTDNC-1,F,1300-1330,V503,V,Hybrid,Physical,No,2,90,Arts/Design,V
+DISCIPLINE AND IDEAS IN THE APPLIED SOCIAL SCIENCE,"Go, Johnalyn",HUMSS 12-A,H,1300-1330,Y304,Y,Hybrid,Physical,No,2,90,Science,Y
+CHRISTIAN LIVING 4,"Eballo, Mia",HUMSS 12-B,TF,1300-1330,Y306,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+DISCIPLINE AND IDEAS IN THE APPLIED SOCIAL SCIENCE,"Go, Johnalyn",HUMSS 12-B,F,1300-1330,Y306,Y,Hybrid,Physical,No,2,90,Science,Y
+CHRISTIAN LIVING 4,"Dillena, Kennith",STEM 12-Q,MH,1300-1330,Y403,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+CHRISTIAN LIVING 4,"Clamor, Wilfred Louie",HUMSS 12-D,T,1300-1330,Y403,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+PRACTICAL RESEARCH 2,"Ong, Ethel",ABM 12-B,M,1300-1330,Y405,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Go, Christian",STEM 11-C,T,1300-1330,Y501,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+EARTH SCIENCE,"Inocencio, eric",STEM 11-M,MH,1300-1330,ZOOM004,Z,Online,Virtual,No,2,90,Science,Z
+EARTH SCIENCE,"Dela Cruz, Mannelyn",STEM 11-F,H,1300-1330,ZOOM004,Z,Online,Virtual,No,2,90,Science,Z
+GENERAL MATHEMATICS,"Carpio, Avegail",ABM 11-A,TF,1300-1330,ZOOM018,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Laude, Claver",STEM 12-Q,F,1300-1500,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Parco, Olga",STEM 12-H,M,1300-1500,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PRACTICAL RESEARCH 2,"Go, Stella P.",STEM 12-A,H,1300-1500,G101,G,Hybrid,Physical,No,2,90,Research,G
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTTAR-1,"Lacsama, Virginia / Buted, Jerilou",T-ADTTAR-1,W,1300-1500,G201,G,Hybrid,Physical,No,2,90,Arts/Design,G
+PRACTICAL RESEARCH 2,"Crisologo, Ma. Louise",STEM 12-L,TF,1300-1500,G211,G,Hybrid,Physical,No,2,90,Research,G
+ORAL COMMUNICATION IN CONTEXT,"Acala, Jefferson",STEM 11-J,M,1300-1500,L208,L,Hybrid,Physical,No,2,90,English/Communication,L
+ORAL COMMUNICATION IN CONTEXT,"Bensal, Edwina",HUMSS 11-D,MH,1300-1500,L210,L,Hybrid,Physical,No,2,90,English/Communication,L
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Aguilar, Noah",HUMSS 11-B,TF,1300-1500,L335,L,Hybrid,Physical,No,2,90,Other,L
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Tabora, Liandro",HUMSS 11-C,W,1300-1500,L335,L,Hybrid,Physical,No,2,90,Other,L
+DISCIPLINE AND IDEAS IN THE APPLIED SOCIAL SCIENCE,"Go, Johnalyn",HUMSS 12-B,T,1300-1500,Y306,Y,Hybrid,Physical,No,2,90,Science,Y
+MEDIA INFORMATION AND LITERACY,"Tan, Lindsey",HUMSS 12-C,W,1300-1500,Y402,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Garcia, Emmanuel V.",STEM 11-B,H,1300-1500,Y405,Y,Hybrid,Physical,No,2,90,Research,Y
+PRACTICAL RESEARCH 2,Cyrill Escolano <cyrill.escolano@dlsu.edu.ph>,SPT 12-A,TF,1300-1500,Y606,Y,Hybrid,Physical,No,2,90,Research,Y
+EARTH SCIENCE,"Magpantay, Hilbert",STEM 11-D,M,1300-1500,ZOOM007,Z,Online,Virtual,No,2,90,Science,Z
+GENERAL MATHEMATICS,"Jimenez, Criselda",HUMSS 11-B,TF,1300-1500,ZOOM012,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Inocencio, eric",STEM 11-L,TF,1300-1500,ZOOM014,Z,Online,Virtual,No,2,90,Science,Z
+EARTH SCIENCE,"Magpantay, Hilbert",STEM 11-E,W,1300-1500,ZOOM015,Z,Online,Virtual,No,2,90,Science,Z
+STATISTICS AND PROBABILITIES,"Acelajado, Maxima",STEM 12-Q,F,1300-1500,ZOOM018,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Aquino, Marvin",STEM 12-O,W,1330-1400,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Acheampong, Joan",STEM 12-N,MH,1330-1400,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Laude, Claver",STEM 12-R,MH,1330-1400,E7T,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTMUS-1,"Diolazo, Justin Ray",T-ADTMUS-1,M,1330-1400,G103,G,Hybrid,Physical,No,2,90,Arts/Design,G
+ORGANIZATION AND MANAGEMENT,"Ang, Charisse Jollins",ABM 11-B,T,1330-1400,G203,G,Hybrid,Physical,No,2,90,Business/ABM,G
+GENERAL CHEMISTRY 2,"Matulac, John Marc",STEM 12-J,M,1330-1400,G208,G,Hybrid,Physical,No,2,90,Science,G
+PRACTICAL RESEARCH 2,"Tan, Christian",STEM 12-K,H,1330-1400,G209,G,Hybrid,Physical,No,2,90,Research,G
+ORGANIZATION AND MANAGEMENT,"Delantar, Edna",ABM 11-H,F,1330-1400,G209,G,Hybrid,Physical,No,2,90,Business/ABM,G
+GENERAL PHYSICS 1-LABORATORY,"Roquel, Kritel Ian",STEM 12-D1,TF,1330-1400,J404,J,Hybrid,Physical,No,2,90,Science,J
+ORAL COMMUNICATION IN CONTEXT,"Bensal, Edwina",HUMSS 11-D,F,1330-1400,L210,L,Hybrid,Physical,No,2,90,English/Communication,L
+HOMEROOM,"Laude, John Claver T.",HUMSS 11-E,MH,1330-1400,L211,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Aguilar, Noah",HUMSS 11-A,F,1330-1400,L335,L,Hybrid,Physical,No,2,90,Other,L
+ORAL COMMUNICATION IN CONTEXT,"Miraflores, Edna",ABM 11-J,TF,1330-1400,V503,V,Hybrid,Physical,No,2,90,English/Communication,V
+PRACTICAL RESEARCH 2,"Cheng, Charibeth",HUMSS 12-A,F,1330-1400,Y304,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Saron, Gracelyn D.",STEM 11-C,TF,1330-1400,Y501,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Villaluz, Brian",ABM 12-D,H,1330-1400,Y502,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+APPLIED ECONOMICS,"Maranon, Christine Ann",ABM 12-D,F,1330-1400,Y502,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+CREATIVE WRITING,"Chua, Johannes",HUMSS 12-C2,W,1330-1400,Y506,Y,Hybrid,Physical,No,2,90,Literature,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"Rivera, Pauline",ABM 12-D,T,1330-1400,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+BUSINESS FINANCE,"Nario, Jem Marie",ABM 12-I,H,1330-1400,Y604,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+STATISTICS AND PROBABILITIES,"Jimenez, Criselda",STEM 12-K,W,1330-1400,ZOOM002,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Inocencio, eric",STEM 11-M,M,1330-1400,ZOOM013,Z,Online,Virtual,No,2,90,Science,Z
+HOMEROOM,"Torres, Myrla",STEM 12-K,H,1330-1530,G-209,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+HOMEROOM,"Torres, Myrla",STEM 12-L,F,1330-1530,G-211,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+HOMEROOM,"Cacal, Ralph Anthony C.",STEM 12-A,TF,1330-1530,G101,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTDNC-1,"Diolazo, Justin Ray",T-ADTDNC-1,M,1330-1530,G102,G,Hybrid,Physical,No,2,90,Arts/Design,G
+LEADERSHIP AND MANAGEMENT IN DIFFERENT ARTS FIELD 1,"Albao, Bluelean",ADT 12-C,H,1330-1530,G103,G,Hybrid,Physical,No,2,90,Arts/Design,G
+PRACTICAL RESEARCH 2,"Ortenero, Joseph",ADT 12-C,M,1330-1530,G103,G,Hybrid,Physical,No,2,90,Research,G
+PRACTICAL RESEARCH 2,"Rodulfo, Flordeliza",STEM 12-H,W,1330-1530,G206,G,Hybrid,Physical,No,2,90,Research,G
+PRACTICAL RESEARCH 2,"Crisologo, Ma. Louise",STEM 12-I,MH,1330-1530,G207,G,Hybrid,Physical,No,2,90,Research,G
+DISASTER READINESS AND RISK REDUCTION,"Duay, IC",STEM 12-J,T,1330-1530,G208,G,Hybrid,Physical,No,2,90,Science,G
+GENERAL PHYSICS 1-LABORATORY,"Querubin, Florabelle",STEM 12-G1,TF,1330-1530,J404,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Fajardo, Raiseth",STEM 12-C1,M,1330-1530,J404,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Pucot, Jayson",STEM 12-A2,M,1330-1530,J410,J,Hybrid,Physical,No,2,90,Science,J
+GENERAL PHYSICS 1-LABORATORY,"Toral, Kenneth",STEM 12-I1,H,1330-1530,J411,J,Hybrid,Physical,No,2,90,Science,J
+ORAL COMMUNICATION IN CONTEXT,"Bensal, Edwina",HUMSS 11-C,MH,1330-1530,L209,L,Hybrid,Physical,No,2,90,English/Communication,L
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Bertumen, Estefanie",HUMSS 11-E,F,1330-1530,L335,L,Hybrid,Physical,No,2,90,Other,L
+PRACTICAL RESEARCH 2,"Gallego, Roman",HUMSS 12-B,MH,1330-1530,Y306,Y,Hybrid,Physical,No,2,90,Research,Y
+MEDIA INFORMATION AND LITERACY,"Hugo, Alleona",HUMSS 12-B,TF,1330-1530,Y306,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+HOMEROOM,"Garganta, Lambert Yancy B.",STEM 11-A,T,1330-1530,Y404,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+HOMEROOM,"Saron, Gracelyn D.",STEM 11-C,MH,1330-1530,Y501,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Velasco, Elsie",ABM 12-G,MH,1330-1530,Y505,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTVMA-3,"Albao, Blulean T.",T-ADTVMA-3,W,1330-1530,Y506,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+EARTH SCIENCE,"Abrigo, Irish",STEM 11-N,M,1330-1530,ZOOM006,Z,Online,Virtual,No,2,90,Science,Z
+STATISTICS AND PROBABILITIES,"Acelajado, Maxima",STEM 12-O,T,1330-1530,ZOOM016,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Tresvalles, Regina",HUMSS 11-E,TF,1330-1530,ZOOM020,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL PHYSICS 1-LABORATORY,"Roquel, Kritel Ian",STEM 12-D2,MH,1345-1415,A101,A,Hybrid,Physical,No,2,90,Science,A
+PHYSICAL EDUCATION AND HEALTH 4,"Bedia, Noel",STEM 12-S,H,1345-1415,E7T,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+CHRISTIAN LIVING 4,"Yap, Richie",STEM 12-C,M,1345-1415,G103,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+DISASTER READINESS AND RISK REDUCTION,"Ong, Russel",STEM 12-D,M,1345-1415,G201,G,Hybrid,Physical,No,2,90,Science,G
+PRACTICAL RESEARCH 2,"Go, Stella P.",STEM 12-E,M,1345-1415,G203,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL PHYSICS 1,"Inocencio, Eric",STEM 12-H,TF,1345-1415,G206,G,Hybrid,Physical,No,2,90,Science,G
+DISASTER READINESS AND RISK REDUCTION,"Alfaro, Shelah",STEM 12-H,F,1345-1415,G206,G,Hybrid,Physical,No,2,90,Science,G
+ORGANIZATION AND MANAGEMENT,"Betita, Rene",ABM 11-F,T,1345-1415,G207,G,Hybrid,Physical,No,2,90,Business/ABM,G
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cruz, Ruth Angelie",STEM 11-L,TF,1345-1415,L210,L,Hybrid,Physical,No,2,90,Research,L
+HOMEROOM,"Perlas, Ricalyn A.",STEM 12-R,TF,1345-1415,V502,V,Face-to-Face,Physical,No,2,90,Homeroom,V
+PRACTICAL RESEARCH 2,"Salvador, Mark Anthony",STEM 12-R,T,1345-1415,V502,V,Hybrid,Physical,No,2,90,Research,V
+CHRISTIAN LIVING 4,"Mobilla, Joy",STEM 12-R,H,1345-1415,V502,V,Face-to-Face,Physical,No,2,90,Social Studies,V
+PRACTICAL RESEARCH 2,"Choi, Angelo Earvin S.",STEM 12-S,W,1345-1415,V503,V,Hybrid,Physical,No,2,90,Research,V
+CHRISTIAN LIVING 4,"Delocario, Martina Rose",STEM 12-M,TF,1345-1415,Y303,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+APPLIED ECONOMICS,"Ocampo Tan, Michelle Brendy",ABM 12-B,W,1345-1415,Y405,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Garcia, Emmanuel V.",STEM 11-C,MH,1345-1415,Y501,Y,Hybrid,Physical,No,2,90,Research,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Garcia, Emmanuel V.",STEM 11-C,W,1345-1415,Y501,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Sioson, Ivory",STEM 11-F,H,1345-1415,Y504,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+HOMEROOM,"Samson, Paul Vincent R.",STEM 11-H,M,1345-1415,Y506,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+EARTH SCIENCE,"Cabanas, Al John",STEM 11-K,MH,1345-1415,ZOOM004,Z,Online,Virtual,No,2,90,Science,Z
+STATISTICS AND PROBABILITIES,"Concepcion, Edward",STEM 12-L,H,1345-1415,ZOOM010,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Tabuloc, Maria Cristina",ABM 11-D,W,1345-1415,ZOOM020,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Parco, Olga",STEM 12-I,F,1430-1500,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 4,"Parco, Olga",STEM 12-I,M,1430-1500,E2FLR HALLWAY,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 3,"Navarro, Joanna",ABM 11-I,T,1430-1500,E7B,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+DISASTER READINESS AND RISK REDUCTION,"Alfaro, Shelah",STEM 12-G,H,1430-1500,G205,G,Hybrid,Physical,No,2,90,Science,G
+GENERAL PHYSICS 1,"Recuenco, Frances C.",STEM 12-C,MH,1430-1500,G206,G,Hybrid,Physical,No,2,90,Science,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Reyes, Arvin",STEM 12-I,F,1430-1500,G302A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Villanueva, Ren Mark",STEM 12-J2,MH,1430-1500,J410,J,Hybrid,Physical,No,2,90,Science,J
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cruz, Ruth Angelie",STEM 11-J,M,1430-1500,L208,L,Hybrid,Physical,No,2,90,Research,L
+HOMEROOM,"Buted, Jerilou A",STEM 11-L,MH,1430-1500,L210,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+CHRISTIAN LIVING 1,"Domingo, Rosalia",STEM 11-M,TF,1430-1500,L211,L,Face-to-Face,Physical,No,2,90,Social Studies,L
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Buso, Nelso Jr.",HUMSS 11-E,T,1430-1500,L211,L,Hybrid,Physical,No,2,90,Arts/Design,L
+ORAL COMMUNICATION IN CONTEXT,"Evangelista, Tyrone",STEM 11-M,W,1430-1500,L211,L,Hybrid,Physical,No,2,90,English/Communication,L
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Tabora, Liandro",HUMSS 11-C,M,1430-1500,L335,L,Hybrid,Physical,No,2,90,Other,L
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"Rivera, Pauline",ABM 12-E,W,1430-1500,L335,L,Hybrid,Physical,No,2,90,Other,L
+21ST CENTURY LITERATURE FROM THE PHILIPPINES AND THE WORLD,"Atalia, Eros",ABM 11-J,M,1430-1500,V503,V,Hybrid,Physical,No,2,90,Literature,V
+HOMEROOM,"Miranda, Janeson M.",STEM 12-M,MH,1430-1500,Y303,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+CREATIVE INDUSTRIES 1 APPLIED ARTS DESIGN,"Marcial, Joshua",ADT 11-A,F,1430-1500,Y303,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+HOMEROOM,"Buencibello, Joenel B.",HUMSS 12-B,F,1430-1500,Y306,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+CHRISTIAN LIVING 4,"Garganta,Yancy",ABM 12-D,H,1430-1500,Y502,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+PRACTICAL RESEARCH 2,"Palabrica, Jose Maria",ABM 12-E,M,1430-1500,Y503,Y,Hybrid,Physical,No,2,90,Research,Y
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTMUS-1,"Lacsama, Virginia / Buted, Jerilou",T-ADTMUS-1,M,1430-1500,Y505,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+CREATIVE WRITING,"Chua, Johannes",HUMSS 12-C2,T,1430-1500,Y506,Y,Hybrid,Physical,No,2,90,Literature,Y
+APPRENTICESHIP AND EXPLORATION IN THE PERFORMING ARTS/APPRENCTICESHIP AND EXPLORATION IN THE ARTS PRODUCTION 1 (by arts stream)_T-ADTVMA-3,"Albao, Blulean T.",T-ADTVMA-3,F,1430-1500,Y506,Y,Hybrid,Physical,No,2,90,Arts/Design,Y
+STATISTICS AND PROBABILITIES,"Acelajado, Maxima",STEM 12-Q,T,1430-1500,ZOOM012,Z,Online,Virtual,No,2,90,Math,Z
+STATISTICS AND PROBABILITIES,"Jimenez, Criselda",STEM 12-R,T,1430-1500,ZOOM016,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Parungao, Anita",STEM 11-H,W,1430-1500,ZOOM016,Z,Online,Virtual,No,2,90,Math,Z
+PRACTICAL RESEARCH 2,"Tan, Christian",STEM 12-C,TF,1430-1600,G103,G,Hybrid,Physical,No,2,90,Research,G
+DISASTER READINESS AND RISK REDUCTION,"Labog, Michael John",STEM 12-E,F,1430-1600,G203,G,Hybrid,Physical,No,2,90,Science,G
+CHRISTIAN LIVING 4,"Mansukhani, Gansham",STEM 12-F,T,1430-1600,G204,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+ORGANIZATION AND MANAGEMENT,"Clark, Eppie",ABM 11-D,T,1430-1600,G205,G,Hybrid,Physical,No,2,90,Business/ABM,G
+PRACTICAL RESEARCH 2,"Crisologo, Ma. Louise",STEM 12-I,H,1430-1600,G207,G,Hybrid,Physical,No,2,90,Research,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Bertumen, Estefanie",STEM 12-A,W,1430-1600,G306A&B,G,Hybrid,Physical,No,2,90,Other,G
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Choi, Angelo Earvin S.",HUMSS 11-A,H,1430-1600,L204,L,Hybrid,Physical,No,2,90,Research,L
+ORAL COMMUNICATION IN CONTEXT,"Villacorta, Dennis",HUMSS 11-E,F,1430-1600,L211,L,Hybrid,Physical,No,2,90,English/Communication,L
+PRACTICAL RESEARCH 2,"Mayol, Andres Philip",STEM 12-M,H,1430-1600,Y303,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Garganta, Lambert Yancy B.",STEM 11-A,M,1430-1600,Y404,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+APPLIED ECONOMICS,"Ocampo Tan, Michelle Brendy",ABM 12-B,T,1430-1600,Y405,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+HOMEROOM,"Saron, Gracelyn D.",STEM 11-D,H,1430-1600,Y502,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+CHRISTIAN LIVING 4,"Dolor, Ramon Rafael",ABM 12-G,MH,1430-1600,Y505,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Baluran, Fe Violeta",ABM 12-H,H,1430-1600,Y506,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+CHRISTIAN LIVING 4,"Buencibello, Joenel",ABM 12-I,T,1430-1600,Y604,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Alcantara, Norberto",SPT 11-A,F,1430-1600,Y604,Y,Hybrid,Physical,No,2,90,Research,Y
+GENERAL MATHEMATICS,"Parungao, Anita",STEM 11-K,TF,1430-1600,ZOOM001,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Carpio, Avegail",ABM 11-B,F,1430-1600,ZOOM004,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Briones, Richard",STEM 11-E,MH,1430-1600,ZOOM009,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Magpantay, Hilbert",STEM 11-C,M,1430-1600,ZOOM009,Z,Online,Virtual,No,2,90,Science,Z
+STATISTICS AND PROBABILITIES,"Candelaria, Luisette",SPT 12-A,F,1430-1600,ZOOM013,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Roces, Susan A.",STEM 11-N,W,1430-1600,ZOOM014,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Elviña, Mikka Angela",STEM 11-H,M,1430-1600,ZOOM015,Z,Online,Virtual,No,2,90,Science,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Aquino, Marvin",STEM 12-O,MH,1430-1630,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+HOMEROOM,"Azucena, Jemmar T.",STEM 12-E,M,1430-1630,G-203,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+LEADERSHIP AND MANAGEMENT IN DIFFERENT ARTS FIELD 1,"Albao, Bluelean",ADT 12-B,F,1430-1630,G102,G,Hybrid,Physical,No,2,90,Arts/Design,G
+CHRISTIAN LIVING 4,"Yogyo-Alonzo, Leah",STEM 12-D,H,1430-1630,G201,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+GENERAL PHYSICS 1,"Fabia, Jose Noel",STEM 12-F,F,1430-1630,G204,G,Hybrid,Physical,No,2,90,Science,G
+PRACTICAL RESEARCH 2,"Tan, Christian",STEM 12-K,W,1430-1630,G209,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL PHYSICS 1-LABORATORY,"Fajardo, Raiseth",STEM 12-C2,H,1430-1630,J410,J,Hybrid,Physical,No,2,90,Science,J
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Calindro, Myrille",STEM 11-I,H,1430-1630,L204,L,Hybrid,Physical,No,2,90,Research,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Cruz, Ruth Angelie",STEM 11-J,TF,1430-1630,L208,L,Hybrid,Physical,No,2,90,Research,L
+HOMEROOM,"Laude, John Claver T.",HUMSS 11-E,M,1430-1630,L211,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Felicilda, Joshua",ADT 11-A,MH,1430-1630,Y303,Y,Hybrid,Physical,No,2,90,Research,Y
+PRACTICAL RESEARCH 2,"Mayol, Andres Philip",STEM 12-M,M,1430-1630,Y303,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Buencibello, Joenel B.",HUMSS 12-B,MH,1430-1630,Y306,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+CHRISTIAN LIVING 4,"Eballo, Mia",HUMSS 12-C,MH,1430-1630,Y402,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+CHRISTIAN LIVING 4,"Clamor, Wilfred Louie",HUMSS 12-D,W,1430-1630,Y403,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+PRACTICAL RESEARCH 2,"Ong, Ethel",ABM 12-A,TF,1430-1630,Y404,Y,Hybrid,Physical,No,2,90,Research,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Villaluz, Brian",ABM 12-C,F,1430-1630,Y501,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+PRACTICAL RESEARCH 2,"Palabrica, Jose Maria",ABM 12-C,W,1430-1630,Y501,Y,Hybrid,Physical,No,2,90,Research,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Umlas, Christian",STEM 11-E,MH,1430-1630,Y503,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Marcial, Joshua R.",STEM 11-E,TF,1430-1630,Y503,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Calindro, Myrille",STEM 11-H,TF,1430-1630,Y506,Y,Hybrid,Physical,No,2,90,Research,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"Seumal, Anthony",ABM 12-I,W,1430-1630,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+HOMEROOM,"Jimenez, Criselda R.",SPT 11-A,H,1430-1630,Y604,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+GENERAL MATHEMATICS,"Hernandez, Alana Margarita",STEM 11-G,TF,1430-1630,ZOOM007,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Dela Cruz, Mannelyn",STEM 11-G,M,1430-1630,ZOOM013,Z,Online,Virtual,No,2,90,Science,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Acheampong, Joan",STEM 12-L,H,1515-1545,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 3,"Tubilleja, Renzo Luigi",ABM 11-H,H,1515-1545,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+CHRISTIAN LIVING 4,"Yap, Richie",STEM 12-C,F,1515-1545,G103,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+ORGANIZATION AND MANAGEMENT,"Betita, Rene",ABM 11-F,H,1515-1545,G207,G,Hybrid,Physical,No,2,90,Business/ABM,G
+CHRISTIAN LIVING 4,"Enriquez, Weegee",STEM 12-I,F,1515-1545,G207,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+PRACTICAL RESEARCH 2,"Crisologo, Ma. Louise",STEM 12-L,MH,1515-1545,G211,G,Hybrid,Physical,No,2,90,Research,G
+GENERAL PHYSICS 1-LABORATORY,"Alcantara, Norberto",STEM 12-F1,F,1515-1545,J404,J,Hybrid,Physical,No,2,90,Science,J
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Espejo, Lance Isaac F",HUMSS 11-A,W,1515-1545,L204,L,Hybrid,Physical,No,2,90,Arts/Design,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"De Guzman, Billy",HUMSS 11-B,M,1515-1545,L208,L,Hybrid,Physical,No,2,90,Research,L
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Aguilar, Noah",HUMSS 11-A,M,1515-1545,L335,L,Hybrid,Physical,No,2,90,Other,L
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTDNC-1,"Olo, Marial Grace",T-ADTDNC-1,TF,1515-1545,V503,V,Hybrid,Physical,No,2,90,Arts/Design,V
+CHRISTIAN LIVING 4,"Delocario, Martina Rose",STEM 12-M,T,1515-1545,Y303,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+CREATIVE WRITING,"Nunez, Ana Margarita",HUMSS 12-A1,H,1515-1545,Y304,Y,Hybrid,Physical,No,2,90,Literature,Y
+CHRISTIAN LIVING 4,"Eballo, Mia",HUMSS 12-A,M,1515-1545,Y304,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+DISCIPLINE AND IDEAS IN THE APPLIED SOCIAL SCIENCE,"Caras, Jamaica",HUMSS 12-C,MH,1515-1545,Y402,Y,Hybrid,Physical,No,2,90,Science,Y
+MEDIA INFORMATION AND LITERACY,"Tan, Lindsey",HUMSS 12-C,H,1515-1545,Y402,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+BUSINESS FINANCE,"Golamco, Angelina",ABM 12-G,T,1515-1545,Y505,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+ORAL COMMUNICATION IN CONTEXT,"Dalisay, Alfred",SPT 11-A,H,1515-1545,Y604,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+GENERAL MATHEMATICS,"Briones, Richard",STEM 11-E,H,1515-1545,ZOOM001,Z,Online,Virtual,No,2,90,Math,Z
+HOMEROOM,"Olo, Marial Grace R.",STEM 12-H,F,1545-1615,G-206,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+CHRISTIAN LIVING 4,"Yap, Richie",STEM 12-B,M,1545-1615,G102,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+PRACTICAL RESEARCH 2,"Ortenero, Joseph",ADT 12-C,H,1545-1615,G103,G,Hybrid,Physical,No,2,90,Research,G
+CHRISTIAN LIVING 4,"Mansukhani, Gansham",STEM 12-G,H,1545-1615,G205,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+GENERAL PHYSICS 1,"Natividad, Michelle",STEM 12-I,MH,1545-1615,G207,G,Hybrid,Physical,No,2,90,Science,G
+PRACTICAL RESEARCH 2,"Lubrico, Jim Benedick",STEM 12-J,W,1545-1615,G208,G,Hybrid,Physical,No,2,90,Research,G
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Sipin, Glenn",STEM 12-B,M,1545-1615,G306A&B,G,Hybrid,Physical,No,2,90,Other,G
+GENERAL PHYSICS 1-LABORATORY,"Toral, Kenneth",STEM 12-I2,F,1545-1615,J410,J,Hybrid,Physical,No,2,90,Science,J
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Calindro, Myrille",STEM 11-I,T,1545-1615,L204,L,Hybrid,Physical,No,2,90,Research,L
+CONTEMPORARY PHILIPPINE ARTS FROM THE REGION,"Buso, Nelso Jr.",HUMSS 11-D,H,1545-1615,L210,L,Hybrid,Physical,No,2,90,Arts/Design,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Alcantara, Norberto",HUMSS 11-E,H,1545-1615,L211,L,Hybrid,Physical,No,2,90,Research,L
+21ST CENTURY LITERATURE FROM THE PHILIPPINES AND THE WORLD,"Atalia, Eros",ABM 11-I,W,1545-1615,V502,V,Hybrid,Physical,No,2,90,Literature,V
+CREATIVE WRITING,"Gojo-Cruz, Genaro",HUMSS 12-B1,H,1545-1615,Y306,Y,Hybrid,Physical,No,2,90,Literature,Y
+CREATIVE WRITING,"Guevarra, Mary Harmony",HUMSS 12-D1,MH,1545-1615,Y403,Y,Hybrid,Physical,No,2,90,Literature,Y
+APPLIED ECONOMICS,"Villamil, Winfred",ABM 12-A,T,1545-1615,Y404,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+"FUNDAMENTALS OF ACCOUNTING,BUSINESS AND MANAGEMENT 2","Velasco, Elsie",ABM 12-F,T,1545-1615,Y504,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"RIVERA, JOANNA PAULINE",ABM 12-F,TF,1545-1615,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+CHRISTIAN LIVING 4,"Rosales, John Mark",ABM 12-J,F,1545-1615,Y606,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+GENERAL MATHEMATICS,"Jimenez, Criselda",ADT 11-B,T,1545-1615,ZOOM011,Z,Online,Virtual,No,2,90,Math,Z
+EARTH SCIENCE,"Elviña, Mikka Angela",STEM 11-H,MH,1545-1615,ZOOM012,Z,Online,Virtual,No,2,90,Science,Z
+STATISTICS AND PROBABILITIES,"Jimenez, Criselda",STEM 12-R,F,1545-1615,ZOOM013,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Tabuloc, Maria Cristina",ABM 11-D,M,1545-1615,ZOOM016,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Cabrera, Emil John",STEM 11-C,F,1545-1615,ZOOM020,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 4,"Garvez, Allen",STEM 12-G,M,1600-1630,E101,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+CHRISTIAN LIVING 4,"Rosales, John Mark",ADT 12-A,MH,1600-1630,G101,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+DISASTER READINESS AND RISK REDUCTION,"Maglaya, Archie",STEM 12-A,H,1600-1630,G101,G,Hybrid,Physical,No,2,90,Science,G
+ORGANIZATION AND MANAGEMENT,"Nario, Jem Marie",ABM 11-A,MH,1600-1630,G201,G,Hybrid,Physical,No,2,90,Business/ABM,G
+CHRISTIAN LIVING 4,"Yogyo-Alonzo, Leah",STEM 12-E,W,1600-1630,G203,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+DISASTER READINESS AND RISK REDUCTION,"Labog, Michael John",STEM 12-F,MH,1600-1630,G204,G,Hybrid,Physical,No,2,90,Science,G
+INTEGRATING ELEMENTS ADND PRINCIPLES OF THE DIFF. ARTS AND APPLICATIONS 1_T-ADTVMA-1,"Olo, Marial Grace",T-ADTVMA-1,W,1600-1630,G204,G,Hybrid,Physical,No,2,90,Arts/Design,G
+CHRISTIAN LIVING 4,"Enriquez, Weegee",STEM 12-H,F,1600-1630,G206,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+CHRISTIAN LIVING 4,"Samson, Paul Vincent",STEM 12-K,MH,1600-1630,G209,G,Face-to-Face,Physical,No,2,90,Social Studies,G
+GENERAL PHYSICS 1-LABORATORY,"Querubin, Florabelle",STEM 12-G1,W,1600-1630,J404,J,Hybrid,Physical,No,2,90,Science,J
+EMPOWERMENT TECHNOLOGIES 2 (DATA-VISUALIZATION),"Tabora, Liandro",HUMSS 11-D,F,1600-1630,L335,L,Hybrid,Physical,No,2,90,Other,L
+ORAL COMMUNICATION IN CONTEXT,"Go, Joanna",ABM 11-I,MH,1600-1630,V502,V,Hybrid,Physical,No,2,90,English/Communication,V
+ORAL COMMUNICATION IN CONTEXT,"Miraflores, Edna",ABM 11-J,MH,1600-1630,V503,V,Hybrid,Physical,No,2,90,English/Communication,V
+MEDIA INFORMATION AND LITERACY,"Hugo, Alleona",HUMSS 12-B,H,1600-1630,Y306,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+HOMEROOM,"Rosales, Jhon Mark M.",STEM 12-P,W,1600-1630,Y402,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+PRACTICAL RESEARCH 2,Cyrill Escolano <cyrill.escolano@dlsu.edu.ph>,HUMSS 12-D,F,1600-1630,Y403,Y,Hybrid,Physical,No,2,90,Research,Y
+ORAL COMMUNICATION IN CONTEXT,"Villacorta, Dennis",STEM 11-A,M,1600-1630,Y404,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+PRACTICAL RESEARCH 2,"Azcarraga, Judith",ABM 12-D,T,1600-1630,Y502,Y,Hybrid,Physical,No,2,90,Research,Y
+CREATIVE WRITING,"Guevarra, Mary Harmony",HUMSS 12-D2,F,1600-1630,Y504,Y,Hybrid,Physical,No,2,90,Literature,Y
+ORAL COMMUNICATION IN CONTEXT,"Sioson, Ivory",STEM 11-F,M,1600-1630,Y504,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"Seumal, Anthony",ABM 12-J,T,1600-1630,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+GENERAL MATHEMATICS,"Tresvalles, Regina",HUMSS 11-E,F,1600-1630,ZOOM005,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Carpio, Avegail",ABM 11-B,W,1600-1630,ZOOM011,Z,Online,Virtual,No,2,90,Math,Z
+STATISTICS AND PROBABILITIES,"Acelajado, Maxima",STEM 12-O,M,1600-1630,ZOOM015,Z,Online,Virtual,No,2,90,Math,Z
+PHYSICAL EDUCATION AND HEALTH 3,"Tubilleja, Renzo Luigi",ABM 11-G,W,1615-1745,E7B,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+PHYSICAL EDUCATION AND HEALTH 3,"Tubilleja, Renzo Luigi",ABM 11-H,MH,1615-1745,E801,E,Face-to-Face,Physical,No,2,90,PE/Health,E
+HOMEROOM,"Azucena, Jemmar T.",STEM 12-D,M,1615-1745,G-201,G,Face-to-Face,Physical,No,2,90,Homeroom,G
+ORAL COMMUNICATION IN CONTEXT,"Perez, Candice",ABM 11-F,F,1615-1745,G207,G,Hybrid,Physical,No,2,90,English/Communication,G
+GENERAL CHEMISTRY 2,"Moreno, Joaquin",STEM 12-I,M,1615-1745,G207,G,Hybrid,Physical,No,2,90,Science,G
+HOMEROOM,"Pamaos, Angela Mae A.",STEM 11-I,T,1615-1745,L204,L,Face-to-Face,Physical,No,2,90,Homeroom,L
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,"Belo, Lawrence",STEM 11-K,M,1615-1745,L209,L,Hybrid,Physical,No,2,90,Research,L
+CHRISTIAN LIVING 4,"Mobilla, Joy",STEM 12-R,TF,1615-1745,V502,V,Face-to-Face,Physical,No,2,90,Social Studies,V
+ORAL COMMUNICATION IN CONTEXT,"Go, Joanna",ABM 11-I,H,1615-1745,V502,V,Hybrid,Physical,No,2,90,English/Communication,V
+PRACTICAL RESEARCH 2,"Gallego, Roman",HUMSS 12-B,F,1615-1745,Y306,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Rosales, Jhon Mark M.",STEM 12-O,M,1615-1745,Y306,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+DISCIPLINE AND IDEAS IN THE APPLIED SOCIAL SCIENCE,"Caras, Jamaica",HUMSS 12-D,T,1615-1745,Y403,Y,Hybrid,Physical,No,2,90,Science,Y
+MEDIA AND INFORMATION LITERACY,"Aguiflor, Danica",ABM 12-C,F,1615-1745,Y501,Y,Hybrid,Physical,No,2,90,English/Communication,Y
+APPLIED ECONOMICS,"Maranon, Christine Ann",ABM 12-E,M,1615-1745,Y503,Y,Hybrid,Physical,No,2,90,Business/ABM,Y
+EMPOWERMENT TECHNOLOGIES 1 (COMPUTATIONAL THINKING),"RIVERA, JOANNA PAULINE",ABM 12-G,W,1615-1745,Y602,Y,Hybrid,Physical,No,2,90,Other,Y
+PRACTICAL RESEARCH 2,"Limson, Brian",ABM 12-I,MH,1615-1745,Y604,Y,Hybrid,Physical,No,2,90,Research,Y
+HOMEROOM,"Jimenez, Criselda R.",SPT 12-A,TF,1615-1745,Y606,Y,Face-to-Face,Physical,No,2,90,Homeroom,Y
+CHRISTIAN LIVING 4,"Clamor, Wilfred Louie",SPT 12-A,H,1615-1745,Y606,Y,Face-to-Face,Physical,No,2,90,Social Studies,Y
+GENERAL MATHEMATICS,"Cabrera, Emil John",STEM 11-D,TF,1615-1745,ZOOM018,Z,Online,Virtual,No,2,90,Math,Z
+GENERAL MATHEMATICS,"Cruz, Eduardo",ABM 11-J,T,1615-1745,ZOOM018,Z,Online,Virtual,No,2,90,Math,Z

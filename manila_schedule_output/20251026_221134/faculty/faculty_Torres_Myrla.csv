@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 12-L,Homeroom,"Torres, Myrla",F,1330-1530,90,2,G-211,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-K,Homeroom,"Torres, Myrla",H,1330-1530,90,2,G-209,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-K,Homeroom,"Torres, Myrla",MH,0800-0930,90,2,G-209,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-I,Homeroom,"Torres, Myrla",T,0915-1045,90,2,G-207,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-L,Homeroom,"Torres, Myrla",W,1100-1130,90,2,G-211,Physical,G,G,Face-to-Face,No

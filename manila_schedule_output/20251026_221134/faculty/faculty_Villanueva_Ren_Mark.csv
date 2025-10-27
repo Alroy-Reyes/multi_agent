@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J2,Science,"Villanueva, Ren Mark",F,1000-1200,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J1,Science,"Villanueva, Ren Mark",MH,0730-0900,90,2,J404,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J2,Science,"Villanueva, Ren Mark",MH,1430-1500,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J1,Science,"Villanueva, Ren Mark",W,0800-0930,90,2,J404,Physical,J,J,Hybrid,No

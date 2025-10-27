@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 11-I,Homeroom,"Pamaos, Angela Mae A.",H,0930-1000,90,2,L204,Physical,L,L,Face-to-Face,No
+HOMEROOM,STEM 11-J,Homeroom,"Pamaos, Angela Mae A.",M,1245-1445,90,2,L208,Physical,L,L,Face-to-Face,No
+HOMEROOM,STEM 11-I,Homeroom,"Pamaos, Angela Mae A.",T,1615-1745,90,2,L204,Physical,L,L,Face-to-Face,No
+HOMEROOM,STEM 11-J,Homeroom,"Pamaos, Angela Mae A.",TF,1245-1445,90,2,L208,Physical,L,L,Face-to-Face,No

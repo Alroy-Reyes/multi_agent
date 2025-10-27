@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1,STEM 12-F,Science,"Fabia, Jose Noel",F,1430-1630,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-F,Science,"Fabia, Jose Noel",M,1215-1245,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-E,Science,"Fabia, Jose Noel",MH,0800-1000,90,2,G203,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-E,Science,"Fabia, Jose Noel",W,0800-0930,90,2,G203,Physical,G,G,Hybrid,No
