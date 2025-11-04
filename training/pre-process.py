@@ -63,7 +63,15 @@ def preprocess_manila_schedule(
                             .astype(str)
                             .str.replace(r'\s+', ' ', regex=True)
                             .str.strip())
-    
+    # CRITICAL FIX #1: Remove line breaks from Day column
+    df_clean['Day'] = df_clean['Day'].str.replace(r'[\r\n]+', '', regex=True)
+    print("✓ Cleaned line breaks from Day column")
+
+    # CRITICAL FIX #2: Standardize room codes - remove dashes
+    if 'Room' in df_clean.columns:
+        df_clean['Room'] = df_clean['Room'].str.replace(r'-', '', regex=True)
+        print("✓ Standardized room codes (removed dashes)")
+        
     # === DEDUPLICATE CSV ROWS ===
     print("=" * 40)
     print("CSV DEDUPLICATION")

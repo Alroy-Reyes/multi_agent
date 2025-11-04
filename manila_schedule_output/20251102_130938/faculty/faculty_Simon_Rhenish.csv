@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-B2,Science,"Simon, Rhenish",H,1430-1600,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-B1,Science,"Simon, Rhenish",M,1430-1600,90,2,J411,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-B2,Science,"Simon, Rhenish",T,1245-1415,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-B1,Science,"Simon, Rhenish",W,1100-1230,90,2,J411,Physical,J,J,Hybrid,No

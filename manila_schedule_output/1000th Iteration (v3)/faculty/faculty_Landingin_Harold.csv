@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-A1,Science,"Landingin, Harold",F,0915-1045,90,2,J411,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-A1,Science,"Landingin, Harold",M,0730-0900,90,2,J411,Physical,J,J,Hybrid,No
+EARTH SCIENCE,STEM 11-M,Science,"Landingin, Harold",W,1245-1415,90,2,ZOOM001,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-N,Science,"Landingin, Harold",W,1430-1600,90,2,ZOOM018,Virtual,Z,Z,Online,No

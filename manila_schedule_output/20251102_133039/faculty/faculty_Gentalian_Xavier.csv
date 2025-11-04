@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-O,Science,"Gentalian, Xavier",F,1100-1230,90,2,Y306,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-N,Science,"Gentalian, Xavier",H,1100-1230,90,2,Y304,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-O,Science,"Gentalian, Xavier",M,0915-1045,90,2,Y306,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-N,Science,"Gentalian, Xavier",W,1430-1600,90,2,Y304,Physical,Y,Y,Hybrid,No

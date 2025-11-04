@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,HUMSS 12-C,Homeroom,"Maranon, Cristine",F,0830-0900,30,1,Y402,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,SPT 12-A,Homeroom,"Maranon, Cristine",M,0945-1015,30,1,Y606,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,SPT 11-A,Homeroom,"Maranon, Cristine",M,1300-1500,120,1,Y604,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,HUMSS 12-D,Homeroom,"Maranon, Cristine",W,1430-1500,30,1,Y403,Physical,Y,Y,Face-to-Face,No

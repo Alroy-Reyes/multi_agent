@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-H1,Science,"Toral, Kenneth",F,0730-0900,90,2,J404,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-I2,Science,"Toral, Kenneth",F,1245-1415,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-I2,Science,"Toral, Kenneth",H,1430-1600,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-H1,Science,"Toral, Kenneth",W,1430-1600,90,2,J404,Physical,J,J,Hybrid,No

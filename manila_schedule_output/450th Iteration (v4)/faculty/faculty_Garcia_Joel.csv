@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-D,Science,"Garcia, Joel",F,1430-1600,90,2,ZOOM015,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-D,Science,"Garcia, Joel",H,1100-1230,90,2,ZOOM007,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-C,Science,"Garcia, Joel",M,1245-1415,90,2,ZOOM017,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-C,Science,"Garcia, Joel",T,1100-1230,90,2,ZOOM009,Virtual,Z,Z,Online,No

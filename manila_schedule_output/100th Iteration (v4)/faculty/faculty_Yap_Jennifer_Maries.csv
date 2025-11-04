@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-E,Science,"Yap, Jennifer Maries",F,1100-1230,90,2,ZOOM005,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-D,Science,"Yap, Jennifer Maries",F,1430-1600,90,2,ZOOM004,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-D,Science,"Yap, Jennifer Maries",H,1245-1415,90,2,ZOOM020,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-E,Science,"Yap, Jennifer Maries",W,1100-1230,90,2,ZOOM004,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-S,Science,"Yap, Jennifer Maries",W,1430-1600,90,2,V503,Physical,V,V,Hybrid,No

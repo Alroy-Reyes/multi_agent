@@ -1,0 +1,8 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+PRACTICAL RESEARCH 2,HUMSS 12-D,Research,"Garcia, Emmanuel V.",F,0730-0900,90,2,Y403,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-S,Science,"Garcia, Emmanuel V.",F,0730-0900,90,2,ZOOM018,Virtual,Z,Z,Online,No
+PRACTICAL RESEARCH 2,HUMSS 12-B,Research,"Garcia, Emmanuel V.",H,0915-1045,90,2,Y306,Physical,Y,Y,Hybrid,No
+PRACTICAL RESEARCH 2,HUMSS 12-B,Research,"Garcia, Emmanuel V.",M,0730-0900,90,2,Y306,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-R,Science,"Garcia, Emmanuel V.",M,0915-1045,90,2,ZOOM002,Virtual,Z,Z,Online,No
+PRACTICAL RESEARCH 2,HUMSS 12-C,Research,"Garcia, Emmanuel V.",T,0730-0900,90,2,Y402,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-S,Science,"Garcia, Emmanuel V.",W,0915-1045,90,2,ZOOM020,Virtual,Z,Z,Online,No

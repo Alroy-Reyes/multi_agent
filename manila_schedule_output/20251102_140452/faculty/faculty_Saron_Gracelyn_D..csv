@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 12-L,Homeroom,"Saron, Gracelyn D.",F,1330-1530,120,1,G211,Physical,G,G,Face-to-Face,No
+HOMEROOM,STEM 12-M,Homeroom,"Saron, Gracelyn D.",H,1100-1230,90,2,Y303,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 12-O,Homeroom,"Saron, Gracelyn D.",M,1100-1230,90,2,Y306,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 12-N,Homeroom,"Saron, Gracelyn D.",T,1145-1215,30,1,Y304,Physical,Y,Y,Face-to-Face,No

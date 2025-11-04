@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-S,Science,"Pucot, Jayson",F,0730-0900,90,2,V503,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-S,Science,"Pucot, Jayson",H,0730-0900,90,2,V503,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-A,Science,"Pucot, Jayson",H,0915-1045,90,2,ZOOM002,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-A,Science,"Pucot, Jayson",T,1100-1230,90,2,ZOOM020,Virtual,Z,Z,Online,No

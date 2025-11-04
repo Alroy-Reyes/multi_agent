@@ -1,0 +1,11 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2,STEM 12-J,Science,"Alcantara, Norberto",F,0730-0900,90,2,G208,Physical,G,G,Hybrid,No
+EARTH SCIENCE,STEM 11-A,Science,"Alcantara, Norberto",F,1100-1230,90,2,ZOOM010,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-B,Science,"Alcantara, Norberto",H,1245-1415,90,2,ZOOM020,Virtual,Z,Z,Online,No
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,HUMSS 11-D,Research,"Alcantara, Norberto",H,1430-1600,90,2,L210,Physical,L,L,Hybrid,No
+PRACTICAL RESEARCH 2,STEM 12-M,Research,"Alcantara, Norberto",M,1245-1415,90,2,Y303,Physical,Y,Y,Hybrid,No
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,HUMSS 11-D,Research,"Alcantara, Norberto",T,0730-0900,90,2,L210,Physical,L,L,Hybrid,No
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,HUMSS 11-E,Research,"Alcantara, Norberto",T,1100-1230,90,2,L211,Physical,L,L,Hybrid,No
+EARTH SCIENCE,STEM 11-B,Science,"Alcantara, Norberto",W,0915-1045,90,2,ZOOM008,Virtual,Z,Z,Online,No
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,HUMSS 11-E,Research,"Alcantara, Norberto",W,1100-1230,90,2,L211,Physical,L,L,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-J,Science,"Alcantara, Norberto",W,1245-1415,90,2,G208,Physical,G,G,Hybrid,No

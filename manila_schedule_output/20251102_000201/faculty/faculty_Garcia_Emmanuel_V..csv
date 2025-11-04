@@ -1,0 +1,9 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2,STEM 12-F,Science,"Garcia, Emmanuel V.",F,0730-0900,90,2,G204,Physical,G,G,Hybrid,No
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,STEM 11-D,Research,"Garcia, Emmanuel V.",F,1245-1415,90,2,Y502,Physical,Y,Y,Hybrid,No
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,STEM 11-C,Research,"Garcia, Emmanuel V.",H,1100-1230,90,2,Y501,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-G,Science,"Garcia, Emmanuel V.",M,1245-1415,90,2,G205,Physical,G,G,Hybrid,No
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,STEM 11-C,Research,"Garcia, Emmanuel V.",M,1245-1415,90,2,Y501,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-F,Science,"Garcia, Emmanuel V.",T,1430-1600,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-G,Science,"Garcia, Emmanuel V.",W,0730-0900,90,2,G205,Physical,G,G,Hybrid,No
+KOMUNIKASYON AT PANANALIKSIK SA WIKA AT KULTURANG PILIPINO,STEM 11-D,Research,"Garcia, Emmanuel V.",W,0730-0900,90,2,Y502,Physical,Y,Y,Hybrid,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,HUMSS 11-C,Homeroom,"Samson, Paul Vincent R.",F,1100-1230,90,2,L209,Physical,L,L,Face-to-Face,No
+HOMEROOM,HUMSS 11-A,Homeroom,"Samson, Paul Vincent R.",F,1145-1215,30,1,L204,Physical,L,L,Face-to-Face,No
+HOMEROOM,HUMSS 11-B,Homeroom,"Samson, Paul Vincent R.",F,1200-1230,30,1,L208,Physical,L,L,Face-to-Face,No
+HOMEROOM,ADT 12-C,Homeroom,"Samson, Paul Vincent R.",M,1300-1500,120,1,G103,Physical,G,G,Face-to-Face,No

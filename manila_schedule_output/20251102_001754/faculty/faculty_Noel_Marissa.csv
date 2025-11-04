@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-I,Science,"Noel, Marissa",F,0730-0900,90,2,ZOOM017,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-H,Science,"Noel, Marissa",F,1245-1415,90,2,ZOOM002,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-H,Science,"Noel, Marissa",M,0730-0900,90,2,ZOOM006,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-I,Science,"Noel, Marissa",W,1245-1415,90,2,ZOOM020,Virtual,Z,Z,Online,No

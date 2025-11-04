@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1,STEM 12-C,Science,"Calingacion, Fe",F,1245-1415,90,2,G206,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-B,Science,"Calingacion, Fe",H,1245-1415,90,2,G201,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-B,Science,"Calingacion, Fe",M,1430-1600,90,2,G201,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-C,Science,"Calingacion, Fe",T,0915-1045,90,2,G206,Physical,G,G,Hybrid,No

@@ -1,96 +1,52 @@
 """
-Training script for Manila schedule - FULLY FIXED VERSION with AGGRESSIVE GPU Optimization
+Training script for Manila schedule - FULLY FIXED VERSION with AGGRESSIVE PENALTIES
 
-Version 18.8: All critical bugs resolved + AGGRESSIVE GPU Settings (15-30x speedup!)
+Version 18.9: AGGRESSIVE Conflict Penalties + GPU Optimization + Curriculum Learning
 ========================================================================================
 ALL FIXES IMPLEMENTED:
-✅ FIX #1: Teacher-slot consistency in action masking
-✅ FIX #2: Section conflict resolution added to environment
-✅ FIX #3: Atomic placement validation
-✅ FIX #4: Enhanced duplicate prevention
-✅ FIX #5: Placement count timing fixed
-✅ FIX #6: Immediate tracking updates
-✅ FIX #7: Per-placement teacher tracking (CRITICAL!)
-✅ FIX #8: Milestone rewards
-✅ FIX #9: Rebalanced rewards
-✅ FIX #10: Day duplicate prevention
-✅ FIX #11: Accurate modality stats
-✅ FIX #12: Step-local placement tracking
-✅ NEW: Checkpoint Resume Support
-✅ PERF #1: Windows-safe multi-worker (2 workers for stability)
-✅ PERF #2: Truncate episodes mode (faster iteration)
-✅ PERF #3: Larger fragments (fewer blocking calls)
-✅ PERF #4: Optimized batch sizes for Windows + GPU
+✅ FIX #1-12: All previous critical bugs resolved
+✅ FIX #13: AGGRESSIVE conflict penalties (conflicts now HURT more than placements help)
+✅ FIX #14: Exponential global conflict penalty (per step)
+✅ FIX #15: Quadratic completion pressure (forces 90%+ placement)
+✅ FIX #16: Curriculum learning (progressive difficulty in 3 phases)
+✅ PERF #1-4: GPU optimization + Windows-safe parallelization
 ========================================================================================
 
-RLLIB VERSION COMPATIBILITY:
+REWARD REBALANCING SUMMARY:
 ========================================================================================
-⚠️ Some advanced features require RLlib 2.x+:
-- Mixed precision training (_enable_amp) - disabled for compatibility
-- Advantage normalization (normalize_advantage) - disabled for compatibility
+BEFORE (Why model wasn't learning):
+- Placement reward: +150
+- Conflict penalty: -20
+- Ratio: 7.5:1 (placements heavily favored)
+- Model learned: "Place subjects, conflicts are acceptable" ❌
 
-This version works with RLlib 1.x and 2.x for maximum compatibility.
+AFTER (Aggressive penalties):
+- Placement reward: +150
+- Conflict penalty: -200
+- Duplicate penalty: -300
+- Section conflict: -250
+- Global exponential penalty: -50 * (1 - exp(-0.02 * conflicts))
+- Ratio: 1:1.33 (conflicts HURT more than placements help)
+- Model learns: "Only place if NO conflicts!" ✅
+
+CURRICULUM LEARNING:
+- Phase 1 (0-10k steps / ~100 episodes): 0.5x penalties - gentle learning
+- Phase 2 (10k-30k steps / ~100-300 episodes): 1.0x penalties - normal training
+- Phase 3 (30k+ steps / 300+ episodes): 1.5x penalties - perfection mode
 ========================================================================================
 
-WINDOWS COMPATIBILITY NOTES:
+EXPECTED BEHAVIOR:
 ========================================================================================
-⚠️ Ray on Windows has known limitations:
-- Max recommended workers: 2-4 (not 8+ like Linux)
-- Higher communication overhead between workers
-- Object store slower than Linux implementation
+Iteration 10-50:   Conflicts START decreasing immediately
+Iteration 50-100:  Student scores rise to 40+, conflicts drop to <50
+Iteration 100-200: Overall scores reach 65-75, conflicts <20
+Iteration 200-500: Overall scores 80-90+, conflicts <5
+Iteration 500+:    ZERO conflicts achievable, scores 95+
 
-This configuration is optimized for Windows stability while maintaining good performance.
-For Linux/Mac systems, you can increase num_rollout_workers to 6-8 for better speedup.
-========================================================================================
-
-OPTIMAL CONFIGURATION (Windows - 12-core CPU, 16GB RAM, 6GB GPU):
-========================================================================================
-CURRENT SETTINGS (Windows-optimized + AGGRESSIVE GPU optimization):
-- num_rollout_workers = 3        (INCREASED from 2 - stable on your system)
-- num_envs_per_worker = 1        (3 total parallel envs)
-- train_batch_size = 4096        (INCREASED to match minibatch - constraint!)
-- sgd_minibatch_size = 4096      (AGGRESSIVE: 8x larger! Maximum GPU utilization)
-- num_sgd_iter = 1               (single pass: 4096 / 4096 = 1)
-- batch_mode = truncate_episodes (don't wait for full episodes)
-- rollout_fragment_length = 128  (larger fragments, fewer blocking calls)
-
-NOTE: train_batch_size MUST be >= sgd_minibatch_size (PPO constraint)
-
-MEASURED PERFORMANCE (v18.7 with 2048 minibatch):
-- GPU Usage: 1050 MB / 6144 MB (17% - was 8% with 512)
-- CPU Usage: 25-40% ✅
-- RAM Usage: 12.1 GB / 16 GB ✅
-- Still have 5 GB GPU headroom!
-
-EXPECTED PERFORMANCE (After 4096 minibatch - CURRENT):
-- CPU Utilization: 30-40%
-- Iteration Time: 30-60 seconds! (was 2 mins, was 16 mins baseline)
-- Speedup: 15-30x faster! 🚀🚀🚀 (from baseline)
-- GPU Utilization: 90-100% during SGD updates
-- GPU Memory: ~2-4GB of 6GB (much better utilization!)
-- RAM Usage: ~12-13GB (safe for 16GB)
-- Training Time (100 iter): 1-1.5 hours! (was 26.7 hours baseline!)
-
-NOTE: On Linux/Mac, you can use 6-8 workers for 12-20x speedup.
-      Windows Ray limitations cap practical speedup at 3-5x.
-
-MONITORING:
-1. Watch CPU: Should stay at 60-70%, not pegged at 100%
-2. Watch RAM: If it exceeds 14GB, reduce num_envs_per_worker to 1
-3. Watch GPU: Run "nvidia-smi" in another terminal
-   - GPU Memory: Should use 3-5GB of 8GB
-   - GPU Utilization: Spikes to 70-90% during training phase
-
-TROUBLESHOOTING:
-- Out of Memory (RAM): Reduce num_envs_per_worker to 1
-- Out of Memory (GPU): Reduce sgd_minibatch_size to 256
-- Still slow: Increase num_rollout_workers to 10
-- GPU underutilized: Increase sgd_minibatch_size to 768
-
-ADVANCED TUNING (if you want to squeeze more performance):
-- Max workers: num_rollout_workers=10 (leave 2 cores for system)
-- More envs: num_envs_per_worker=3 if RAM usage < 12GB
-- Larger GPU batches: sgd_minibatch_size=768 if GPU memory < 6GB used
+IF CONFLICTS DON'T DECREASE BY ITERATION 50:
+→ Penalties still too weak (increase r_conflict_penalty to -300)
+→ Check TensorBoard for reward trends (should stabilize, not collapse)
+→ Verify environment is using v14.7 (check print at startup)
 ========================================================================================
 """
 
@@ -126,7 +82,7 @@ from ray.rllib.models.torch.torch_modelv2 import TorchModelV2
 from ray.rllib.models import ModelCatalog
 from collections import OrderedDict
 
-# Import FIXED ENV v14.6
+# Import FIXED ENV v14.7 (AGGRESSIVE PENALTIES)
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from envs.timetabling_env import ParallelTimetablingEnv
 
@@ -433,11 +389,11 @@ print("✅ Model 'improved_saha_masked' registered\n")
 
 
 # ============================================================
-# ENHANCED DIAGNOSTIC CALLBACK WITH FIX #7 VALIDATION
+# ENHANCED DIAGNOSTIC CALLBACK WITH AGGRESSIVE PENALTY TRACKING
 # ============================================================
 class EnhancedValidationCallback(DefaultCallbacks):
     """
-    Enhanced callback with FIX #7: Per-placement teacher tracking validation
+    Enhanced callback with aggressive penalty tracking and curriculum phase monitoring
     """
     def __init__(self):
         super().__init__()
@@ -459,6 +415,14 @@ class EnhancedValidationCallback(DefaultCallbacks):
         
         self.placement_history = []
         self.conflict_history = []
+        
+        # NEW: Track curriculum phase performance
+        self.phase_conflicts = {0.5: [], 1.0: [], 1.5: []}
+        self.phase_placements = {0.5: [], 1.0: [], 1.5: []}
+        
+        # Track first improvements
+        self.first_conflict_decrease = None
+        self.first_40_score = None
         
     def on_train_result(self, *, algorithm, result, **kwargs):
         it = result.get("training_iteration", 0)
@@ -496,51 +460,172 @@ class EnhancedValidationCallback(DefaultCallbacks):
                 else:
                     print(f"   ✨ Value loss excellent!")
         
+        # FIX: Get metrics from multiple possible locations
+        custom = result.get('custom_metrics', {})
+        sampler = result.get('sampler_results', {})
+        eval_metrics = result.get('evaluation', {}).get('custom_metrics', {})
+        
+        # Try all possible sources
+        partial = None
+        full = None
+        total_conflicts = None
+        duplicates = None
+        teacher_conflicts = None
+        section_conflicts = None
+        curriculum_phase = None
+        global_steps = None
+        under_placed = None
+        over_placed = None
+        correct_placed = None
+        episode_conflicts = None
+        
+        for source in [custom, sampler, eval_metrics]:
+            if partial is None:
+                partial = source.get('placement_rate_mean')
+            if full is None:
+                full = source.get('full_placement_rate_mean')
+            if total_conflicts is None:
+                total_conflicts = source.get('total_conflicts_mean')
+            if duplicates is None:
+                duplicates = source.get('duplicate_count_mean')
+            if teacher_conflicts is None:
+                teacher_conflicts = source.get('teacher_conflicts_mean')
+            if section_conflicts is None:
+                section_conflicts = source.get('section_conflicts_mean')
+            if curriculum_phase is None:
+                curriculum_phase = source.get('curriculum_phase_mean')
+            if global_steps is None:
+                global_steps = source.get('global_step_counter_mean')
+            if under_placed is None:
+                under_placed = source.get('under_placed_subjects_mean')
+            if over_placed is None:
+                over_placed = source.get('over_placed_subjects_mean')
+            if correct_placed is None:
+                correct_placed = source.get('correct_placed_subjects_mean')
+            if episode_conflicts is None:
+                episode_conflicts = source.get('episode_conflicts_mean')
+        
+        # DEBUG OUTPUT (only every 10 iterations)
+        if it % 10 == 0 and (partial is None or curriculum_phase is None):
+            print(f"\n⚠️ DEBUG: Metrics not found in expected locations")
+            print(f"   custom_metrics keys: {list(custom.keys())[:5] if custom else 'EMPTY'}")
+            print(f"   sampler_results keys: {list(sampler.keys())[:5] if sampler else 'EMPTY'}")
+        
+        # Curriculum status
+        print(f"\n🎓 CURRICULUM STATUS:")
+        if curriculum_phase is not None and global_steps is not None:
+            if curriculum_phase <= 0.6:
+                phase_name, phase_desc, phase_icon = "LEARNING", "Exploring with gentle penalties", "🌱"
+            elif curriculum_phase <= 1.1:
+                phase_name, phase_desc, phase_icon = "NORMAL", "Balanced exploration", "⚡"
+            else:
+                phase_name, phase_desc, phase_icon = "PERFECTION", "Strict penalties", "🎯"
+            
+            print(f"   Phase: {phase_icon} {phase_name} ({curriculum_phase:.1f}x penalties)")
+            print(f"   Status: {phase_desc}")
+            print(f"   Steps: {int(global_steps):,}")
+        else:
+            print(f"   ⚠️ Curriculum metrics not available (steps={global_steps}, phase={curriculum_phase})")
+        
         # Placement metrics
         print(f"\n📈 PLACEMENT PERFORMANCE:")
-        partial = result.get('custom_metrics/placement_rate_mean', None)
-        full = result.get('custom_metrics/full_placement_rate_mean', None)
-        
-        # ENHANCED: All conflict types
-        total_conflicts = result.get('custom_metrics/total_conflicts_mean', 0)
-        duplicates = result.get('custom_metrics/duplicate_count_mean', 0)
-        teacher_conflicts = result.get('custom_metrics/teacher_conflicts_mean', 0)
-        section_conflicts = result.get('custom_metrics/section_conflicts_mean', 0)
-        
         if partial is not None:
             self.placement_history.append(partial)
-            self.conflict_history.append(total_conflicts)
+            if total_conflicts is not None:
+                self.conflict_history.append(total_conflicts)
             
             print(f"   Partial: {partial:.1f}%")
-            print(f"   Full: {full:.1f}%")
-            print(f"\n   🔍 CONFLICT BREAKDOWN:")
-            print(f"      Total: {total_conflicts:.1f}")
-            print(f"      Duplicates: {duplicates:.1f}")
-            print(f"      Teacher: {teacher_conflicts:.1f}")
-            print(f"      Section: {section_conflicts:.1f}")
+            if full is not None:
+                print(f"   Full: {full:.1f}%")
             
-            # Celebrate zero conflicts!
-            if total_conflicts == 0:
-                if not self.best_zero_conflicts:
-                    print(f"\n   🎉🎉🎉 FIRST ZERO-CONFLICT EPISODE! 🎉🎉🎉")
-                    print(f"   FIX #7 IS WORKING!")
-                    self.best_zero_conflicts = True
+            # NEW: Under/over placement tracking
+            if under_placed is not None or over_placed is not None or correct_placed is not None:
+                print(f"\n   📦 PLACEMENT ACCURACY:")
+                if under_placed is not None:
+                    print(f"      Under-placed: {under_placed:.0f} subjects")
+                if over_placed is not None:
+                    print(f"      Over-placed: {over_placed:.0f} subjects")
+                if correct_placed is not None:
+                    print(f"      Correct: {correct_placed:.0f} subjects")
+                
+                # Diagnose the main issue
+                if under_placed and under_placed > 400:
+                    print(f"      ⚠️ MAJOR ISSUE: Most subjects missing required placements!")
+                    print(f"         → Need stronger rewards for reaching required_placements")
+                    print(f"         → Consider increasing milestone rewards")
+                
+                if over_placed and over_placed > 100:
+                    print(f"      ⚠️ DUPLICATE PROBLEM: Duplicate prevention failing!")
+                    print(f"         → Current r_duplicate_penalty: -300")
+                    print(f"         → Consider increasing to -500 or -1000")
+            
+            if total_conflicts is not None:
+                print(f"\n   🔍 CONFLICT BREAKDOWN:")
+                print(f"      Total (validate): {total_conflicts:.1f}")
+                if duplicates is not None:
+                    print(f"      Duplicates: {duplicates:.1f}")
+                if teacher_conflicts is not None:
+                    print(f"      Teacher: {teacher_conflicts:.1f}")
+                if section_conflicts is not None:
+                    print(f"      Section: {section_conflicts:.1f}")
+                if episode_conflicts is not None:
+                    print(f"      Episode (real-time): {episode_conflicts:.1f}")
+                
+                # Conflict trend analysis
+                if len(self.conflict_history) >= 10:
+                    recent_avg = sum(self.conflict_history[-10:]) / 10
+                    if len(self.conflict_history) >= 20:
+                        older_avg = sum(self.conflict_history[-20:-10]) / 10
+                        improvement = older_avg - recent_avg
+                        
+                        print(f"\n   📉 CONFLICT TREND (last 10 iters):")
+                        print(f"      Current avg: {recent_avg:.1f}")
+                        print(f"      Previous avg: {older_avg:.1f}")
+                        print(f"      Improvement: {improvement:+.1f}")
+                        
+                        if self.first_conflict_decrease is None and improvement > 10:
+                            self.first_conflict_decrease = it
+                            print(f"      🎉 FIRST MAJOR DECREASE at iteration {it}!")
+                        
+                        if improvement > 10:
+                            print(f"      🎉 EXCELLENT: Conflicts decreasing rapidly!")
+                        elif improvement > 5:
+                            print(f"      ✅ GOOD: Steady improvement")
+                        elif improvement > 0:
+                            print(f"      ✓ Progress, but slow")
+                        elif improvement > -5:
+                            print(f"      ⚠️ WARNING: Stagnating")
+                        else:
+                            print(f"      ❌ PROBLEM: Getting worse!")
+                
+                # Zero conflicts check
+                if total_conflicts == 0:
+                    if not self.best_zero_conflicts:
+                        print(f"\n   🎉🎉🎉 FIRST ZERO-CONFLICT EPISODE! 🎉🎉🎉")
+                        self.best_zero_conflicts = True
+                    else:
+                        print(f"\n   ✅ ZERO CONFLICTS!")
+                elif total_conflicts < 5:
+                    print(f"\n   ✨ Very low conflicts - almost there!")
+                elif total_conflicts < 10:
+                    print(f"\n   ⚠️ Some conflicts remain")
+                elif total_conflicts < 50:
+                    print(f"\n   ⚡ Conflicts decreasing")
                 else:
-                    print(f"\n   ✅ ZERO CONFLICTS - All fixes working!")
-            elif total_conflicts < 5:
-                print(f"\n   ✨ Very low conflicts!")
-            elif total_conflicts < 10:
-                print(f"\n   ⚠️ Some conflicts remain")
+                    print(f"\n   ❌ High conflict count")
+                
+                # Track improvements
+                if partial > self.best_placement:
+                    self.best_placement = partial
+                    print(f"\n   🎯 NEW BEST PARTIAL: {partial:.1f}%!")
+                
+                if full is not None and full > self.best_full_placement:
+                    self.best_full_placement = full
+                    print(f"   🏆 NEW BEST FULL: {full:.1f}%!")
             else:
-                print(f"\n   ❌ High conflict count - debugging needed")
-            
-            if partial > self.best_placement:
-                self.best_placement = partial
-                print(f"\n   🎯 NEW BEST PARTIAL: {partial:.1f}%!")
-            
-            if full is not None and full > self.best_full_placement:
-                self.best_full_placement = full
-                print(f"   🏆 NEW BEST FULL: {full:.1f}%!")
+                print(f"   ⚠️ Conflict metrics not available")
+        else:
+            print(f"   ⚠️ Placement metrics not available (warming up...)")
         
         # Action distribution
         print(f"\n🎮 ACTION DISTRIBUTION:")
@@ -558,6 +643,8 @@ class EnhancedValidationCallback(DefaultCallbacks):
                 print(f"   ✅ Good action balance")
             
             self.action_stats = {'wait_actions': 0, 'place_actions': 0, 'total_actions': 0}
+        else:
+            print(f"   (No actions recorded this iteration)")
         
         # Reward analysis
         print(f"\n💰 REWARD ANALYSIS:")
@@ -566,19 +653,17 @@ class EnhancedValidationCallback(DefaultCallbacks):
             prev_rew = self.reward_history[-2]
             delta = rew - prev_rew
             print(f"   Change: {delta:+.2f}")
-        
-        # Progress tracking
-        if len(self.conflict_history) > 10:
-            recent_conflicts = self.conflict_history[-10:]
-            avg_recent = sum(recent_conflicts) / len(recent_conflicts)
-            print(f"\n📊 RECENT TREND (last 10 episodes):")
-            print(f"   Avg conflicts: {avg_recent:.1f}")
-            if avg_recent == 0:
-                print(f"   🌟 PERFECT: Consistently zero conflicts!")
-            elif avg_recent < 1:
-                print(f"   ✨ Excellent: Near-zero conflicts")
-            elif avg_recent < 5:
-                print(f"   ✅ Good: Low conflicts")
+            
+            if len(self.reward_history) > 20:
+                recent_trend = sum(self.reward_history[-10:]) / 10
+                older_trend = sum(self.reward_history[-20:-10]) / 10
+                trend_change = recent_trend - older_trend
+                
+                print(f"   Trend: {trend_change:+.2f}")
+                if trend_change > 1.0:
+                    print(f"   📈 Rewards improving!")
+                elif trend_change < -1.0:
+                    print(f"   📉 Rewards declining")
         
         print(f"{'='*80}\n")
         
@@ -588,16 +673,25 @@ class EnhancedValidationCallback(DefaultCallbacks):
             self.writer.add_scalar("Placement/Partial", partial, it)
         if full is not None:
             self.writer.add_scalar("Placement/Full", full, it)
-        if total_conflicts >= 0:
+        if total_conflicts is not None:
             self.writer.add_scalar("Validation/Total_Conflicts", total_conflicts, it)
+        if duplicates is not None:
             self.writer.add_scalar("Validation/Duplicates", duplicates, it)
+        if teacher_conflicts is not None:
             self.writer.add_scalar("Validation/Teacher_Conflicts", teacher_conflicts, it)
+        if section_conflicts is not None:
             self.writer.add_scalar("Validation/Section_Conflicts", section_conflicts, it)
-        if value_loss is not None:
-            self.writer.add_scalar("Loss/Value", value_loss, it)
-        if policy_loss is not None:
-            self.writer.add_scalar("Loss/Policy", policy_loss, it)
-                
+        if curriculum_phase is not None:
+            self.writer.add_scalar("Curriculum/Phase", curriculum_phase, it)
+        if global_steps is not None:
+            self.writer.add_scalar("Curriculum/GlobalSteps", global_steps, it)
+        if under_placed is not None:
+            self.writer.add_scalar("Placement/Under_Placed", under_placed, it)
+        if over_placed is not None:
+            self.writer.add_scalar("Placement/Over_Placed", over_placed, it)
+        if correct_placed is not None:
+            self.writer.add_scalar("Placement/Correct_Placed", correct_placed, it)
+                    
     def _unwrap_env(self, base_env):
         """Properly unwrap the environment"""
         env_like = None
@@ -616,13 +710,23 @@ class EnhancedValidationCallback(DefaultCallbacks):
         return getattr(env_like, "par_env", env_like)
         
     def on_episode_end(self, *, worker, base_env, episode, **kwargs):
-        """Enhanced validation with FIX #7: Per-placement teacher tracking"""
+        """Enhanced validation with ACCURATE conflict detection - handles missing keys"""
         self.episode_counter += 1
         env = self._unwrap_env(base_env)
 
-        num_fully_placed = len(env.placed_subjects)
+        # DEBUG: Print raw environment state every 50 episodes
+        if self.episode_counter % 50 == 0:
+            print(f"\n🔍 EPISODE {self.episode_counter} RAW STATE:")
+            print(f"   conflict_count: {env.conflict_count}")
+            print(f"   placed_subjects: {len(env.placed_subjects)}/{env.num_subjects}")
+            print(f"   global_step_counter: {env.global_step_counter}")
+            print(f"   curriculum_multiplier: {env._get_curriculum_multiplier():.2f}")
+
+        # Get complete placements (HONEST counting)
+        num_fully_placed = env.get_complete_placements()
         full_placement_rate = (num_fully_placed / env.num_subjects) * 100
         
+        # Track partial placements
         subjects_with_placements = set()
         for (subj, sec), count in env.subject_placement_count.items():
             if count > 0:
@@ -631,111 +735,107 @@ class EnhancedValidationCallback(DefaultCallbacks):
         num_partial_placed = len(subjects_with_placements)
         partial_placement_rate = (num_partial_placed / env.num_subjects) * 100
         
+        # Overall progress
         total_placements_needed = sum(env.subject_required_placements.values())
         total_placements_made = sum(env.subject_placement_count.values())
         overall_progress = (total_placements_made / total_placements_needed) * 100 if total_placements_needed > 0 else 0
         
+        # Report metrics
         episode.custom_metrics["placement_rate"] = partial_placement_rate
         episode.custom_metrics["full_placement_rate"] = full_placement_rate
         episode.custom_metrics["overall_progress"] = overall_progress
         
-        # COMPREHENSIVE VALIDATION WITH FIX #7
+        # CRITICAL: Track curriculum phase
+        episode.custom_metrics["curriculum_phase"] = env._get_curriculum_multiplier()
+        episode.custom_metrics["global_step_counter"] = env.global_step_counter
         
-        # 1. Duplicate check
-        duplicate_count = 0
+        # ============================================================
+        # FIX: USE ENVIRONMENT'S COMPREHENSIVE VALIDATION WITH SAFE KEY ACCESS
+        # ============================================================
+        conflicts_report = env.validate_schedule()
+        
+        # Extract conflict counts SAFELY (handle missing keys)
+        summary = conflicts_report.get('summary', {})
+        duplicate_count = summary.get('duplicate_placements', 0)
+        teacher_conflicts = summary.get('teacher_conflicts', 0)
+        total_conflicts = summary.get('total_conflicts', 0)
+        
+        # Calculate section conflicts manually (since validate_schedule doesn't return it)
+        section_conflicts = 0
+        section_time_map = {}
+        for subj in range(env.num_subjects):
+            sec_idx = env.subject_section_idx[subj]
+            for d in range(env.num_days):
+                for ts in range(env.num_timeslots):
+                    if (subj, d, ts) in env.placement_teachers:
+                        key = (sec_idx, d, ts)
+                        if key not in section_time_map:
+                            section_time_map[key] = []
+                        section_time_map[key].append(subj)
+        
+        for key, subjects in section_time_map.items():
+            if len(subjects) > 1:
+                section_conflicts += (len(subjects) - 1)
+        
+        # Also get the conflict count tracked DURING episode
+        episode_conflicts = env.conflict_count
+        
+        # Report ALL conflict metrics
+        episode.custom_metrics["duplicate_count"] = duplicate_count
+        episode.custom_metrics["teacher_conflicts"] = teacher_conflicts  
+        episode.custom_metrics["section_conflicts"] = section_conflicts
+        episode.custom_metrics["total_conflicts"] = total_conflicts
+        episode.custom_metrics["episode_conflicts"] = episode_conflicts
+        
+        # NEW: Report under/over placement issues
+        under_placed = 0
+        over_placed = 0
+        correct_placed = 0
+        
         for subj in range(env.num_subjects):
             sec_idx = env.subject_section_idx[subj]
             current = env._get_placement_count(subj, sec_idx)
             required = env.subject_required_placements.get(subj, 1)
-            if current > required:
-                duplicate_count += (current - required)
-        
-        episode.custom_metrics["duplicate_count"] = duplicate_count
-        
-        # 2. Teacher conflict check (FIX #7: Using per-placement tracking)
-        teacher_conflicts = 0
-        for t_idx in range(env.num_teachers):
-            for d in range(env.num_days):
-                for ts in range(env.num_timeslots):
-                    # Find all subjects at this day/time with this teacher
-                    subjects_here = []
-                    
-                    for b in env.building_keys:
-                        b_sched = env.buildings_room_schedule[b]
-                        for r_idx in range(len(env.buildings_room_info[b])):
-                            subj = b_sched[r_idx, d, ts]
-                            
-                            if subj >= 0:
-                                # FIX #7: Use placement-specific teacher assignment
-                                assigned_t = env.placement_teachers.get((subj, d, ts), -1)
-                                if assigned_t == t_idx:
-                                    subjects_here.append(subj)
-                    
-                    # If same teacher has multiple subjects at same time, it's a conflict
-                    if len(subjects_here) > 1:
-                        teacher_conflicts += (len(subjects_here) - 1)
-        
-        episode.custom_metrics["teacher_conflicts"] = teacher_conflicts
-        
-        # 3. Section conflict check
-        section_conflicts = 0
-        for sec_idx in range(env.num_sections):
-            for d in range(env.num_days):
-                for ts in range(env.num_timeslots):
-                    subjects_at_time = []
-                    for subj in range(env.num_subjects):
-                        if env.subject_section_idx[subj] != sec_idx:
-                            continue
-                        for b in env.building_keys:
-                            b_sched = env.buildings_room_schedule[b]
-                            for r_idx in range(len(env.buildings_room_info[b])):
-                                if b_sched[r_idx, d, ts] == subj:
-                                    subjects_at_time.append(subj)
-                    
-                    if len(subjects_at_time) > 1:
-                        section_conflicts += (len(subjects_at_time) - 1)
-        
-        episode.custom_metrics["section_conflicts"] = section_conflicts
-        
-        # Total conflicts
-        total_conflicts = duplicate_count + teacher_conflicts + section_conflicts
-        episode.custom_metrics["total_conflicts"] = total_conflicts
-        
-        # Detailed logging for first 20 and every 10th episode
-        should_log = (worker.worker_index == 1) and ((self.episode_counter <= 20) or (self.episode_counter % 10 == 0))
-        
-        if should_log:
-            print(f"\n{'='*70}")
-            print(f"📊 EPISODE {self.episode_counter} VALIDATION (v14.5)")
-            print(f"{'='*70}")
-            print(f"Placement: Partial {partial_placement_rate:.1f}% | Full {full_placement_rate:.1f}%")
-            print(f"\nConflict Breakdown:")
-            print(f"  Total: {total_conflicts}")
-            print(f"  ├─ Duplicates: {duplicate_count}")
-            print(f"  ├─ Teacher: {teacher_conflicts}")
-            print(f"  └─ Section: {section_conflicts}")
             
-            if total_conflicts == 0:
-                print(f"\n🎉 PERFECT SCHEDULE: ZERO CONFLICTS!")
-                print(f"✅ All fixes (including FIX #7) are working!")
-            elif total_conflicts < 5:
-                print(f"\n✨ Excellent: Very low conflicts")
-            elif total_conflicts < 10:
-                print(f"\n⚠️ Some conflicts remain")
+            if current < required:
+                under_placed += 1
+            elif current > required:
+                over_placed += 1
             else:
-                print(f"\n❌ High conflicts - needs attention")
-                
-                # Show which type is worst
-                max_type = max(
-                    [("Duplicates", duplicate_count), 
-                     ("Teacher", teacher_conflicts),
-                     ("Section", section_conflicts)],
-                    key=lambda x: x[1]
-                )
-                print(f"   Main issue: {max_type[0]} ({max_type[1]} conflicts)")
-            
-            print(f"{'='*70}\n")
-    
+                correct_placed += 1
+        
+        episode.custom_metrics["under_placed_subjects"] = under_placed
+        episode.custom_metrics["over_placed_subjects"] = over_placed
+        episode.custom_metrics["correct_placed_subjects"] = correct_placed
+        
+        # Modality stats
+        for modality in env.modality_labels:
+            modality_data = env.modality_stats.get(modality, {})
+            total = modality_data.get('attempted', 0)
+            placed = modality_data.get('placed', 0)
+            rate = (placed / total * 100) if total > 0 else 0
+            episode.custom_metrics[f"modality_{modality}_rate"] = rate
+        
+        # Enhanced debug output every 100 episodes
+        if self.episode_counter % 100 == 0:
+            print(f"\n" + "="*80)
+            print(f"📊 EPISODE {self.episode_counter} COMPREHENSIVE SUMMARY")
+            print("="*80)
+            print(f"Placement:")
+            print(f"  Partial: {num_partial_placed}/{env.num_subjects} ({partial_placement_rate:.1f}%)")
+            print(f"  Full: {num_fully_placed}/{env.num_subjects} ({full_placement_rate:.1f}%)")
+            print(f"  Under-placed: {under_placed}")
+            print(f"  Over-placed: {over_placed}")
+            print(f"  Correct: {correct_placed}")
+            print(f"\nConflicts:")
+            print(f"  Total (from validation): {total_conflicts}")
+            print(f"  Teacher: {teacher_conflicts}")
+            print(f"  Section (calculated): {section_conflicts}")
+            print(f"  Duplicates: {duplicate_count}")
+            print(f"  Episode (real-time): {episode_conflicts}")
+            print(f"\nCurriculum: {env._get_curriculum_multiplier():.1f}x @ step {env.global_step_counter}")
+            print("="*80 + "\n")
+        
     def on_episode_step(self, *, worker, base_env, episode, **kwargs):
         """Track action distribution"""
         env = self._unwrap_env(base_env)
@@ -765,8 +865,27 @@ class EnhancedValidationCallback(DefaultCallbacks):
 # ============================================================
 # ENVIRONMENT FACTORY
 # ============================================================
+
+def convert_subject_placements(data):
+    """Convert subject_required_days to integer counts (handles both list and int formats)"""
+    subject_required_days = data.get('subject_required_days') or data.get('subject_required_placements')
+    
+    if not subject_required_days:
+        return {i: 1 for i in range(data['num_subjects'])}
+    
+    # Convert to integer counts (handle both list ['M','H'] and integer 2 formats)
+    result = {}
+    for subj_idx, days in subject_required_days.items():
+        if isinstance(days, list):
+            result[subj_idx] = len(days)  # Convert list to count
+        else:
+            result[subj_idx] = int(days)  # Already an integer
+    
+    return result
+
+
 def make_manila_env(config=None):
-    """Create environment for Manila schedule with ALL FIXES including #7"""
+    """Create environment for Manila schedule with AGGRESSIVE PENALTIES"""
     cache_file = None
     if config and isinstance(config, dict):
         cache_file = config.get('cache_file')
@@ -807,7 +926,7 @@ def make_manila_env(config=None):
         area_teacher_indices=data["area_teacher_indices"],
         subject_allowed_timeslots=data.get("subject_allowed_timeslots"),
         timeslot_definitions=data.get("timeslot_definitions", []),
-        subject_required_placements=data.get("subject_required_placements"),
+        subject_required_placements=convert_subject_placements(data),
         strict_teacher_match=False,
         r_teacher_match=40.0,
         r_teacher_mismatch=-1.0,
@@ -816,9 +935,14 @@ def make_manila_env(config=None):
         r_workload_balance=15.0,
         base_success_reward=150.0,
         wait_penalty=20.0,
+        # NEW: AGGRESSIVE PENALTIES
+        r_conflict_penalty=-200.0,
+        r_duplicate_penalty=-300.0,
+        r_section_conflict_penalty=-250.0,
         r_online_bonus=8.0,
         enable_progressive_difficulty=True,
         difficulty_ramp_steps=100,
+        enable_curriculum_learning=True,  # NEW
         include_focus_scalar=True,
         include_focus_tor_scalar=False,
         include_section_features=True,
@@ -901,7 +1025,7 @@ def find_latest_checkpoint(base_dir="C:/ray_logs"):
 # MAIN TRAINING
 # ============================================================
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Manila Training v18.2 - FULLY FIXED with Resume")
+    parser = argparse.ArgumentParser(description="Manila Training v18.9 - AGGRESSIVE PENALTIES")
     parser.add_argument("--cache", type=str, default=None,
                        help="Path to Manila cache file")
     parser.add_argument("--iterations", type=int, default=100,
@@ -916,38 +1040,28 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     print("=" * 80)
-    print("MANILA TRAINING - v18.8 AGGRESSIVE GPU Optimization (4096 minibatch!)")
+    print("MANILA TRAINING - v18.9 AGGRESSIVE PENALTIES + GPU Optimization")
     print("=" * 80)
     print("\n🔧 ALL FIXES APPLIED:")
     print("  ✅ FIX #1-12: All critical bugs resolved")
-    print("  ✅ Per-placement teacher tracking (CRITICAL!)")
-    print("  ✅ Step-local placement tracking")
-    print("  ✅ Day duplicate prevention")
-    print("  ✅ Checkpoint Resume Support")
-    print("\n⚡ PERFORMANCE OPTIMIZATIONS (AGGRESSIVE - Tuned for Your Hardware):")
-    print("  ✅ PERF #1: 3-worker parallelization (tested stable on your system)")
-    print("  ✅ PERF #2: AGGRESSIVE GPU optimization - 4096 minibatch (8x larger!)")
-    print("  ✅ PERF #3: Truncate episodes mode (faster iteration)")
-    print("  ✅ PERF #4: Larger rollout fragments (fewer blocking calls)")
-    print("\n📊 MEASURED PERFORMANCE (with 2048 minibatch):")
-    print("  • GPU: 1050 MB / 6144 MB (was 500 MB) - 2x increase ✅")
-    print("  • CPU: 25-40% - Good utilization ✅")
-    print("  • RAM: 12.1 GB / 16 GB - Safe ✅")
-    print("  • Still have 5 GB GPU unused! Pushing to 4096 minibatch...")
-    print("\n💻 HARDWARE CONFIGURATION:")
-    print("  CPU: 12-core → 3 rollout workers × 1 env = 3 parallel environments")
-    print("  GPU: 6GB → Target 2-4GB usage (4096 minibatch = 8x increase from 512!)")
-    print("  RAM: 16GB → Expected ~12-13GB used (safe)")
-    print("\n📈 EXPECTED PERFORMANCE (After 4096 minibatch):")
-    print("  Iteration time: 30-60 seconds! (was 2 mins, was 16 mins baseline)")
-    print("  Total speedup: 15-30x faster! 🚀🚀🚀")
-    print("  CPU usage: 30-40%")
-    print("  GPU usage: 90-100% (maximum utilization!)")
-    print("  Training time (100 iter): 1-1.5 hours! (was 26.7 hours baseline!)")
-    print("\n📊 Expected Result:")
-    print("  ZERO teacher conflicts")
-    print("  ZERO section conflicts")
-    print("  ZERO duplicate placements")
+    print("  ✅ FIX #13: AGGRESSIVE conflict penalties (-200)")
+    print("  ✅ FIX #14: Exponential global conflict penalty")
+    print("  ✅ FIX #15: Quadratic completion pressure")
+    print("  ✅ FIX #16: Curriculum learning (3 phases)")
+    print("\n⚡ EXPECTED LEARNING BEHAVIOR:")
+    print("  • Phase 1 (0-10k steps): 🌱 Learning basics (0.5x penalties)")
+    print("  • Phase 2 (10k-30k steps): ⚡ Normal training (1.0x penalties)")
+    print("  • Phase 3 (30k+ steps): 🎯 Perfection mode (1.5x penalties)")
+    print("\n📈 EXPECTED RESULTS:")
+    print("  • Iter 10-50: Conflicts START decreasing")
+    print("  • Iter 50-100: Student scores rise to 40+, conflicts <50")
+    print("  • Iter 100-200: Overall scores 65-75, conflicts <20")
+    print("  • Iter 200-500: Overall scores 80-90+, conflicts <5")
+    print("  • Iter 500+: ZERO conflicts achievable, scores 95+")
+    print("\n⚠️ IF CONFLICTS DON'T DECREASE BY ITERATION 50:")
+    print("  → Penalties still too weak")
+    print("  → Increase r_conflict_penalty to -300 or -400")
+    print("  → Check TensorBoard for reward trends")
     print("=" * 80 + "\n")
     
     cache_file = args.cache
@@ -967,7 +1081,7 @@ if __name__ == "__main__":
         
         if conflicts['summary']['total_conflicts'] == 0:
             print("\n✅ Schedule is PERFECT - ZERO conflicts!")
-            print("FIX #7 is working correctly!")
+            print("All fixes are working correctly!")
         else:
             print(f"\n⚠️ Schedule has {conflicts['summary']['total_conflicts']} conflicts")
             print("\nBreakdown:")
@@ -1001,7 +1115,7 @@ if __name__ == "__main__":
 
     # Test environment
     print("=" * 80)
-    print("VALIDATING ENVIRONMENT (v14.5)")
+    print("VALIDATING ENVIRONMENT (v14.7 - AGGRESSIVE PENALTIES)")
     print("=" * 80)
     test_env = make_manila_env({'cache_file': cache_file})
     raw = test_env.par_env
@@ -1012,11 +1126,26 @@ if __name__ == "__main__":
     print(f"Max teachers per area: {raw.max_teachers_per_area}")
     print(f"Slot choices: {raw.slot_choices}")
     
-    # Verify FIX #7
-    if hasattr(raw, 'placement_teachers'):
-        print(f"✅ FIX #7 applied: placement_teachers dict exists")
+    # Verify aggressive penalties
+    print(f"\n🔥 AGGRESSIVE PENALTIES VERIFIED:")
+    print(f"   Conflict penalty: {raw.r_conflict_penalty}")
+    print(f"   Duplicate penalty: {raw.r_duplicate_penalty}")
+    print(f"   Section conflict: {raw.r_section_conflict_penalty}")
+    print(f"   Curriculum learning: {raw.enable_curriculum_learning}")
+    
+    if raw.r_conflict_penalty >= -50:
+        print(f"\n   ❌ WARNING: Penalties too weak!")
+        print(f"      Current: {raw.r_conflict_penalty}")
+        print(f"      Recommended: -200 or lower")
+        sys.exit(1)
     else:
-        print(f"❌ FIX #7 NOT applied: placement_teachers missing!")
+        print(f"   ✅ Penalties are aggressive enough")
+    
+    # Verify curriculum learning
+    if hasattr(raw, '_get_curriculum_multiplier'):
+        print(f"   ✅ Curriculum learning enabled")
+    else:
+        print(f"   ❌ Curriculum learning NOT found!")
         sys.exit(1)
     
     obs_dict, _ = test_env.reset()
@@ -1063,37 +1192,7 @@ if __name__ == "__main__":
     def policy_mapping_fn(agent_id, episode, **kwargs):
         return "saha_policy"
 
-    # PPO Configuration - GPU-OPTIMIZED + WINDOWS-TESTED
-    # ============================================================
-    # HARDWARE:
-    # - CPU: 12 cores → Using 3 workers (Windows-tested stable)
-    # - RAM: 16GB → 1 env/worker (8-10GB used)
-    # - GPU: 6GB VRAM → 2048 minibatch (2-3GB used - 4x increase!)
-    #
-    # OPTIMIZATIONS APPLIED:
-    # - 3 workers × 1 env = 3 parallel environments (50% more than 2)
-    # - 2048 minibatch: 4x larger GPU batches (was 512)
-    # - Truncate episodes mode: Don't wait for full episodes
-    # - Larger fragments (128): Fewer blocking calls
-    # - Batch size 1536: Matched to 3 workers
-    #
-    # RLLIB VERSION COMPATIBILITY:
-    # - normalize_advantage: Disabled (not in all RLlib versions)
-    # - _enable_amp: Disabled (not in all RLlib versions)
-    # - Works with RLlib 1.x and 2.x
-    #
-    # EXPECTED PERFORMANCE:
-    # - Total speedup: 10-20x faster than original! 🚀🚀
-    # - CPU utilization: 30-40% (was 1-5%)
-    # - GPU utilization: 80-95% (was 60-80%)
-    # - Iteration time: 45-90 seconds! (was 2 mins, was 16 mins baseline)
-    # - Training time (100 iter): 1.5-2.5 hours! (was 26.7 hours)
-    #
-    # PROGRESSION:
-    # - Baseline: 16 min/iter = 26.7 hours
-    # - After 2 workers: 2 min/iter = 3.3 hours (8x speedup)
-    # - After GPU opt: 1 min/iter = 1.7 hours (16x speedup) ✅
-    # ============================================================
+    # PPO Configuration - GPU-OPTIMIZED
     ppo_cfg = (
         PPOConfig()
         .environment(
@@ -1103,11 +1202,10 @@ if __name__ == "__main__":
         )
         .framework("torch")
         .rollouts(
-            num_rollout_workers=2,              # ✅ INCREASED: 3 workers (2 was stable, trying 3 for more parallelism)
-            rollout_fragment_length=128,        # ✅ Larger fragments (was 64) - fewer blocking calls
-            batch_mode="truncate_episodes",     # ✅ Don't wait for full episodes (was complete_episodes) - faster iteration
-            num_envs_per_worker=1,              # ✅ WINDOWS-SAFE: 1 env per worker
-            # observation_filter removed - causes initialization slowdown on Windows
+            num_rollout_workers=2,
+            rollout_fragment_length=128,
+            batch_mode="truncate_episodes",
+            num_envs_per_worker=1,
         )
         .training(
             gamma=0.95,
@@ -1118,17 +1216,12 @@ if __name__ == "__main__":
                 [50000, 2e-4],
                 [100000, 1e-4],
             ],
-            # CRITICAL CONSTRAINT: sgd_minibatch_size <= train_batch_size ALWAYS!
-            # train_batch_size = samples collected from workers
-            # sgd_minibatch_size = chunk size for gradient updates
-            # num_sgd_iter = train_batch_size / sgd_minibatch_size
-            train_batch_size=512,              # ✅ Must be >= sgd_minibatch_size
-            sgd_minibatch_size=512,            # ✅ GPU OPTIMIZATION: Match train_batch for single pass
-            num_sgd_iter=1,                     # ✅ 4096 / 4096 = 1 iteration
+            train_batch_size=512,
+            sgd_minibatch_size=512,
+            num_sgd_iter=1,
             vf_clip_param=50.0,
             use_gae=True,
             lambda_=0.95,
-            # normalize_advantage=True,         # Not available in this RLlib version
             clip_param=0.3,
             entropy_coeff=1.0,
             entropy_coeff_schedule=[
@@ -1141,7 +1234,6 @@ if __name__ == "__main__":
             kl_coeff=0.1,
             kl_target=0.01,
             vf_loss_coeff=1.0,
-            # _enable_amp=True,                 # Mixed precision - not available in this RLlib version
         )
         .resources(
             num_gpus=1,
@@ -1164,13 +1256,11 @@ if __name__ == "__main__":
     
     if args.resume:
         if args.resume.lower() == "auto":
-            # Auto-detect latest checkpoint
             resume_checkpoint = find_latest_checkpoint()
             if not resume_checkpoint:
                 print("No checkpoints found, starting fresh training")
                 args.resume = None
         else:
-            # User specified checkpoint path
             resume_checkpoint = args.resume
             
             if not os.path.exists(resume_checkpoint):
@@ -1179,24 +1269,23 @@ if __name__ == "__main__":
             
             print(f"\n✅ Found checkpoint: {os.path.basename(resume_checkpoint)}")
             
-            # Verify it's a valid checkpoint
             if not os.path.isdir(resume_checkpoint):
                 print(f"❌ ERROR: Path is not a checkpoint directory")
                 sys.exit(1)
     
     # ============================================================
-    # STARTING TRAINING (WITH RESUME SUPPORT)
+    # STARTING TRAINING
     # ============================================================
     print(f"\n" + "=" * 80)
-    print("STARTING TRAINING - ALL FIXES APPLIED (v14.5 + v18.2)")
+    print("STARTING TRAINING - AGGRESSIVE PENALTIES v14.7")
     print("=" * 80)
     print(f"Target iterations: {args.iterations}")
     if resume_checkpoint:
         print(f"🔄 RESUMING from: {os.path.basename(resume_checkpoint)}")
     else:
         print(f"🆕 STARTING FRESH (no checkpoint)")
-    print(f"\n🎯 Target: ZERO conflicts of all types")
-    print(f"Watch for: 'FIX #7 IS WORKING!' in episode logs")
+    print(f"\n🎯 Target: Conflicts decrease by iteration 50")
+    print(f"Watch for: '🎉 FIRST MAJOR DECREASE' in diagnostic output")
     print("=" * 80 + "\n")
     
     # ============================================================
@@ -1206,20 +1295,16 @@ if __name__ == "__main__":
         print(f"Attempting direct algorithm restoration...")
         
         try:
-            # Restore algorithm directly from checkpoint
             algorithm = PPO.from_checkpoint(resume_checkpoint)
             current_iter = algorithm.iteration
             print(f"✅ Restored from iteration {current_iter}")
             
-            # Verify environment still works with restored model
-            print(f"Verifying environment compatibility...")
             verify_env = make_manila_env({'cache_file': cache_file})
             obs, _ = verify_env.reset()
             print(f"✅ Environment compatible with checkpoint")
             
-            # Continue training manually
             target_iterations = args.iterations
-            checkpoint_dir = "C:/ray_logs/manual_checkpoints_manila_resumed"
+            checkpoint_dir = "C:/ray_logs/manual_checkpoints_manila_aggressive"
             os.makedirs(checkpoint_dir, exist_ok=True)
             
             print(f"\n{'='*80}")
@@ -1237,19 +1322,16 @@ if __name__ == "__main__":
 
                 current_iter = result["training_iteration"]
                 
-                # Extract metrics
                 reward = result.get('episode_reward_mean', 0)
                 placement_rate = result.get('custom_metrics', {}).get('placement_rate_mean', 0)
                 full_rate = result.get('custom_metrics', {}).get('full_placement_rate_mean', 0)
                 conflicts = result.get('custom_metrics', {}).get('total_conflicts_mean', 0)
                 duplicates = result.get('custom_metrics', {}).get('duplicate_count_mean', 0)
                 
-                # Calculate actual subjects placed
                 num_subjects = raw.num_subjects
                 partial_placed = int(placement_rate * num_subjects / 100) if placement_rate else 0
                 full_placed = int(full_rate * num_subjects / 100) if full_rate else 0
                 
-                # Print progress with timing
                 avg_time = sum(iteration_times[-5:]) / min(5, len(iteration_times)) if iteration_times else 0
                 print(f"Iter {current_iter:3d}: "
                       f"Time={iter_duration:5.1f}s (avg={avg_time:5.1f}s) | "
@@ -1259,21 +1341,18 @@ if __name__ == "__main__":
                       f"Conflicts={conflicts:4.1f} | "
                       f"Dup={duplicates:4.1f}")
                 
-                # Save checkpoint every 10 iterations
                 if current_iter % 10 == 0:
                     checkpoint_path = algorithm.save(
                         f"{checkpoint_dir}/checkpoint_{current_iter:06d}"
                     )
                     print(f"   💾 Saved checkpoint_{current_iter:06d}")
                 
-                # Milestone notifications
                 if full_rate >= 95 and current_iter % 5 == 0:
                     print(f"   🎯 Excellent performance! Full placement: {full_rate:.1f}%")
                 
                 if conflicts == 0 and duplicates == 0 and full_rate > 0:
                     print(f"   ✨ PERFECT SCHEDULE: Zero conflicts and duplicates!")
             
-            # Final checkpoint
             final_checkpoint = algorithm.save(
                 f"{checkpoint_dir}/checkpoint_{current_iter:06d}_FINAL"
             )
@@ -1286,7 +1365,6 @@ if __name__ == "__main__":
             print(f"Checkpoint directory: {checkpoint_dir}")
             print(f"{'='*80}\n")
             
-            # Run final validation
             print("\nRunning final comprehensive validation...")
             final_env = make_manila_env({'cache_file': cache_file})
             final_env.reset()
@@ -1296,7 +1374,7 @@ if __name__ == "__main__":
             
             if total == 0:
                 print("\n🎉🎉🎉 PERFECT! Final schedule has ZERO conflicts! 🎉🎉🎉")
-                print("All fixes (including FIX #7 and FIX #12) are working correctly!")
+                print("All fixes (aggressive penalties) are working correctly!")
             else:
                 print(f"\n⚠️ Final schedule has {total} conflicts")
                 print(f"\nBreakdown:")
@@ -1314,7 +1392,7 @@ if __name__ == "__main__":
             resume_checkpoint = None
     
     # ============================================================
-    # FRESH TRAINING (No checkpoint or resume failed)
+    # FRESH TRAINING
     # ============================================================
     if not resume_checkpoint:
         print("Starting fresh training with Tuner...")
@@ -1329,6 +1407,7 @@ if __name__ == "__main__":
                 "custom_metrics/duplicate_count_mean",
                 "custom_metrics/teacher_conflicts_mean",
                 "custom_metrics/section_conflicts_mean",
+                "custom_metrics/curriculum_phase_mean",
             ],
             max_report_frequency=30,
         )
@@ -1336,7 +1415,7 @@ if __name__ == "__main__":
         run_cfg = RunConfig(
             stop={"training_iteration": args.iterations},
             local_dir="C:/ray_logs",
-            name="Manila_FULLY_FIXED_v18_2_with_Resume",
+            name="Manila_v14_7_AGGRESSIVE_PENALTIES",
             checkpoint_config=CheckpointConfig(
                 checkpoint_frequency=10, 
                 checkpoint_at_end=True,
@@ -1353,8 +1432,7 @@ if __name__ == "__main__":
         print("✅ TRAINING COMPLETED")
         print("=" * 80)
         
-        # Final comprehensive validation
-        print("\nRunning final comprehensive validation with FIX #7...")
+        print("\nRunning final comprehensive validation...")
         final_env = make_manila_env({'cache_file': cache_file})
         final_env.reset()
         final_conflicts = final_env.par_env.validate_schedule()
@@ -1363,11 +1441,16 @@ if __name__ == "__main__":
         
         if total == 0:
             print("\n🎉🎉🎉 PERFECT! Final schedule has ZERO conflicts! 🎉🎉🎉")
-            print("All fixes (including FIX #7 and FIX #12) are working correctly!")
+            print("Aggressive penalties worked!")
         else:
             print(f"\n⚠️ Final schedule has {total} conflicts")
             print(f"\nBreakdown:")
             print(f"  Duplicates: {final_conflicts['summary']['duplicate_placements']}")
             print(f"  Teacher: {final_conflicts['summary']['teacher_conflicts']}")
             print(f"  Section: {final_conflicts['summary']['section_conflicts']}")
-            print("\nReview episode logs to identify when conflicts occur.")
+            
+            if total > 50:
+                print(f"\n💡 RECOMMENDATION:")
+                print(f"   Penalties still too weak. In environment init, increase:")
+                print(f"   r_conflict_penalty=-200.0  →  -300.0 or -400.0")
+                print(f"   r_duplicate_penalty=-300.0  →  -500.0")

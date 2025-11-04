@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-K,Science,"Orillo, Jhoanne",F,0915-1045,90,2,G209,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-L,Science,"Orillo, Jhoanne",M,0915-1045,90,2,G211,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-L,Science,"Orillo, Jhoanne",T,0915-1045,90,2,G211,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-K,Science,"Orillo, Jhoanne",W,0915-1045,90,2,G209,Physical,G,G,Hybrid,No

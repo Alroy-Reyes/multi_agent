@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2,STEM 12-B,Science,"Labog, Michael John",F,0730-0900,90,2,G102,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-C,Science,"Labog, Michael John",F,1430-1600,90,2,G103,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-B,Science,"Labog, Michael John",H,1100-1230,90,2,G102,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-C,Science,"Labog, Michael John",T,0915-1045,90,2,G103,Physical,G,G,Hybrid,No

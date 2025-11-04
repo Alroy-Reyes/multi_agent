@@ -10,6 +10,7 @@ Scoring Methodology:
 - Based on educational research and best practices
 
 UPDATED: Now handles both "Day" and "Days" column names automatically
+UPDATED: Enhanced conflict reporting - shows total conflicts prominently
 """
 import pandas as pd
 import sys
@@ -657,6 +658,8 @@ class SchedulePOVValidatorV2:
         teachers = self.df[self.teacher_column].unique()
         teacher_reports = {}
         total_score = 0
+        total_conflicts = 0
+        teachers_with_conflicts = 0
         score_distribution = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'F': 0}
         
         for teacher in teachers:
@@ -664,6 +667,11 @@ class SchedulePOVValidatorV2:
             if report:
                 teacher_reports[teacher] = report
                 total_score += report['score']
+                
+                # Track conflicts
+                if report['conflicts'] > 0:
+                    total_conflicts += report['conflicts']
+                    teachers_with_conflicts += 1
                 
                 # Grade distribution
                 if report['score'] >= 90:
@@ -681,6 +689,8 @@ class SchedulePOVValidatorV2:
         
         print(f"\nTotal Teachers: {len(teachers)}")
         print(f"Average Score: {avg_score:.1f}/100")
+        print(f"\n🚨 CONFLICTS: {total_conflicts} total conflicts found")
+        print(f"   Teachers with conflicts: {teachers_with_conflicts}/{len(teachers)}")
         print(f"\nGrade Distribution:")
         print(f"  A (90-100): {score_distribution['A']} teachers")
         print(f"  B (80-89):  {score_distribution['B']} teachers")
@@ -700,6 +710,7 @@ class SchedulePOVValidatorV2:
                 print(f"\n{teacher}: {report['score']:.1f}/100")
                 print(f"  Weekly Hours: {report['weekly_hours']:.1f}")
                 print(f"  Total Classes: {report['total_classes']}")
+                print(f"  Conflicts: {report['conflicts']}")
                 
                 if report.get('deductions'):
                     print(f"  Deductions:")
@@ -710,6 +721,8 @@ class SchedulePOVValidatorV2:
             'overall_score': avg_score,
             'distribution': score_distribution,
             'total_count': len(teachers),
+            'total_conflicts': total_conflicts,
+            'teachers_with_conflicts': teachers_with_conflicts,
             'reports': teacher_reports,
         }
         
@@ -728,6 +741,8 @@ class SchedulePOVValidatorV2:
         sections = self.df[self.section_column].unique()
         section_reports = {}
         total_score = 0
+        total_conflicts = 0
+        sections_with_conflicts = 0
         score_distribution = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'F': 0}
         
         for section in sections:
@@ -735,6 +750,11 @@ class SchedulePOVValidatorV2:
             if report:
                 section_reports[section] = report
                 total_score += report['score']
+                
+                # Track conflicts
+                if report['conflicts'] > 0:
+                    total_conflicts += report['conflicts']
+                    sections_with_conflicts += 1
                 
                 # Grade distribution
                 if report['score'] >= 90:
@@ -753,6 +773,8 @@ class SchedulePOVValidatorV2:
         
         print(f"\nTotal Sections: {len(sections)}")
         print(f"Average Score: {avg_score:.1f}/100")
+        print(f"\n🚨 CONFLICTS: {total_conflicts} total conflicts found")
+        print(f"   Sections with conflicts: {sections_with_conflicts}/{len(sections)}")
         print(f"\nGrade Distribution:")
         print(f"  A (90-100): {score_distribution['A']} sections")
         print(f"  B (80-89):  {score_distribution['B']} sections")
@@ -771,6 +793,7 @@ class SchedulePOVValidatorV2:
             for section, report in worst_sections:
                 print(f"\n{section}: {report['score']:.1f}/100")
                 print(f"  Subjects: {report['total_subjects']}")
+                print(f"  Conflicts: {report['conflicts']}")
                 
                 if report.get('deductions'):
                     print(f"  Deductions:")
@@ -781,6 +804,8 @@ class SchedulePOVValidatorV2:
             'overall_score': avg_score,
             'distribution': score_distribution,
             'total_count': len(sections),
+            'total_conflicts': total_conflicts,
+            'sections_with_conflicts': sections_with_conflicts,
             'reports': section_reports,
         }
         
@@ -809,12 +834,21 @@ class SchedulePOVValidatorV2:
         student_score = self.student_details['overall_score']
         overall_score = (teacher_score * 0.4) + (student_score * 0.6)
         
+        # Get conflict counts
+        teacher_conflicts = self.teacher_details.get('total_conflicts', 0)
+        student_conflicts = self.student_details.get('total_conflicts', 0)
+        
         print("\n" + "="*80)
         print("OVERALL POV VALIDITY SCORES (SEVERITY-WEIGHTED)")
         print("="*80)
         print(f"Teacher Perspective:  {teacher_score:.1f}/100")
-        print(f"Student Perspective:  {student_score:.1f}/100")
-        print(f"Overall POV Score:    {overall_score:.1f}/100")
+        print(f"  • Conflicts: {teacher_conflicts}")
+        print(f"  • Teachers with conflicts: {self.teacher_details.get('teachers_with_conflicts', 0)}/{self.teacher_details.get('total_count', 0)}")
+        print(f"\nStudent Perspective:  {student_score:.1f}/100")
+        print(f"  • Conflicts: {student_conflicts}")
+        print(f"  • Sections with conflicts: {self.student_details.get('sections_with_conflicts', 0)}/{self.student_details.get('total_count', 0)}")
+        print(f"\nOverall POV Score:    {overall_score:.1f}/100")
+        print(f"Total Conflicts:      {teacher_conflicts + student_conflicts}")
         print("="*80)
         
         # Grade and recommendations
@@ -856,12 +890,19 @@ class SchedulePOVValidatorV2:
         print("DETAILED RECOMMENDATIONS")
         print("="*80)
         
+        if student_conflicts > 0 or teacher_conflicts > 0:
+            print(f"\n🚨 CRITICAL: {student_conflicts + teacher_conflicts} TOTAL CONFLICTS DETECTED")
+            if student_conflicts > 0:
+                print(f"   • Student conflicts: {student_conflicts} (students attending 2 classes at once)")
+            if teacher_conflicts > 0:
+                print(f"   • Teacher conflicts: {teacher_conflicts} (teachers teaching 2 classes at once)")
+            print("   ⚠️ FIX REQUIRED: Check FIX #10 (same-day duplicate prevention)")
+        
         if student_score < 70:
             print("\n🚨 CRITICAL STUDENT ISSUES:")
             worst_section = min(section_reports.items(), key=lambda x: x[1]['score'])
             print(f"   Worst section: {worst_section[0]} ({worst_section[1]['score']:.1f}/100)")
             if worst_section[1]['conflicts'] > 0:
-                print(f"   • FIX SAME-DAY DUPLICATES (FIX #10 not working)")
                 print(f"   • {worst_section[1]['conflicts']} scheduling conflicts found")
         
         if teacher_score < 70:
@@ -870,6 +911,8 @@ class SchedulePOVValidatorV2:
             print(f"   Worst teacher: {worst_teacher[0]} ({worst_teacher[1]['score']:.1f}/100)")
             if worst_teacher[1]['weekly_hours'] > 35:
                 print(f"   • Heavy workload: {worst_teacher[1]['weekly_hours']:.1f} hours/week")
+            if worst_teacher[1]['conflicts'] > 0:
+                print(f"   • {worst_teacher[1]['conflicts']} scheduling conflicts found")
         
         if overall_score >= 85:
             print("\n✅ SCHEDULE QUALITY IS GOOD")
@@ -884,6 +927,9 @@ class SchedulePOVValidatorV2:
             'overall_score': overall_score,
             'teacher_score': teacher_score,
             'student_score': student_score,
+            'teacher_conflicts': teacher_conflicts,
+            'student_conflicts': student_conflicts,
+            'total_conflicts': teacher_conflicts + student_conflicts,
             'grade': grade,
             'status': status,
             'recommendation': recommendation,

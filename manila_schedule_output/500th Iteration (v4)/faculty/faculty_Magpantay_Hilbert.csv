@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2,STEM 12-H,Science,"Magpantay, Hilbert",F,0915-1045,90,2,G206,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-G,Science,"Magpantay, Hilbert",M,1430-1600,90,2,G205,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-H,Science,"Magpantay, Hilbert",T,0730-0900,90,2,G206,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-F,Science,"Magpantay, Hilbert",T,1430-1600,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-F,Science,"Magpantay, Hilbert",W,0915-1045,90,2,G204,Physical,G,G,Hybrid,No

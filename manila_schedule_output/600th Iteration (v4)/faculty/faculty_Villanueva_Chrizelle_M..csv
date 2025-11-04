@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,HUMSS 11-D,Homeroom,"Villanueva, Chrizelle M.",F,0930-1000,30,1,L210,Physical,L,L,Face-to-Face,No
+HOMEROOM,HUMSS 11-C,Homeroom,"Villanueva, Chrizelle M.",F,1215-1245,30,1,L209,Physical,L,L,Face-to-Face,No
+HOMEROOM,HUMSS 12-A,Homeroom,"Villanueva, Chrizelle M.",F,1545-1615,30,1,Y304,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,HUMSS 11-E,Homeroom,"Villanueva, Chrizelle M.",M,1300-1500,120,1,L211,Physical,L,L,Face-to-Face,No

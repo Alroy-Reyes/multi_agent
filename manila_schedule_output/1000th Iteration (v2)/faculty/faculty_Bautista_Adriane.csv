@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ABM 12-F,Homeroom,"Bautista, Adriane",F,1330-1400,30,1,Y504,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-E,Homeroom,"Bautista, Adriane",H,1015-1045,30,1,Y503,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-G,Homeroom,"Bautista, Adriane",M,1300-1330,30,1,Y505,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-D,Homeroom,"Bautista, Adriane",T,1300-1330,30,1,Y502,Physical,Y,Y,Face-to-Face,No

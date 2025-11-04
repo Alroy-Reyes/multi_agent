@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2,STEM 12-J,Science,"Go, Johnalyn",H,1100-1230,90,2,G208,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-J,Science,"Go, Johnalyn",M,0730-0900,90,2,G208,Physical,G,G,Hybrid,No
+EARTH SCIENCE,STEM 11-A,Science,"Go, Johnalyn",M,1245-1415,90,2,ZOOM011,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-A,Science,"Go, Johnalyn",T,0915-1045,90,2,ZOOM007,Virtual,Z,Z,Online,No

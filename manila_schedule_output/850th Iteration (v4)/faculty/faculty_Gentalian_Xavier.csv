@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-C1,Science,"Gentalian, Xavier",H,0730-0900,90,2,J404,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-C2,Science,"Gentalian, Xavier",T,0915-1045,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-C1,Science,"Gentalian, Xavier",T,1430-1600,90,2,J404,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-C2,Science,"Gentalian, Xavier",W,0730-0900,90,2,J410,Physical,J,J,Hybrid,No

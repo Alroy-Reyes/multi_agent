@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+CHRISTIAN LIVING 1,STEM 11-N,Social Studies,"Pilapil, Charlene",F,0800-1000,120,1,L228,Physical,L,L,Face-to-Face,No
+CHRISTIAN LIVING 1,STEM 11-L,Social Studies,"Pilapil, Charlene",T,0730-0900,90,2,L210,Physical,L,L,Face-to-Face,No
+CHRISTIAN LIVING 4,ABM 12-A,Social Studies,"Pilapil, Charlene",T,1000-1200,120,1,Y404,Physical,Y,Y,Face-to-Face,No
+CHRISTIAN LIVING 4,ABM 12-B,Social Studies,"Pilapil, Charlene",W,1300-1500,120,1,Y405,Physical,Y,Y,Face-to-Face,No
