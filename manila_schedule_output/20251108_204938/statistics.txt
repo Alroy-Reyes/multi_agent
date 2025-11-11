@@ -1,0 +1,15 @@
+MANILA SCHEDULE GENERATION STATISTICS v16.2
+==================================================
+
+Version: With FIX #12 Validation + Enhanced Checks
+Checkpoint: checkpoint_000054
+Completion Rate: 77.9%
+Subjects Placed: 466/598
+Generation Steps: 400
+Conflicts: 22
+
+==================================================
+SCHEDULE VALIDATION (FIX #12 CHECK)
+==================================================
+Duplicates: 0
+Missing: 33

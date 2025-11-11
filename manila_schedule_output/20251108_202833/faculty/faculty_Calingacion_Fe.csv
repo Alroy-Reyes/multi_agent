@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-O,Science,"Calingacion, Fe",F,0915-1045,90,2,Y306,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-A,Science,"Calingacion, Fe",F,0915-1045,90,2,ZOOM001,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-P,Science,"Calingacion, Fe",M,0915-1045,90,2,Y402,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-O,Science,"Calingacion, Fe",W,0730-0900,90,2,Y306,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-A,Science,"Calingacion, Fe",W,0915-1045,90,2,ZOOM003,Virtual,Z,Z,Online,No

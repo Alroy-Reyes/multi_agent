@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J2,Science,"Orillo, Jhoanne",F,0915-1045,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-A,Science,"Orillo, Jhoanne",F,1245-1415,90,2,G203,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J2,Science,"Orillo, Jhoanne",T,1430-1600,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-A,Science,"Orillo, Jhoanne",W,0730-0900,90,2,G203,Physical,G,G,Hybrid,No

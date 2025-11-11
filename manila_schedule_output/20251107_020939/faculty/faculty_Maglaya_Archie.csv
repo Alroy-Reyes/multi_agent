@@ -1,0 +1,7 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-S,Science,"Maglaya, Archie",F,0730-0900,90,2,V503,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-R,Science,"Maglaya, Archie",F,1100-1230,90,2,V502,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-S,Science,"Maglaya, Archie",H,0915-1045,90,2,V503,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-Q,Science,"Maglaya, Archie",M,0915-1045,90,2,Y403,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-R,Science,"Maglaya, Archie",W,0915-1045,90,2,V502,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-Q,Science,"Maglaya, Archie",W,1430-1600,90,2,Y403,Physical,Y,Y,Hybrid,No

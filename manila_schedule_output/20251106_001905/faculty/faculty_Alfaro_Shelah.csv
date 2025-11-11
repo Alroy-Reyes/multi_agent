@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J1,Science,"Alfaro, Shelah",M,0730-0900,90,2,J404,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J2,Science,"Alfaro, Shelah",M,0915-1045,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J1,Science,"Alfaro, Shelah",T,1430-1600,90,2,J404,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J2,Science,"Alfaro, Shelah",W,1430-1600,90,2,J410,Physical,J,J,Hybrid,No

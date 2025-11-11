@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2,STEM 12-F,Science,"Simon, Rhenish",H,1245-1415,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-H,Science,"Simon, Rhenish",M,0730-0900,90,2,G206,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-G,Science,"Simon, Rhenish",M,0915-1045,90,2,G205,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-F,Science,"Simon, Rhenish",M,1430-1600,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-H,Science,"Simon, Rhenish",T,1100-1230,90,2,G206,Physical,G,G,Hybrid,No

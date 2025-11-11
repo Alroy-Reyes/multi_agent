@@ -1,0 +1,9 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL MATHEMATICS,STEM 11-N,Math,"Cruz, Eduardo",F,0730-0930,120,1,ZOOM003,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-M,Math,"Cruz, Eduardo",F,1430-1600,90,2,ZOOM014,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-S,Math,"Cruz, Eduardo",H,0730-0900,90,2,ZOOM019,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-S,Math,"Cruz, Eduardo",M,0915-1045,90,2,ZOOM016,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-L,Math,"Cruz, Eduardo",T,0730-0900,90,2,ZOOM012,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,STEM 11-N,Math,"Cruz, Eduardo",T,0730-0930,120,1,ZOOM019,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-M,Math,"Cruz, Eduardo",T,1245-1415,90,2,ZOOM014,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-L,Math,"Cruz, Eduardo",W,1245-1415,90,2,ZOOM017,Virtual,Z,Z,Online,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-A,Science,"Querubin, Florabelle",F,0915-1045,90,2,ZOOM004,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-S,Science,"Querubin, Florabelle",H,1100-1230,90,2,V503,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-A,Science,"Querubin, Florabelle",M,0915-1045,90,2,ZOOM015,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-S,Science,"Querubin, Florabelle",W,1245-1415,90,2,V503,Physical,V,V,Hybrid,No

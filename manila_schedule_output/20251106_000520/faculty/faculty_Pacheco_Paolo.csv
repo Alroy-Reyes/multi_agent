@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+EARTH SCIENCE,STEM 11-F,Science,"Pacheco, Paolo",F,0730-0900,90,2,ZOOM003,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-F,Science,"Pacheco, Paolo",M,1245-1415,90,2,ZOOM015,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2,STEM 12-G,Science,"Pacheco, Paolo",M,1430-1600,90,2,G205,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-F,Science,"Pacheco, Paolo",W,1100-1230,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-G,Science,"Pacheco, Paolo",W,1430-1600,90,2,G205,Physical,G,G,Hybrid,No

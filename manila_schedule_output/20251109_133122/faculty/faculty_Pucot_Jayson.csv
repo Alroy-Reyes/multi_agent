@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+EARTH SCIENCE,STEM 11-I,Science,"Pucot, Jayson",F,0915-1045,90,2,ZOOM005,Virtual,Z,Z,Online,No
+EARTH SCIENCE,STEM 11-I,Science,"Pucot, Jayson",T,1100-1230,90,2,ZOOM014,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2,STEM 12-I,Science,"Pucot, Jayson",T,1245-1415,90,2,G207,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2,STEM 12-I,Science,"Pucot, Jayson",W,1430-1600,90,2,G207,Physical,G,G,Hybrid,No

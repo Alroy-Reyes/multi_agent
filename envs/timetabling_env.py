@@ -1,25 +1,20 @@
 """
-COMPLETE FIXED TIMETABLING ENVIRONMENT - v14.7 AGGRESSIVE CONFLICT PENALTIES
+COMPLETE FIXED TIMETABLING ENVIRONMENT - v14.8 CRITICAL REWARD FIX
 
-Version 14.7: CRITICAL FIX - Aggressive Conflict Penalties for RL Learning
+Version 14.8: CRITICAL FIX - Track ACTUAL schedule conflicts, not placement attempts!
 ========================================================================================
-ALL FIXES APPLIED + NEW AGGRESSIVE PENALTIES:
-✅ FIX #1-12: All previous fixes
-✅ FIX #13: AGGRESSIVE conflict penalties (conflicts now HURT more than placements help)
-✅ FIX #14: Exponential global conflict penalty (per step)
-✅ FIX #15: Quadratic completion pressure (forces 90%+ placement)
-✅ FIX #16: Curriculum learning (progressive difficulty)
+CRITICAL REWARD ALIGNMENT FIX:
+✅ FIX #17: Track ACTUAL schedule conflicts (final state) not placement attempts (process)
+✅ FIX #18: Reward based on validated schedule outcomes
+✅ FIX #19: Proper conflict counting across teacher/section/duplicates
 ========================================================================================
 
-REWARD REBALANCING:
-Before: Placement +150, Conflict -20 → Model learns "conflicts are acceptable"
-After:  Placement +150, Conflict -200 → Model learns "avoid conflicts at all costs!"
+THE FUNDAMENTAL FIX:
+Before: self.conflict_count tracked placement ATTEMPT conflicts during 3-stage resolution
+After:  _count_actual_schedule_conflicts() tracks REAL conflicts in final schedule
 
-EXPECTED BEHAVIOR:
-- Conflicts should decrease IMMEDIATELY (iteration 10-50)
-- Student scores should rise to 40+ by iteration 50
-- Overall scores should reach 75+ by iteration 200
-- Zero conflicts achievable by iteration 500
+This aligns rewards with desired outcomes - the model now learns to CREATE VALID SCHEDULES
+rather than learning to AVOID MAKING PLACEMENTS.
 ========================================================================================
 """
 
@@ -39,12 +34,12 @@ class ParallelTimetablingEnv(ParallelEnv):
     """
     COMPLETE FIXED parallel multi-agent timetabling environment
     
-    Version 14.7: AGGRESSIVE CONFLICT PENALTIES for effective RL learning
+    Version 14.8: CRITICAL reward alignment fix - track actual schedule conflicts
     """
 
     metadata = {
         "render_modes": ["human"],
-        "name": "parallel_timetabling_env_v14_7_aggressive_penalties",
+        "name": "parallel_timetabling_env_v14_8_fixed",
         "is_parallelizable": True,
     }
 
@@ -73,9 +68,9 @@ class ParallelTimetablingEnv(ParallelEnv):
         r_workload_balance: float = 15.0,
         base_success_reward: float = 150.0,
         wait_penalty: float = 20.0,
-        r_conflict_penalty: float = -200.0,          # NEW: AGGRESSIVE
-        r_duplicate_penalty: float = -300.0,         # NEW: EVEN WORSE
-        r_section_conflict_penalty: float = -250.0,  # NEW: CRITICAL
+        r_conflict_penalty: float = -200.0,
+        r_duplicate_penalty: float = -300.0,
+        r_section_conflict_penalty: float = -250.0,
         include_focus_scalar: bool = True,
         include_focus_tor_scalar: bool = False,
         include_section_features: bool = True,
@@ -95,7 +90,7 @@ class ParallelTimetablingEnv(ParallelEnv):
         enable_progressive_difficulty: bool = True,
         difficulty_ramp_steps: int = 100,
         enable_milestone_rewards: bool = True,
-        enable_curriculum_learning: bool = True,     # NEW: Curriculum
+        enable_curriculum_learning: bool = True,
     ):
         super().__init__()
 
@@ -131,10 +126,10 @@ class ParallelTimetablingEnv(ParallelEnv):
         self.wait_penalty = float(wait_penalty)
         self.r_online_bonus = float(r_online_bonus)
         
-        # NEW: AGGRESSIVE CONFLICT PENALTIES
-        self.r_conflict_penalty = float(r_conflict_penalty)              # -200
-        self.r_duplicate_penalty = float(r_duplicate_penalty)            # -300
-        self.r_section_conflict_penalty = float(r_section_conflict_penalty)  # -250
+        # AGGRESSIVE CONFLICT PENALTIES
+        self.r_conflict_penalty = float(r_conflict_penalty)
+        self.r_duplicate_penalty = float(r_duplicate_penalty)
+        self.r_section_conflict_penalty = float(r_section_conflict_penalty)
         
         self.reward_scale = 0.01
         
@@ -353,26 +348,22 @@ class ParallelTimetablingEnv(ParallelEnv):
         self.observation_spaces = {a: self.saha_observation_space for a in self.saha_agents}
         self.communication_buffer = np.zeros(self.comm_size, dtype=np.float32)
 
-        print(f"\n{'='*50}")
-        print(f"TIMETABLING ENVIRONMENT v14.7 - AGGRESSIVE PENALTIES")
-        print(f"{'='*50}")
-        print(f"\n=== ALL FIXES APPLIED ===")
-        print(f"  ✅ FIX #1-12: All previous fixes")
-        print(f"  ✅ FIX #13: AGGRESSIVE conflict penalties")
-        print(f"  ✅ FIX #14: Exponential global penalties")
-        print(f"  ✅ FIX #15: Quadratic completion pressure")
-        print(f"  ✅ FIX #16: Curriculum learning")
-        print(f"\n=== REWARD REBALANCING ===")
-        print(f"  • Base success: {self.base_success_reward}")
-        print(f"  • Conflict penalty: {self.r_conflict_penalty} (was -20)")
-        print(f"  • Duplicate penalty: {self.r_duplicate_penalty} (was -20)")
-        print(f"  • Section conflict: {self.r_section_conflict_penalty} (was -15)")
-        print(f"  • Wait penalty: {self.wait_penalty}")
+        print(f"\n{'='*80}")
+        print(f"TIMETABLING ENVIRONMENT v14.8 - CRITICAL REWARD FIX")
+        print(f"{'='*80}")
+        print(f"\n=== CRITICAL FIX APPLIED ===")
+        print(f"  ✅ FIX #17: Track ACTUAL schedule conflicts (not placement attempts)")
+        print(f"  ✅ FIX #18: Rewards based on validated schedule outcomes")
+        print(f"  ✅ FIX #19: Proper teacher/section/duplicate conflict counting")
+        print(f"\n=== REWARD ALIGNMENT ===")
+        print(f"  • Model now optimizes: ACTUAL conflicts in final schedule")
+        print(f"  • Model was optimizing: Placement attempt conflicts (WRONG)")
+        print(f"  • Result: Model learns smart placements, not placement avoidance")
         print(f"\n=== EXPECTED BEHAVIOR ===")
-        print(f"  • Conflicts decrease IMMEDIATELY (iter 10-50)")
-        print(f"  • Student scores rise to 40+ by iter 50")
-        print(f"  • Zero conflicts achievable by iter 500")
-        print(f"{'='*50}\n")
+        print(f"  • Conflicts should DECREASE as placement improves")
+        print(f"  • Inverse relationship should disappear")
+        print(f"  • Convergence to optimal solutions")
+        print(f"{'='*80}\n")
 
     def _get_difficulty_factor(self) -> float:
         """Get current difficulty factor for progressive training"""
@@ -382,21 +373,24 @@ class ParallelTimetablingEnv(ParallelEnv):
 
     def _get_curriculum_multiplier(self) -> float:
         """
-        Get curriculum learning multiplier for penalty scaling
+        Get curriculum learning multiplier - SMOOTHER 4-PHASE VERSION
         
-        Phase 1 (0-10k steps / ~100 episodes): Learning basics, lighter penalties (0.5x)
-        Phase 2 (10k-30k steps / ~100-300 episodes): Normal penalties (1.0x)
-        Phase 3 (30k+ steps / 300+ episodes): Perfection mode, heavier penalties (1.5x)
+        Phase 1 (0-20k steps): Gentle (0.5x)
+        Phase 2 (20k-60k steps): Intermediate (0.75x)
+        Phase 3 (60k-100k steps): Normal (1.0x)
+        Phase 4 (100k+ steps): Refinement (1.2x)
         """
         if not self.enable_curriculum_learning:
             return 1.0
         
-        if self.global_step_counter < 10000:
-            return 0.5  # Learning phase - be gentle
-        elif self.global_step_counter < 30000:
-            return 1.0  # Normal phase
+        if self.global_step_counter < 20000:
+            return 0.5
+        elif self.global_step_counter < 60000:
+            return 0.75
+        elif self.global_step_counter < 100000:
+            return 1.0
         else:
-            return 1.5  # Perfection phase - be strict
+            return 1.2
     
     def _is_virtual_room(self, room_code: str) -> bool:
         """Check if room is virtual"""
@@ -559,6 +553,55 @@ class ParallelTimetablingEnv(ParallelEnv):
             return False, "day_duplicate"
         
         return True, "ok"
+
+    # ============================================================
+    # ✅ NEW FIX #17: Count ACTUAL schedule conflicts
+    # ============================================================
+    def _count_actual_schedule_conflicts(self) -> int:
+        """
+        Count REAL conflicts in the final validated schedule
+        (Not placement attempts - actual schedule conflicts!)
+        
+        This is what the model should be optimizing for!
+        """
+        conflicts = 0
+        
+        # 1. Teacher double-booking conflicts
+        teacher_time_map = defaultdict(list)
+        for subj in range(self.num_subjects):
+            for d in range(self.num_days):
+                for ts in range(self.num_timeslots):
+                    teacher = self.placement_teachers.get((subj, d, ts), -1)
+                    if teacher >= 0:
+                        teacher_time_map[(teacher, d, ts)].append(subj)
+        
+        for assignments in teacher_time_map.values():
+            if len(assignments) > 1:
+                conflicts += (len(assignments) - 1)
+        
+        # 2. Section conflicts (students double-booked)
+        section_time_map = defaultdict(list)
+        for subj in range(self.num_subjects):
+            sec_idx = self.subject_section_idx[subj]
+            for d in range(self.num_days):
+                for ts in range(self.num_timeslots):
+                    if self.section_schedules[f"section_{sec_idx}"][d, ts]:
+                        if self.placement_teachers.get((subj, d, ts), -1) >= 0:
+                            section_time_map[(sec_idx, d, ts)].append(subj)
+        
+        for classes in section_time_map.values():
+            if len(classes) > 1:
+                conflicts += (len(classes) - 1)
+        
+        # 3. Duplicate placements (same subject placed too many times)
+        for subj in range(self.num_subjects):
+            sec_idx = self.subject_section_idx[subj]
+            actual_count = self._get_placement_count(subj, sec_idx)
+            required = self.subject_required_placements.get(subj, 1)
+            if actual_count > required:
+                conflicts += (actual_count - required)
+        
+        return conflicts
   
     def reset(self, seed=None, options=None):
         if seed is not None:
@@ -589,7 +632,7 @@ class ParallelTimetablingEnv(ParallelEnv):
         }
 
         self.timestep = 0
-        self.conflict_count = 0
+        self.conflict_count = 0  # Still track placement attempt conflicts for debugging
         self.fail_count = np.zeros(self.num_subjects, dtype=np.int32)
         self.fail_stats = {
             "no_intent": 0,
@@ -642,7 +685,9 @@ class ParallelTimetablingEnv(ParallelEnv):
 
     def step(self, actions):
         """
-        COMPLETE FIXED step function with AGGRESSIVE conflict penalties
+        COMPLETE FIXED step function with proper conflict tracking
+        
+        ✅ FIX #17-19: Uses _count_actual_schedule_conflicts() for rewards
         """
         self.timestep += 1
         self.global_step_counter += 1
@@ -781,7 +826,7 @@ class ParallelTimetablingEnv(ParallelEnv):
             intents.append((agent, focus, global_teacher_idx, bkey, room_idx, day_idx, ts))
 
         # ============================================================
-        # PHASE 2: CONFLICT RESOLUTION (3-STAGE) WITH AGGRESSIVE PENALTIES
+        # PHASE 2: CONFLICT RESOLUTION (3-STAGE)
         # ============================================================
         
         teacher_time_map: Dict[Tuple[int, int, int], List[Tuple[str, int, int, str, int, int, int]]] = {}
@@ -798,10 +843,9 @@ class ParallelTimetablingEnv(ParallelEnv):
                 kept_after_teacher.append(winner)
                 for it in group:
                     if it is not winner:
-                        # AGGRESSIVE PENALTY
                         penalty = self.r_conflict_penalty * curriculum_mult
                         rewards[it[0]] += penalty
-                        self.conflict_count += 1
+                        self.conflict_count += 1  # Still track for debugging
 
         room_slot_map: Dict[Tuple[str, int, int, int], List[Tuple[str, int, int, str, int, int, int]]] = {}
         for it in kept_after_teacher:
@@ -817,7 +861,6 @@ class ParallelTimetablingEnv(ParallelEnv):
                 kept_after_room.append(winner)
                 for it in group:
                     if it is not winner:
-                        # AGGRESSIVE PENALTY
                         penalty = self.r_conflict_penalty * curriculum_mult
                         rewards[it[0]] += penalty
                         self.conflict_count += 1
@@ -837,7 +880,6 @@ class ParallelTimetablingEnv(ParallelEnv):
                 final_winners.append(winner)
                 for it in group:
                     if it is not winner:
-                        # EVEN MORE AGGRESSIVE FOR SECTION CONFLICTS
                         penalty = self.r_section_conflict_penalty * curriculum_mult
                         rewards[it[0]] += penalty
                         self.conflict_count += 1
@@ -867,7 +909,6 @@ class ParallelTimetablingEnv(ParallelEnv):
             required_count = self.subject_required_placements.get(subj, 1)
             
             if total_count >= required_count:
-                # AGGRESSIVE DUPLICATE PENALTY
                 penalty = self.r_duplicate_penalty * curriculum_mult
                 rewards[agent] += penalty
                 self.fail_stats["section_duplicate"] += 1
@@ -876,7 +917,6 @@ class ParallelTimetablingEnv(ParallelEnv):
             can_place, reason = self._can_place_on_day(subj, d, ts)
             if not can_place:
                 if reason == "day_duplicate":
-                    # AGGRESSIVE PENALTY
                     penalty = self.r_duplicate_penalty * curriculum_mult
                     rewards[agent] += penalty
                     self.fail_stats["day_duplicate"] += 1
@@ -1011,23 +1051,24 @@ class ParallelTimetablingEnv(ParallelEnv):
             rewards[agent] += r
 
         # ============================================================
-        # NEW: EXPONENTIAL GLOBAL CONFLICT PENALTY (PER STEP)
+        # ✅ FIX #18: USE ACTUAL SCHEDULE CONFLICTS FOR REWARDS
         # ============================================================
-        if self.conflict_count > 0:
-            # Exponential penalty that never caps - always provides gradient
-            conflict_penalty = -50 * (1 - math.exp(-0.02 * self.conflict_count))
-            conflict_penalty *= curriculum_mult
+        actual_conflicts = self._count_actual_schedule_conflicts()
+        
+        if actual_conflicts > 0:
+            # AGGRESSIVE penalty based on ACTUAL conflicts in schedule
+            conflict_penalty = actual_conflicts * self.r_conflict_penalty * curriculum_mult
             
             # Apply to ALL agents (shared responsibility)
             for agent in self.agents:
                 rewards[agent] += conflict_penalty
             
             # Debug output (periodic)
-            if self.timestep % 50 == 0 and self.conflict_count > 10:
-                print(f"   ⚠️ Step {self.timestep}: {self.conflict_count} conflicts → {conflict_penalty:.1f} global penalty")
+            if self.timestep % 50 == 0:
+                print(f"   ⚠️ Step {self.timestep}: {actual_conflicts} ACTUAL conflicts → {conflict_penalty:.1f} penalty")
 
         # ============================================================
-        # MILESTONE REWARDS (REBALANCED)
+        # MILESTONE REWARDS
         # ============================================================
         if self.enable_milestone_rewards:
             placement_rate = len(self.placed_subjects) / self.num_subjects
@@ -1089,8 +1130,11 @@ class ParallelTimetablingEnv(ParallelEnv):
             terminations[agent] = all_placed
             truncations[agent] = (time_limit and not all_placed)
 
-        # Episode-end bonuses with QUADRATIC completion pressure
+        # Episode-end bonuses
         if all_placed or time_limit:
+            # Recalculate actual conflicts for episode end
+            actual_conflicts_end = self._count_actual_schedule_conflicts()
+            
             duplicate_penalty = 0.0
             for subj in range(self.num_subjects):
                 sec_idx = self.subject_section_idx[subj]
@@ -1098,10 +1142,9 @@ class ParallelTimetablingEnv(ParallelEnv):
                 required = self.subject_required_placements.get(subj, 1)
                 if current > required:
                     excess = current - required
-                    # AGGRESSIVE duplicate penalty
                     duplicate_penalty += excess * self.r_duplicate_penalty * curriculum_mult
             
-            if duplicate_penalty < 0:  # It's negative
+            if duplicate_penalty < 0:
                 for a in self.agents:
                     rewards[a] += duplicate_penalty
             
@@ -1141,30 +1184,19 @@ class ParallelTimetablingEnv(ParallelEnv):
             avg_balance = total_balance / len(self.agents) if self.agents else 0.0
             balance_bonus = 10.0 * avg_balance
             
-            # QUADRATIC COMPLETION PRESSURE (more aggressive)
+            # Completion pressure (softer)
             completion_pressure = 0.0
-            
             if completion_rate < 0.90:
                 gap = 0.90 - completion_rate
-                completion_pressure = -5000.0 * (gap ** 2)  # Quadratic!
-                if self.timestep <= 10 or self.timestep % 100 == 0:
-                    print(f"  ⚠️ Below 90%: {completion_rate*100:.1f}% → penalty {completion_pressure:.1f}")
-            
+                completion_pressure = -1000.0 * (gap ** 2)
             elif completion_rate < 0.95:
                 gap = 0.95 - completion_rate
-                completion_pressure = -2000.0 * (gap ** 2)  # Quadratic!
-                if self.timestep % 100 == 0:
-                    print(f"  ⚠️ Below 95%: {completion_rate*100:.1f}% → penalty {completion_pressure:.1f}")
-            
+                completion_pressure = -500.0 * (gap ** 2)
             elif completion_rate < 1.0:
                 gap = 1.0 - completion_rate
-                completion_pressure = -1000.0 * (gap ** 2)  # Quadratic!
-                if self.timestep % 100 == 0:
-                    print(f"  ⚠️ Below 100%: {completion_rate*100:.1f}% → penalty {completion_pressure:.1f}")
-            
+                completion_pressure = -200.0 * (gap ** 2)
             else:
                 completion_pressure = 10000.0
-                print(f"  🎉🎉🎉 100% COMPLETION! Bonus: +{completion_pressure:.1f}")
             
             total_bonus = (
                 completion_bonus + 
@@ -1177,8 +1209,9 @@ class ParallelTimetablingEnv(ParallelEnv):
                 rewards[a] += total_bonus
             
             if self.timestep <= 10 or time_limit:
-                print(f"\n  📊 Episode End Bonuses:")
+                print(f"\n  📊 Episode End Summary:")
                 print(f"     Completion: {completion_rate*100:.1f}%")
+                print(f"     Actual conflicts: {actual_conflicts_end}")
                 print(f"     Completion bonus: +{completion_bonus:.1f}")
                 print(f"     TOR satisfaction: +{tor_satisfaction_bonus:.1f}")
                 print(f"     Balance: +{balance_bonus:.1f}")
@@ -1187,10 +1220,13 @@ class ParallelTimetablingEnv(ParallelEnv):
                 print(f"     Total bonus: {total_bonus:+.1f}\n")
 
         observations = self._get_all_observations()
+        
+        # ✅ FIX #19: Update infos to track actual conflicts
         infos = {
             agent: {
                 "error_rate": self.calculate_error_rate(),
-                "conflict_count": self.conflict_count,
+                "actual_conflicts": self._count_actual_schedule_conflicts(),  # ← ACTUAL conflicts
+                "placement_attempt_conflicts": self.conflict_count,  # ← Keep for debugging
                 "timestep": self.timestep,
                 "fail_stats": dict(self.fail_stats),
                 "workload_balance": self._calculate_area_workload_balance(agent),
@@ -1204,7 +1240,7 @@ class ParallelTimetablingEnv(ParallelEnv):
         # Apply reward scaling and clipping
         for agent in rewards:
             rewards[agent] = rewards[agent] * self.reward_scale
-            rewards[agent] = np.clip(rewards[agent], -100.0, 100.0)
+            rewards[agent] = np.clip(rewards[agent], -50.0, 50.0)
             
             if not np.isfinite(rewards[agent]):
                 rewards[agent] = 0.0
@@ -1321,7 +1357,10 @@ class ParallelTimetablingEnv(ParallelEnv):
             return
         placed_frac = len(self.placed_subjects) / max(1, self.num_subjects)
         self.communication_buffer[0] = np.float32(np.clip(placed_frac, 0.0, 1.0))
-        conflict_pressure = self.conflict_count / max(1, self.num_subjects)
+        
+        # Use ACTUAL conflicts for communication
+        actual_conflicts = self._count_actual_schedule_conflicts()
+        conflict_pressure = actual_conflicts / max(1, self.num_subjects)
         self.communication_buffer[1] = np.float32(np.clip(conflict_pressure, 0.0, 1.0))
         
         for i in range(7):
@@ -1731,12 +1770,41 @@ class ParallelTimetablingEnv(ParallelEnv):
                     'assignments': assignments
                 })
         
+        section_conflict_count = 0
+        section_time_map = defaultdict(list)
+        
+        for (subj, sec_idx), placements in placement_map.items():
+            for p in placements:
+                key = (sec_idx, p['day'], p['timeslot'])
+                section_time_map[key].append({
+                    'subject': subj,
+                    'subject_name': self.subject_codes[subj],
+                    'room': p['room_code']
+                })
+        
+        for (section, day, ts), classes in section_time_map.items():
+            if len(classes) > 1:
+                section_conflict_count += (len(classes) - 1)
+                conflicts['section_conflicts'].append({
+                    'section': self.section_labels[section],
+                    'section_idx': section,
+                    'day': day,
+                    'timeslot': ts,
+                    'count': len(classes),
+                    'classes': classes
+                })
+
         if teacher_conflict_count == 0:
             print("   ✅ No teacher conflicts")
         else:
             print(f"\n   ❌ TEACHER CONFLICTS: {teacher_conflict_count}")
         
-        total_conflicts = duplicate_count + teacher_conflict_count
+        if section_conflict_count == 0:
+            print("   ✅ No section conflicts")
+        else:
+            print(f"\n   ❌ SECTION CONFLICTS: {section_conflict_count}")
+        
+        total_conflicts = duplicate_count + teacher_conflict_count + section_conflict_count
         
         fully_placed_count = sum(
             1 for (subj, sec_idx), placements in placement_map.items()
@@ -1747,6 +1815,7 @@ class ParallelTimetablingEnv(ParallelEnv):
             'total_conflicts': total_conflicts,
             'duplicate_placements': duplicate_count,
             'teacher_conflicts': teacher_conflict_count,
+            'section_conflicts': section_conflict_count,
             'placement_rate': len(placement_map) / self.num_subjects * 100,
             'fully_placed': fully_placed_count,
             'fully_placed_rate': fully_placed_count / self.num_subjects * 100
@@ -1754,6 +1823,9 @@ class ParallelTimetablingEnv(ParallelEnv):
         
         print(f"\nSUMMARY:")
         print(f"Total conflicts: {total_conflicts}")
+        print(f"  Teacher: {teacher_conflict_count}")
+        print(f"  Section: {section_conflict_count}")
+        print(f"  Duplicates: {duplicate_count}")
         print(f"Fully placed: {fully_placed_count}/{self.num_subjects} ({conflicts['summary']['fully_placed_rate']:.1f}%)")
         print("="*80 + "\n")
         
@@ -1761,8 +1833,10 @@ class ParallelTimetablingEnv(ParallelEnv):
 
     def render(self):
         """Render environment status"""
+        actual_conflicts = self._count_actual_schedule_conflicts()
         print(f"\nStep: {self.timestep}/{self.max_timesteps}")
         print(f"Placed: {len(self.placed_subjects)}/{self.num_subjects}")
+        print(f"Actual conflicts: {actual_conflicts}")
         print(f"Curriculum phase: {self._get_curriculum_multiplier():.1f}x")
 
     def close(self):

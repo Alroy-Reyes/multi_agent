@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1,STEM 12-A,Science,"Pacheco, Paolo",F,1430-1600,90,2,G203,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-A,Science,"Pacheco, Paolo",H,0730-0900,90,2,G203,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J2,Science,"Pacheco, Paolo",H,0915-1045,90,2,J410,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-J2,Science,"Pacheco, Paolo",T,0915-1045,90,2,J410,Physical,J,J,Hybrid,No

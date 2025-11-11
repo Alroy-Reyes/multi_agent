@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,HUMSS 11-C,Homeroom,"Marcial, Joshua R.",F,1015-1045,30,1,L209,Physical,L,L,Face-to-Face,No
+HOMEROOM,HUMSS 11-E,Homeroom,"Marcial, Joshua R.",H,1430-1500,30,1,L211,Physical,L,L,Face-to-Face,No
+HOMEROOM,HUMSS 11-D,Homeroom,"Marcial, Joshua R.",M,1145-1215,30,1,L210,Physical,L,L,Face-to-Face,No
+HOMEROOM,HUMSS 12-A,Homeroom,"Marcial, Joshua R.",M,1515-1545,30,1,Y304,Physical,Y,Y,Face-to-Face,No

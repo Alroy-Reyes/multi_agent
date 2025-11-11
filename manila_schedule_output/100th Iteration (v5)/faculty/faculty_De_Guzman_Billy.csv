@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+PRACTICAL RESEARCH 2,STEM 12-L,Research,"De Guzman, Billy",F,1430-1600,90,2,G211,Physical,G,G,Hybrid,No
+PRACTICAL RESEARCH 2,STEM 12-N,Research,"De Guzman, Billy",M,0730-0900,90,2,Y304,Physical,Y,Y,Hybrid,No
+PRACTICAL RESEARCH 2,STEM 12-L,Research,"De Guzman, Billy",T,1430-1600,90,2,G211,Physical,G,G,Hybrid,No
+PRACTICAL RESEARCH 2,STEM 12-N,Research,"De Guzman, Billy",W,1245-1415,90,2,Y304,Physical,Y,Y,Hybrid,No

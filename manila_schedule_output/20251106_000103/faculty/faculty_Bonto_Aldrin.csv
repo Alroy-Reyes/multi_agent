@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-N,Science,"Bonto, Aldrin",F,1430-1600,90,2,Y304,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-N,Science,"Bonto, Aldrin",H,0730-0900,90,2,Y304,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-M,Science,"Bonto, Aldrin",T,0915-1045,90,2,Y303,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-M,Science,"Bonto, Aldrin",W,0730-0900,90,2,Y303,Physical,Y,Y,Hybrid,No

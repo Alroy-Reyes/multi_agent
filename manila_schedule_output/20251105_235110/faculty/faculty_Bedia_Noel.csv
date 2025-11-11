@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+PHYSICAL EDUCATION AND HEALTH 3,ABM 11-A,PE/Health,"Bedia, Noel",F,1000-1200,120,1,E7A,Physical,E,E,Face-to-Face,No
+PHYSICAL EDUCATION AND HEALTH 1,STEM 11-C,PE/Health,"Bedia, Noel",M,0730-0900,90,2,E801,Physical,E,E,Face-to-Face,No
+PHYSICAL EDUCATION AND HEALTH 1,STEM 11-D,PE/Health,"Bedia, Noel",T,0730-0900,90,2,E801,Physical,E,E,Face-to-Face,No
+PHYSICAL EDUCATION AND HEALTH 1,STEM 11-G,PE/Health,"Bedia, Noel",T,1000-1200,120,1,E803,Physical,E,E,Face-to-Face,No

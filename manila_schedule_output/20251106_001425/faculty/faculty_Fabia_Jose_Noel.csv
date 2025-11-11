@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-R,Science,"Fabia, Jose Noel",F,1245-1415,90,2,V502,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-P,Science,"Fabia, Jose Noel",H,0915-1045,90,2,Y402,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-R,Science,"Fabia, Jose Noel",M,1245-1415,90,2,V502,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-Q,Science,"Fabia, Jose Noel",W,0915-1045,90,2,Y403,Physical,Y,Y,Hybrid,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+PRACTICAL RESEARCH 2,STEM 12-S,Research,"Limson, Brian",F,0915-1045,90,2,V503,Physical,V,V,Hybrid,No
+PRACTICAL RESEARCH 2,STEM 12-S,Research,"Limson, Brian",M,0915-1045,90,2,V503,Physical,V,V,Hybrid,No
+PRACTICAL RESEARCH 2,STEM 12-R,Research,"Limson, Brian",T,0915-1045,90,2,V502,Physical,V,V,Hybrid,No
+PRACTICAL RESEARCH 2,STEM 12-R,Research,"Limson, Brian",W,1430-1600,90,2,V502,Physical,V,V,Hybrid,No

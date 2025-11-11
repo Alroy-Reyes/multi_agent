@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ABM 12-C,Homeroom,"Torres, Myrla",F,1145-1215,30,1,Y501,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-D,Homeroom,"Torres, Myrla",H,0830-0900,30,1,Y502,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-E,Homeroom,"Torres, Myrla",M,0945-1015,30,1,Y503,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,ABM 12-F,Homeroom,"Torres, Myrla",T,1215-1245,30,1,Y504,Physical,Y,Y,Face-to-Face,No

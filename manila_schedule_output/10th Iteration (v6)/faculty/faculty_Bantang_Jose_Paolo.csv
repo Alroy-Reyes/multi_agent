@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1,STEM 12-F,Science,"Bantang, Jose Paolo",T,0915-1045,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-G,Science,"Bantang, Jose Paolo",T,1430-1600,90,2,G205,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-G,Science,"Bantang, Jose Paolo",W,0915-1045,90,2,G205,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-F,Science,"Bantang, Jose Paolo",W,1430-1600,90,2,G204,Physical,G,G,Hybrid,No

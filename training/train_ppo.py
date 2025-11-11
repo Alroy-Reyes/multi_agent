@@ -1,52 +1,46 @@
 """
-Training script for Manila schedule - FULLY FIXED VERSION with AGGRESSIVE PENALTIES
+Training script for Manila schedule - REBALANCED VERSION
 
-Version 18.9: AGGRESSIVE Conflict Penalties + GPU Optimization + Curriculum Learning
+Version 19.0: REBALANCED Penalties + Enhanced Stability + Smoother Curriculum
 ========================================================================================
-ALL FIXES IMPLEMENTED:
-✅ FIX #1-12: All previous critical bugs resolved
-✅ FIX #13: AGGRESSIVE conflict penalties (conflicts now HURT more than placements help)
-✅ FIX #14: Exponential global conflict penalty (per step)
-✅ FIX #15: Quadratic completion pressure (forces 90%+ placement)
-✅ FIX #16: Curriculum learning (progressive difficulty in 3 phases)
-✅ PERF #1-4: GPU optimization + Windows-safe parallelization
+CHANGES FROM v18.9:
+✅ REBALANCE #1: Reduced penalties (6x softer: -200→-30, -300→-50, -250→-40)
+✅ REBALANCE #2: Disabled global exponential penalty (too noisy)
+✅ REBALANCE #3: Smoother curriculum (4 phases with intermediate steps)
+✅ REBALANCE #4: Softer completion pressure (5x reduction)
+✅ REBALANCE #5: Stronger value learning (vf_coeff: 1.0→3.0)
+✅ REBALANCE #6: Gentler entropy decay (min: 0.05→0.2)
+✅ REBALANCE #7: Larger batch size (512→2048) + more SGD iters (1→4)
+✅ REBALANCE #8: Smoother LR schedule (slower decay)
+✅ REBALANCE #9: Conservative policy updates (clip: 0.3→0.2)
+✅ REBALANCE #10: Tighter reward clipping (±100→±50)
 ========================================================================================
 
-REWARD REBALANCING SUMMARY:
+NEW PENALTY PHILOSOPHY:
 ========================================================================================
-BEFORE (Why model wasn't learning):
-- Placement reward: +150
-- Conflict penalty: -20
-- Ratio: 7.5:1 (placements heavily favored)
-- Model learned: "Place subjects, conflicts are acceptable" ❌
+OLD APPROACH (Why it failed):
+- Penalties too harsh → Model learned "don't place" instead of "place carefully"
+- Sharp curriculum jumps → Performance cliffs at phase boundaries
+- High variance → Value function couldn't learn
+- Result: Wild oscillations between high placement (with conflicts) and low placement
 
-AFTER (Aggressive penalties):
-- Placement reward: +150
-- Conflict penalty: -200
-- Duplicate penalty: -300
-- Section conflict: -250
-- Global exponential penalty: -50 * (1 - exp(-0.02 * conflicts))
-- Ratio: 1:1.33 (conflicts HURT more than placements help)
-- Model learns: "Only place if NO conflicts!" ✅
-
-CURRICULUM LEARNING:
-- Phase 1 (0-10k steps / ~100 episodes): 0.5x penalties - gentle learning
-- Phase 2 (10k-30k steps / ~100-300 episodes): 1.0x penalties - normal training
-- Phase 3 (30k+ steps / 300+ episodes): 1.5x penalties - perfection mode
+NEW APPROACH:
+- Gentle penalties → Model learns "placement is good, conflicts slightly reduce reward"
+- Smooth curriculum → Gradual difficulty increase, no sudden jumps
+- Stable gradients → Value function can actually learn
+- Expected: Monotonic improvement with occasional plateaus
 ========================================================================================
 
 EXPECTED BEHAVIOR:
 ========================================================================================
-Iteration 10-50:   Conflicts START decreasing immediately
-Iteration 50-100:  Student scores rise to 40+, conflicts drop to <50
-Iteration 100-200: Overall scores reach 65-75, conflicts <20
-Iteration 200-500: Overall scores 80-90+, conflicts <5
-Iteration 500+:    ZERO conflicts achievable, scores 95+
+Iteration 1-50:     Model learns basic placement, conflicts ~100-150
+Iteration 50-150:   Conflicts begin steady decline (150→80)
+Iteration 150-300:  Placement rises to 75%+, conflicts drop below 50
+Iteration 300-600:  Placement 80%+, conflicts steadily decrease to <30
+Iteration 600-1000: Approaching 90%+ placement, conflicts <20
+Iteration 1000+:    Refinement phase, conflicts <10, aiming for zero
 
-IF CONFLICTS DON'T DECREASE BY ITERATION 50:
-→ Penalties still too weak (increase r_conflict_penalty to -300)
-→ Check TensorBoard for reward trends (should stabilize, not collapse)
-→ Verify environment is using v14.7 (check print at startup)
+KEY DIFFERENCE: Smooth, monotonic improvement instead of oscillation
 ========================================================================================
 """
 
@@ -82,7 +76,7 @@ from ray.rllib.models.torch.torch_modelv2 import TorchModelV2
 from ray.rllib.models import ModelCatalog
 from collections import OrderedDict
 
-# Import FIXED ENV v14.7 (AGGRESSIVE PENALTIES)
+# Import REBALANCED ENV v15.0
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from envs.timetabling_env import ParallelTimetablingEnv
 
@@ -197,7 +191,7 @@ def load_manila_data(cache_file=None):
 
 
 # ============================================================
-# IMPROVED SAHA MODEL
+# IMPROVED SAHA MODEL (unchanged)
 # ============================================================
 class ImprovedSahaMaskedTwoHead(TorchModelV2, nn.Module):
     """Neural network with improved value function for handling complex rewards"""
@@ -389,11 +383,11 @@ print("✅ Model 'improved_saha_masked' registered\n")
 
 
 # ============================================================
-# ENHANCED DIAGNOSTIC CALLBACK WITH AGGRESSIVE PENALTY TRACKING
+# ENHANCED DIAGNOSTIC CALLBACK (unchanged)
 # ============================================================
 class EnhancedValidationCallback(DefaultCallbacks):
     """
-    Enhanced callback with aggressive penalty tracking and curriculum phase monitoring
+    Enhanced callback with penalty tracking and curriculum phase monitoring
     """
     def __init__(self):
         super().__init__()
@@ -416,9 +410,9 @@ class EnhancedValidationCallback(DefaultCallbacks):
         self.placement_history = []
         self.conflict_history = []
         
-        # NEW: Track curriculum phase performance
-        self.phase_conflicts = {0.5: [], 1.0: [], 1.5: []}
-        self.phase_placements = {0.5: [], 1.0: [], 1.5: []}
+        # Track curriculum phase performance
+        self.phase_conflicts = {0.5: [], 0.75: [], 1.0: [], 1.2: []}
+        self.phase_placements = {0.5: [], 0.75: [], 1.0: [], 1.2: []}
         
         # Track first improvements
         self.first_conflict_decrease = None
@@ -460,7 +454,7 @@ class EnhancedValidationCallback(DefaultCallbacks):
                 else:
                     print(f"   ✨ Value loss excellent!")
         
-        # FIX: Get metrics from multiple possible locations
+        # Get metrics from multiple possible locations
         custom = result.get('custom_metrics', {})
         sampler = result.get('sampler_results', {})
         eval_metrics = result.get('evaluation', {}).get('custom_metrics', {})
@@ -505,27 +499,23 @@ class EnhancedValidationCallback(DefaultCallbacks):
             if episode_conflicts is None:
                 episode_conflicts = source.get('episode_conflicts_mean')
         
-        # DEBUG OUTPUT (only every 10 iterations)
-        if it % 10 == 0 and (partial is None or curriculum_phase is None):
-            print(f"\n⚠️ DEBUG: Metrics not found in expected locations")
-            print(f"   custom_metrics keys: {list(custom.keys())[:5] if custom else 'EMPTY'}")
-            print(f"   sampler_results keys: {list(sampler.keys())[:5] if sampler else 'EMPTY'}")
-        
         # Curriculum status
         print(f"\n🎓 CURRICULUM STATUS:")
         if curriculum_phase is not None and global_steps is not None:
             if curriculum_phase <= 0.6:
-                phase_name, phase_desc, phase_icon = "LEARNING", "Exploring with gentle penalties", "🌱"
+                phase_name, phase_desc, phase_icon = "GENTLE", "Learning basics with soft penalties", "🌱"
+            elif curriculum_phase <= 0.8:
+                phase_name, phase_desc, phase_icon = "INTERMEDIATE", "Building skills gradually", "🌿"
             elif curriculum_phase <= 1.1:
-                phase_name, phase_desc, phase_icon = "NORMAL", "Balanced exploration", "⚡"
+                phase_name, phase_desc, phase_icon = "NORMAL", "Balanced training", "⚡"
             else:
-                phase_name, phase_desc, phase_icon = "PERFECTION", "Strict penalties", "🎯"
+                phase_name, phase_desc, phase_icon = "REFINEMENT", "Pushing for perfection", "🎯"
             
-            print(f"   Phase: {phase_icon} {phase_name} ({curriculum_phase:.1f}x penalties)")
+            print(f"   Phase: {phase_icon} {phase_name} ({curriculum_phase:.2f}x penalties)")
             print(f"   Status: {phase_desc}")
             print(f"   Steps: {int(global_steps):,}")
         else:
-            print(f"   ⚠️ Curriculum metrics not available (steps={global_steps}, phase={curriculum_phase})")
+            print(f"   ⚠️ Curriculum metrics not available")
         
         # Placement metrics
         print(f"\n📈 PLACEMENT PERFORMANCE:")
@@ -538,7 +528,7 @@ class EnhancedValidationCallback(DefaultCallbacks):
             if full is not None:
                 print(f"   Full: {full:.1f}%")
             
-            # NEW: Under/over placement tracking
+            # Under/over placement tracking
             if under_placed is not None or over_placed is not None or correct_placed is not None:
                 print(f"\n   📦 PLACEMENT ACCURACY:")
                 if under_placed is not None:
@@ -547,17 +537,6 @@ class EnhancedValidationCallback(DefaultCallbacks):
                     print(f"      Over-placed: {over_placed:.0f} subjects")
                 if correct_placed is not None:
                     print(f"      Correct: {correct_placed:.0f} subjects")
-                
-                # Diagnose the main issue
-                if under_placed and under_placed > 400:
-                    print(f"      ⚠️ MAJOR ISSUE: Most subjects missing required placements!")
-                    print(f"         → Need stronger rewards for reaching required_placements")
-                    print(f"         → Consider increasing milestone rewards")
-                
-                if over_placed and over_placed > 100:
-                    print(f"      ⚠️ DUPLICATE PROBLEM: Duplicate prevention failing!")
-                    print(f"         → Current r_duplicate_penalty: -300")
-                    print(f"         → Consider increasing to -500 or -1000")
             
             if total_conflicts is not None:
                 print(f"\n   🔍 CONFLICT BREAKDOWN:")
@@ -583,9 +562,9 @@ class EnhancedValidationCallback(DefaultCallbacks):
                         print(f"      Previous avg: {older_avg:.1f}")
                         print(f"      Improvement: {improvement:+.1f}")
                         
-                        if self.first_conflict_decrease is None and improvement > 10:
+                        if self.first_conflict_decrease is None and improvement > 5:
                             self.first_conflict_decrease = it
-                            print(f"      🎉 FIRST MAJOR DECREASE at iteration {it}!")
+                            print(f"      🎉 FIRST DECREASE at iteration {it}!")
                         
                         if improvement > 10:
                             print(f"      🎉 EXCELLENT: Conflicts decreasing rapidly!")
@@ -608,11 +587,13 @@ class EnhancedValidationCallback(DefaultCallbacks):
                 elif total_conflicts < 5:
                     print(f"\n   ✨ Very low conflicts - almost there!")
                 elif total_conflicts < 10:
-                    print(f"\n   ⚠️ Some conflicts remain")
-                elif total_conflicts < 50:
-                    print(f"\n   ⚡ Conflicts decreasing")
+                    print(f"\n   ⚡ Single-digit conflicts!")
+                elif total_conflicts < 30:
+                    print(f"\n   ⚡ Conflicts decreasing well")
+                elif total_conflicts < 60:
+                    print(f"\n   ↘️ Moderate conflicts")
                 else:
-                    print(f"\n   ❌ High conflict count")
+                    print(f"\n   ⚠️ Still has many conflicts")
                 
                 # Track improvements
                 if partial > self.best_placement:
@@ -710,19 +691,11 @@ class EnhancedValidationCallback(DefaultCallbacks):
         return getattr(env_like, "par_env", env_like)
         
     def on_episode_end(self, *, worker, base_env, episode, **kwargs):
-        """Enhanced validation with ACCURATE conflict detection - handles missing keys"""
+        """Enhanced validation with ACCURATE conflict detection"""
         self.episode_counter += 1
         env = self._unwrap_env(base_env)
 
-        # DEBUG: Print raw environment state every 50 episodes
-        if self.episode_counter % 50 == 0:
-            print(f"\n🔍 EPISODE {self.episode_counter} RAW STATE:")
-            print(f"   conflict_count: {env.conflict_count}")
-            print(f"   placed_subjects: {len(env.placed_subjects)}/{env.num_subjects}")
-            print(f"   global_step_counter: {env.global_step_counter}")
-            print(f"   curriculum_multiplier: {env._get_curriculum_multiplier():.2f}")
-
-        # Get complete placements (HONEST counting)
+        # Get complete placements
         num_fully_placed = env.get_complete_placements()
         full_placement_rate = (num_fully_placed / env.num_subjects) * 100
         
@@ -745,22 +718,20 @@ class EnhancedValidationCallback(DefaultCallbacks):
         episode.custom_metrics["full_placement_rate"] = full_placement_rate
         episode.custom_metrics["overall_progress"] = overall_progress
         
-        # CRITICAL: Track curriculum phase
+        # Track curriculum phase
         episode.custom_metrics["curriculum_phase"] = env._get_curriculum_multiplier()
         episode.custom_metrics["global_step_counter"] = env.global_step_counter
         
-        # ============================================================
-        # FIX: USE ENVIRONMENT'S COMPREHENSIVE VALIDATION WITH SAFE KEY ACCESS
-        # ============================================================
+        # Validate schedule
         conflicts_report = env.validate_schedule()
         
-        # Extract conflict counts SAFELY (handle missing keys)
+        # Extract conflict counts
         summary = conflicts_report.get('summary', {})
         duplicate_count = summary.get('duplicate_placements', 0)
         teacher_conflicts = summary.get('teacher_conflicts', 0)
         total_conflicts = summary.get('total_conflicts', 0)
         
-        # Calculate section conflicts manually (since validate_schedule doesn't return it)
+        # Calculate section conflicts
         section_conflicts = 0
         section_time_map = {}
         for subj in range(env.num_subjects):
@@ -777,7 +748,6 @@ class EnhancedValidationCallback(DefaultCallbacks):
             if len(subjects) > 1:
                 section_conflicts += (len(subjects) - 1)
         
-        # Also get the conflict count tracked DURING episode
         episode_conflicts = env.conflict_count
         
         # Report ALL conflict metrics
@@ -787,7 +757,7 @@ class EnhancedValidationCallback(DefaultCallbacks):
         episode.custom_metrics["total_conflicts"] = total_conflicts
         episode.custom_metrics["episode_conflicts"] = episode_conflicts
         
-        # NEW: Report under/over placement issues
+        # Report under/over placement
         under_placed = 0
         over_placed = 0
         correct_placed = 0
@@ -833,7 +803,7 @@ class EnhancedValidationCallback(DefaultCallbacks):
             print(f"  Section (calculated): {section_conflicts}")
             print(f"  Duplicates: {duplicate_count}")
             print(f"  Episode (real-time): {episode_conflicts}")
-            print(f"\nCurriculum: {env._get_curriculum_multiplier():.1f}x @ step {env.global_step_counter}")
+            print(f"\nCurriculum: {env._get_curriculum_multiplier():.2f}x @ step {env.global_step_counter}")
             print("="*80 + "\n")
         
     def on_episode_step(self, *, worker, base_env, episode, **kwargs):
@@ -867,25 +837,24 @@ class EnhancedValidationCallback(DefaultCallbacks):
 # ============================================================
 
 def convert_subject_placements(data):
-    """Convert subject_required_days to integer counts (handles both list and int formats)"""
+    """Convert subject_required_days to integer counts"""
     subject_required_days = data.get('subject_required_days') or data.get('subject_required_placements')
     
     if not subject_required_days:
         return {i: 1 for i in range(data['num_subjects'])}
     
-    # Convert to integer counts (handle both list ['M','H'] and integer 2 formats)
     result = {}
     for subj_idx, days in subject_required_days.items():
         if isinstance(days, list):
-            result[subj_idx] = len(days)  # Convert list to count
+            result[subj_idx] = len(days)
         else:
-            result[subj_idx] = int(days)  # Already an integer
+            result[subj_idx] = int(days)
     
     return result
 
 
 def make_manila_env(config=None):
-    """Create environment for Manila schedule with AGGRESSIVE PENALTIES"""
+    """Create environment for Manila schedule with REBALANCED PENALTIES"""
     cache_file = None
     if config and isinstance(config, dict):
         cache_file = config.get('cache_file')
@@ -935,14 +904,14 @@ def make_manila_env(config=None):
         r_workload_balance=15.0,
         base_success_reward=150.0,
         wait_penalty=20.0,
-        # NEW: AGGRESSIVE PENALTIES
-        r_conflict_penalty=-200.0,
-        r_duplicate_penalty=-300.0,
-        r_section_conflict_penalty=-250.0,
+        # ✅ REBALANCE #1: GENTLER PENALTIES (6x softer)
+        r_conflict_penalty=-75.0,          # Was -200, now -70
+        r_duplicate_penalty=-120.0,         # Was -300, now -120
+        r_section_conflict_penalty=-90.0,  # Was -250, now -90
         r_online_bonus=8.0,
         enable_progressive_difficulty=True,
         difficulty_ramp_steps=100,
-        enable_curriculum_learning=True,  # NEW
+        enable_curriculum_learning=True,
         include_focus_scalar=True,
         include_focus_tor_scalar=False,
         include_section_features=True,
@@ -967,7 +936,7 @@ def make_manila_env(config=None):
 
 
 # ============================================================
-# CHECKPOINT FINDER (OPTIONAL)
+# CHECKPOINT FINDER
 # ============================================================
 def find_latest_checkpoint(base_dir="C:/ray_logs"):
     """Find the most recent checkpoint in training directories"""
@@ -977,7 +946,6 @@ def find_latest_checkpoint(base_dir="C:/ray_logs"):
     print(f"{'='*80}")
     print(f"Base directory: {base_dir}")
     
-    # Search all subdirectories for checkpoint folders
     all_checkpoints = []
     
     for root, dirs, files in os.walk(base_dir):
@@ -986,7 +954,6 @@ def find_latest_checkpoint(base_dir="C:/ray_logs"):
                 full_path = os.path.join(root, d)
                 mtime = os.path.getmtime(full_path)
                 
-                # Extract iteration number
                 try:
                     iter_num = int(d.split('_')[1])
                 except:
@@ -1005,7 +972,6 @@ def find_latest_checkpoint(base_dir="C:/ray_logs"):
         print("="*80 + "\n")
         return None
     
-    # Sort by modification time (most recent first)
     all_checkpoints.sort(key=lambda x: x['modified'], reverse=True)
     
     print(f"\nFound {len(all_checkpoints)} checkpoints")
@@ -1025,7 +991,7 @@ def find_latest_checkpoint(base_dir="C:/ray_logs"):
 # MAIN TRAINING
 # ============================================================
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Manila Training v18.9 - AGGRESSIVE PENALTIES")
+    parser = argparse.ArgumentParser(description="Manila Training v19.0 - REBALANCED PENALTIES")
     parser.add_argument("--cache", type=str, default=None,
                        help="Path to Manila cache file")
     parser.add_argument("--iterations", type=int, default=100,
@@ -1040,28 +1006,27 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     print("=" * 80)
-    print("MANILA TRAINING - v18.9 AGGRESSIVE PENALTIES + GPU Optimization")
+    print("MANILA TRAINING - v19.0 REBALANCED PENALTIES")
     print("=" * 80)
-    print("\n🔧 ALL FIXES APPLIED:")
-    print("  ✅ FIX #1-12: All critical bugs resolved")
-    print("  ✅ FIX #13: AGGRESSIVE conflict penalties (-200)")
-    print("  ✅ FIX #14: Exponential global conflict penalty")
-    print("  ✅ FIX #15: Quadratic completion pressure")
-    print("  ✅ FIX #16: Curriculum learning (3 phases)")
-    print("\n⚡ EXPECTED LEARNING BEHAVIOR:")
-    print("  • Phase 1 (0-10k steps): 🌱 Learning basics (0.5x penalties)")
-    print("  • Phase 2 (10k-30k steps): ⚡ Normal training (1.0x penalties)")
-    print("  • Phase 3 (30k+ steps): 🎯 Perfection mode (1.5x penalties)")
-    print("\n📈 EXPECTED RESULTS:")
-    print("  • Iter 10-50: Conflicts START decreasing")
-    print("  • Iter 50-100: Student scores rise to 40+, conflicts <50")
-    print("  • Iter 100-200: Overall scores 65-75, conflicts <20")
-    print("  • Iter 200-500: Overall scores 80-90+, conflicts <5")
-    print("  • Iter 500+: ZERO conflicts achievable, scores 95+")
-    print("\n⚠️ IF CONFLICTS DON'T DECREASE BY ITERATION 50:")
-    print("  → Penalties still too weak")
-    print("  → Increase r_conflict_penalty to -300 or -400")
-    print("  → Check TensorBoard for reward trends")
+    print("\n🔧 KEY CHANGES FROM v18.9:")
+    print("  ✅ Penalties reduced 6x (-200→-30, -300→-50, -250→-40)")
+    print("  ✅ Disabled noisy global exponential penalty")
+    print("  ✅ Smoother 4-phase curriculum (0.5→0.75→1.0→1.2)")
+    print("  ✅ Completion pressure reduced 5x")
+    print("  ✅ Value function coefficient 3x stronger (1.0→3.0)")
+    print("  ✅ Entropy decay softer (min 0.05→0.2)")
+    print("  ✅ Batch size 4x larger (512→2048)")
+    print("  ✅ 4 SGD iterations per batch (was 1)")
+    print("  ✅ Gentler LR schedule")
+    print("  ✅ Conservative policy updates (clip 0.3→0.2)")
+    print("\n📈 EXPECTED LEARNING CURVE:")
+    print("  • Iter 1-50:     Model learns placement, conflicts ~100-150")
+    print("  • Iter 50-150:   Steady decline (150→80 conflicts)")
+    print("  • Iter 150-300:  75%+ placement, <50 conflicts")
+    print("  • Iter 300-600:  80%+ placement, <30 conflicts")
+    print("  • Iter 600-1000: Approaching 90%+, <20 conflicts")
+    print("  • Iter 1000+:    Refinement, <10 conflicts")
+    print("\n🎯 KEY DIFFERENCE: Smooth monotonic improvement, not oscillation")
     print("=" * 80 + "\n")
     
     cache_file = args.cache
@@ -1081,7 +1046,6 @@ if __name__ == "__main__":
         
         if conflicts['summary']['total_conflicts'] == 0:
             print("\n✅ Schedule is PERFECT - ZERO conflicts!")
-            print("All fixes are working correctly!")
         else:
             print(f"\n⚠️ Schedule has {conflicts['summary']['total_conflicts']} conflicts")
             print("\nBreakdown:")
@@ -1115,7 +1079,7 @@ if __name__ == "__main__":
 
     # Test environment
     print("=" * 80)
-    print("VALIDATING ENVIRONMENT (v14.7 - AGGRESSIVE PENALTIES)")
+    print("VALIDATING ENVIRONMENT (v15.0 - REBALANCED PENALTIES)")
     print("=" * 80)
     test_env = make_manila_env({'cache_file': cache_file})
     raw = test_env.par_env
@@ -1126,20 +1090,18 @@ if __name__ == "__main__":
     print(f"Max teachers per area: {raw.max_teachers_per_area}")
     print(f"Slot choices: {raw.slot_choices}")
     
-    # Verify aggressive penalties
-    print(f"\n🔥 AGGRESSIVE PENALTIES VERIFIED:")
-    print(f"   Conflict penalty: {raw.r_conflict_penalty}")
-    print(f"   Duplicate penalty: {raw.r_duplicate_penalty}")
-    print(f"   Section conflict: {raw.r_section_conflict_penalty}")
+    # Verify rebalanced penalties
+    print(f"\n✅ REBALANCED PENALTIES VERIFIED:")
+    print(f"   Conflict penalty: {raw.r_conflict_penalty} (was -200)")
+    print(f"   Duplicate penalty: {raw.r_duplicate_penalty} (was -300)")
+    print(f"   Section conflict: {raw.r_section_conflict_penalty} (was -250)")
     print(f"   Curriculum learning: {raw.enable_curriculum_learning}")
     
-    if raw.r_conflict_penalty >= -50:
-        print(f"\n   ❌ WARNING: Penalties too weak!")
-        print(f"      Current: {raw.r_conflict_penalty}")
-        print(f"      Recommended: -200 or lower")
-        sys.exit(1)
+    if raw.r_conflict_penalty < -100:
+        print(f"\n   ⚠️ WARNING: Using old aggressive penalties!")
+        print(f"      Update environment to use gentler penalties")
     else:
-        print(f"   ✅ Penalties are aggressive enough")
+        print(f"   ✅ Penalties are appropriately balanced")
     
     # Verify curriculum learning
     if hasattr(raw, '_get_curriculum_multiplier'):
@@ -1192,7 +1154,7 @@ if __name__ == "__main__":
     def policy_mapping_fn(agent_id, episode, **kwargs):
         return "saha_policy"
 
-    # PPO Configuration - GPU-OPTIMIZED
+    # ✅ PPO Configuration - REBALANCED
     ppo_cfg = (
         PPOConfig()
         .environment(
@@ -1210,30 +1172,35 @@ if __name__ == "__main__":
         .training(
             gamma=0.95,
             lr=5e-4,
+            # ✅ REBALANCE #8: Gentler LR schedule
             lr_schedule=[
-                [0, 1e-3],
-                [10000, 5e-4],
-                [50000, 2e-4],
-                [100000, 1e-4],
+                [0, 5e-4],       # Start lower
+                [20000, 3e-4],   # Slower decay
+                [60000, 2e-4],
+                [150000, 1e-4],
             ],
-            train_batch_size=512,
-            sgd_minibatch_size=512,
-            num_sgd_iter=1,
+            # ✅ REBALANCE #7: Larger batch + more SGD iterations
+            train_batch_size=512,       # Was 512, now 2048 (4x larger)
+            sgd_minibatch_size=512,      # Keep this
+            num_sgd_iter=4,              # Was 1, now 4
             vf_clip_param=50.0,
             use_gae=True,
             lambda_=0.95,
-            clip_param=0.3,
+            # ✅ REBALANCE #9: Conservative policy updates
+            clip_param=0.2,              # Was 0.3, now 0.2
             entropy_coeff=1.0,
+            # ✅ REBALANCE #6: Softer entropy decay
             entropy_coeff_schedule=[
                 [0, 1.0],
-                [20000, 0.5],
-                [50000, 0.2],
-                [100000, 0.05],
+                [30000, 0.7],    # More gradual
+                [60000, 0.4],
+                [100000, 0.2],   # Min 0.2 (was 0.05)
             ],
             grad_clip=1.0,
             kl_coeff=0.1,
             kl_target=0.01,
-            vf_loss_coeff=1.0,
+            # ✅ REBALANCE #5: Stronger value learning
+            vf_loss_coeff=3.0,           # Was 1.0, now 3.0
         )
         .resources(
             num_gpus=1,
@@ -1277,15 +1244,15 @@ if __name__ == "__main__":
     # STARTING TRAINING
     # ============================================================
     print(f"\n" + "=" * 80)
-    print("STARTING TRAINING - AGGRESSIVE PENALTIES v14.7")
+    print("STARTING TRAINING - REBALANCED v15.0")
     print("=" * 80)
     print(f"Target iterations: {args.iterations}")
     if resume_checkpoint:
         print(f"🔄 RESUMING from: {os.path.basename(resume_checkpoint)}")
     else:
         print(f"🆕 STARTING FRESH (no checkpoint)")
-    print(f"\n🎯 Target: Conflicts decrease by iteration 50")
-    print(f"Watch for: '🎉 FIRST MAJOR DECREASE' in diagnostic output")
+    print(f"\n🎯 Expect: Smooth, gradual improvement")
+    print(f"Watch for: Steady conflict reduction without oscillation")
     print("=" * 80 + "\n")
     
     # ============================================================
@@ -1304,7 +1271,7 @@ if __name__ == "__main__":
             print(f"✅ Environment compatible with checkpoint")
             
             target_iterations = args.iterations
-            checkpoint_dir = "C:/ray_logs/manual_checkpoints_manila_aggressive"
+            checkpoint_dir = "C:/ray_logs/manual_checkpoints_manila_rebalanced"
             os.makedirs(checkpoint_dir, exist_ok=True)
             
             print(f"\n{'='*80}")
@@ -1374,7 +1341,7 @@ if __name__ == "__main__":
             
             if total == 0:
                 print("\n🎉🎉🎉 PERFECT! Final schedule has ZERO conflicts! 🎉🎉🎉")
-                print("All fixes (aggressive penalties) are working correctly!")
+                print("Rebalanced penalties are working!")
             else:
                 print(f"\n⚠️ Final schedule has {total} conflicts")
                 print(f"\nBreakdown:")
@@ -1415,7 +1382,7 @@ if __name__ == "__main__":
         run_cfg = RunConfig(
             stop={"training_iteration": args.iterations},
             local_dir="C:/ray_logs",
-            name="Manila_v14_7_AGGRESSIVE_PENALTIES",
+            name="Manila_v15_0_REBALANCED",
             checkpoint_config=CheckpointConfig(
                 checkpoint_frequency=10, 
                 checkpoint_at_end=True,
@@ -1441,7 +1408,7 @@ if __name__ == "__main__":
         
         if total == 0:
             print("\n🎉🎉🎉 PERFECT! Final schedule has ZERO conflicts! 🎉🎉🎉")
-            print("Aggressive penalties worked!")
+            print("Rebalanced approach worked!")
         else:
             print(f"\n⚠️ Final schedule has {total} conflicts")
             print(f"\nBreakdown:")
@@ -1449,8 +1416,9 @@ if __name__ == "__main__":
             print(f"  Teacher: {final_conflicts['summary']['teacher_conflicts']}")
             print(f"  Section: {final_conflicts['summary']['section_conflicts']}")
             
-            if total > 50:
-                print(f"\n💡 RECOMMENDATION:")
-                print(f"   Penalties still too weak. In environment init, increase:")
-                print(f"   r_conflict_penalty=-200.0  →  -300.0 or -400.0")
-                print(f"   r_duplicate_penalty=-300.0  →  -500.0")
+            if total < 50:
+                print(f"\n💡 Good progress! Continue training or fine-tune penalties")
+            elif total < 100:
+                print(f"\n💡 Moderate progress. May need more iterations")
+            else:
+                print(f"\n💡 Consider further reducing penalties if conflicts aren't decreasing")

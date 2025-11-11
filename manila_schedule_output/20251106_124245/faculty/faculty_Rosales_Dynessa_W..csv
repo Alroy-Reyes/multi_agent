@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ABM 11-H,Homeroom,"Rosales, Dynessa W.",F,0830-0900,30,1,G209,Physical,G,G,Face-to-Face,No
+HOMEROOM,ABM 11-I,Homeroom,"Rosales, Dynessa W.",F,1600-1630,30,1,V502,Physical,V,V,Face-to-Face,No
+HOMEROOM,ABM 11-J,Homeroom,"Rosales, Dynessa W.",M,0915-0945,30,1,V503,Physical,V,V,Face-to-Face,No
+HOMEROOM,ABM 12-A,Homeroom,"Rosales, Dynessa W.",T,1145-1215,30,1,Y404,Physical,Y,Y,Face-to-Face,No

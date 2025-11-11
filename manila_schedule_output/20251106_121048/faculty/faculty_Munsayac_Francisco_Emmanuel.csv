@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1-LABORATORY,STEM 12-H2,Science,"Munsayac, Francisco Emmanuel",F,1245-1415,90,2,J411,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-H1,Science,"Munsayac, Francisco Emmanuel",H,1100-1230,90,2,J404,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-I1,Science,"Munsayac, Francisco Emmanuel",H,1430-1600,90,2,J411,Physical,J,J,Hybrid,No
+GENERAL PHYSICS 1-LABORATORY,STEM 12-I1,Science,"Munsayac, Francisco Emmanuel",T,0915-1045,90,2,J411,Physical,J,J,Hybrid,No
