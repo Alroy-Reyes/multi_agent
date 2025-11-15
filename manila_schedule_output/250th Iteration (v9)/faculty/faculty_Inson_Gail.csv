@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-M,Science,"Inson, Gail",F,0730-0900,90,2,ZOOM006,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-L,Science,"Inson, Gail",F,1430-1600,90,2,ZOOM005,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-L,Science,"Inson, Gail",T,0730-0900,90,2,ZOOM014,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-M,Science,"Inson, Gail",W,1430-1600,90,2,ZOOM004,Virtual,Z,Z,Online,No

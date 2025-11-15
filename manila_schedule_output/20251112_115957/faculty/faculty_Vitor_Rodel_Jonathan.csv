@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-M,Science,"Vitor, Rodel Jonathan",F,1430-1600,90,2,Y303,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-L,Science,"Vitor, Rodel Jonathan",H,1100-1230,90,2,G211,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-L,Science,"Vitor, Rodel Jonathan",M,1245-1415,90,2,G211,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-M,Science,"Vitor, Rodel Jonathan",T,1430-1600,90,2,Y303,Physical,Y,Y,Hybrid,No

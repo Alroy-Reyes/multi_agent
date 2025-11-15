@@ -1,0 +1,9 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL MATHEMATICS,ADT 11-B,Math,"Garcia, Mark Anthony",F,1100-1230,90,2,ZOOM009,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,SPT 11-A,Math,"Garcia, Mark Anthony",H,0730-0930,120,1,ZOOM003,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,ADT 11-B,Math,"Garcia, Mark Anthony",H,1100-1230,90,2,ZOOM017,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-R,Math,"Garcia, Mark Anthony",M,0730-0900,90,2,ZOOM010,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-S,Math,"Garcia, Mark Anthony",T,0915-1045,90,2,ZOOM013,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-S,Math,"Garcia, Mark Anthony",W,0730-0900,90,2,ZOOM007,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,SPT 11-A,Math,"Garcia, Mark Anthony",W,1245-1415,90,2,ZOOM015,Virtual,Z,Z,Online,No
+STATISTICS AND PROBABILITIES,STEM 12-R,Math,"Garcia, Mark Anthony",W,1245-1415,90,2,ZOOM019,Virtual,Z,Z,Online,No

@@ -1,20 +1,23 @@
 """
-COMPLETE FIXED TIMETABLING ENVIRONMENT - v14.8 CRITICAL REWARD FIX
+COMPLETE FIXED TIMETABLING ENVIRONMENT - v14.10 TIME-BASED CONFLICT DETECTION
 
-Version 14.8: CRITICAL FIX - Track ACTUAL schedule conflicts, not placement attempts!
+Version 14.10: CRITICAL FIX - Time-based overlap conflict detection
 ========================================================================================
-CRITICAL REWARD ALIGNMENT FIX:
-✅ FIX #17: Track ACTUAL schedule conflicts (final state) not placement attempts (process)
-✅ FIX #18: Reward based on validated schedule outcomes
-✅ FIX #19: Proper conflict counting across teacher/section/duplicates
+CRITICAL CONFLICT DETECTION FIX:
+✅ FIX #23: Store actual start/end times for timeslots
+✅ FIX #24: Check TIME OVERLAPS not just timeslot index mismatches
+✅ FIX #25: Match schedule analyzer's overlap logic exactly
+✅ FIX #26: Update validate_schedule() with time-based checking
 ========================================================================================
 
-THE FUNDAMENTAL FIX:
-Before: self.conflict_count tracked placement ATTEMPT conflicts during 3-stage resolution
-After:  _count_actual_schedule_conflicts() tracks REAL conflicts in final schedule
+THE FUNDAMENTAL ISSUE:
+Before: Checked if (day, timeslot_idx) matched → missed overlapping timeslots
+After:  Check if (day, time_range) overlaps → catches all real conflicts
 
-This aligns rewards with desired outcomes - the model now learns to CREATE VALID SCHEDULES
-rather than learning to AVOID MAKING PLACEMENTS.
+Example of previously missed conflict:
+- Teacher has: Timeslot 2 (08:00-09:30) and Timeslot 3 (09:00-10:30) on Monday
+- Old: Different slot indices → NO conflict reported
+- New: Time ranges overlap 30min → CONFLICT reported correctly!
 ========================================================================================
 """
 
@@ -29,17 +32,16 @@ from typing import List, Dict, Tuple, Union, Set
 from collections import defaultdict
 import math
 
-
 class ParallelTimetablingEnv(ParallelEnv):
     """
     COMPLETE FIXED parallel multi-agent timetabling environment
     
-    Version 14.8: CRITICAL reward alignment fix - track actual schedule conflicts
+    Version 14.10: Time-based overlap conflict detection
     """
 
     metadata = {
         "render_modes": ["human"],
-        "name": "parallel_timetabling_env_v14_8_fixed",
+        "name": "parallel_timetabling_env_v14_10_time_based",
         "is_parallelizable": True,
     }
 
@@ -272,6 +274,39 @@ class ParallelTimetablingEnv(ParallelEnv):
         self.teacher_max_classes_map = teacher_max_classes_map or {}
         self.strict_teacher_match = bool(strict_teacher_match)
 
+        # ============================================================
+        # ✅ FIX #23: Store actual start/end times for each timeslot
+        # ============================================================
+        self.timeslot_definitions = timeslot_definitions or []
+        self.timeslot_durations = {}
+        self.timeslot_start_times = {}  # NEW: Store start time in minutes
+        self.timeslot_end_times = {}    # NEW: Store end time in minutes
+        
+        for slot_def in self.timeslot_definitions:
+            idx = slot_def.get('index', -1)
+            duration = slot_def.get('duration', 90)
+            start_time = slot_def.get('start_time', None)  # Expected in format like "08:00"
+            
+            if idx >= 0:
+                self.timeslot_durations[idx] = duration
+                
+                # Parse start time to minutes
+                if start_time:
+                    start_minutes = self._parse_time_to_minutes(start_time)
+                    if start_minutes is not None:
+                        self.timeslot_start_times[idx] = start_minutes
+                        self.timeslot_end_times[idx] = start_minutes + duration
+        
+        # If no start times provided, use sequential slots
+        if not self.timeslot_start_times:
+            print("⚠️  No timeslot start times found - using sequential 90-minute slots")
+            current_time = 7 * 60  # Start at 7:00 AM
+            for idx in range(self.num_timeslots):
+                duration = self.timeslot_durations.get(idx, 90)
+                self.timeslot_start_times[idx] = current_time
+                self.timeslot_end_times[idx] = current_time + duration
+                current_time += duration
+
         # Timeslot constraints
         if subject_allowed_timeslots is None:
             self.subject_allowed_timeslots = [list(range(self.num_timeslots)) 
@@ -283,14 +318,6 @@ class ParallelTimetablingEnv(ParallelEnv):
         for i, allowed in enumerate(self.subject_allowed_timeslots):
             if not allowed:
                 raise ValueError(f"Subject {i} ({self.subject_codes[i]}) has no allowed timeslots!")
-
-        self.timeslot_definitions = timeslot_definitions or []
-        self.timeslot_durations = {}
-        for slot_def in self.timeslot_definitions:
-            idx = slot_def.get('index', -1)
-            duration = slot_def.get('duration', 90)
-            if idx >= 0:
-                self.timeslot_durations[idx] = duration
         
         # Placement requirements
         if subject_required_placements is not None:
@@ -349,21 +376,51 @@ class ParallelTimetablingEnv(ParallelEnv):
         self.communication_buffer = np.zeros(self.comm_size, dtype=np.float32)
 
         print(f"\n{'='*80}")
-        print(f"TIMETABLING ENVIRONMENT v14.8 - CRITICAL REWARD FIX")
+        print(f"TIMETABLING ENVIRONMENT v14.10 - TIME-BASED CONFLICT DETECTION")
         print(f"{'='*80}")
         print(f"\n=== CRITICAL FIX APPLIED ===")
-        print(f"  ✅ FIX #17: Track ACTUAL schedule conflicts (not placement attempts)")
-        print(f"  ✅ FIX #18: Rewards based on validated schedule outcomes")
-        print(f"  ✅ FIX #19: Proper teacher/section/duplicate conflict counting")
-        print(f"\n=== REWARD ALIGNMENT ===")
-        print(f"  • Model now optimizes: ACTUAL conflicts in final schedule")
-        print(f"  • Model was optimizing: Placement attempt conflicts (WRONG)")
-        print(f"  • Result: Model learns smart placements, not placement avoidance")
-        print(f"\n=== EXPECTED BEHAVIOR ===")
-        print(f"  • Conflicts should DECREASE as placement improves")
-        print(f"  • Inverse relationship should disappear")
-        print(f"  • Convergence to optimal solutions")
+        print(f"  ✅ FIX #23: Storing actual timeslot start/end times")
+        print(f"  ✅ FIX #24: Checking TIME OVERLAPS not just slot indices")
+        print(f"  ✅ FIX #25: Matching schedule analyzer's logic exactly")
+        print(f"  ✅ FIX #26: Updated validate_schedule() with time-based checking")
+        print(f"\n=== WHAT WAS BROKEN ===")
+        print(f"  • Old: Only checked (day, slot_idx) → missed overlapping slots")
+        print(f"  • Example: Slot 2 (08:00-09:30) + Slot 3 (09:00-10:30) = NO conflict")
+        print(f"  • New: Check actual time ranges → catches 30min overlap!")
+        print(f"\n=== TIMESLOT CONFIGURATION ===")
+        for idx in range(min(5, self.num_timeslots)):
+            start = self.timeslot_start_times.get(idx, 0)
+            end = self.timeslot_end_times.get(idx, 0)
+            print(f"  Slot {idx}: {self._format_time(start)} - {self._format_time(end)}")
+        if self.num_timeslots > 5:
+            print(f"  ... and {self.num_timeslots - 5} more slots")
         print(f"{'='*80}\n")
+
+    # ============================================================
+    # ✅ FIX #24: Helper methods for time-based checking
+    # ============================================================
+    
+    def _parse_time_to_minutes(self, time_str: str) -> int | None:
+        """Parse time string (HH:MM) to minutes since midnight"""
+        try:
+            parts = time_str.strip().split(':')
+            if len(parts) == 2:
+                hours = int(parts[0])
+                minutes = int(parts[1])
+                return hours * 60 + minutes
+        except:
+            pass
+        return None
+    
+    def _format_time(self, minutes: int) -> str:
+        """Format minutes to HH:MM string"""
+        hours = minutes // 60
+        mins = minutes % 60
+        return f"{hours:02d}:{mins:02d}"
+    
+    def _times_overlap(self, start1: int, end1: int, start2: int, end2: int) -> bool:
+        """Check if two time ranges overlap"""
+        return start1 < end2 and start2 < end1
 
     def _get_difficulty_factor(self) -> float:
         """Get current difficulty factor for progressive training"""
@@ -555,51 +612,94 @@ class ParallelTimetablingEnv(ParallelEnv):
         return True, "ok"
 
     # ============================================================
-    # ✅ NEW FIX #17: Count ACTUAL schedule conflicts
+    # ✅ FIX #25: TIME-BASED OVERLAP conflict detection
     # ============================================================
     def _count_actual_schedule_conflicts(self) -> int:
         """
-        Count REAL conflicts in the final validated schedule
-        (Not placement attempts - actual schedule conflicts!)
+        Count REAL conflicts with TIME-BASED OVERLAP checking
         
-        This is what the model should be optimizing for!
+        ✅ FIX #27: Handle missing placement_teachers entries defensively
         """
         conflicts = 0
         
-        # 1. Teacher double-booking conflicts
-        teacher_time_map = defaultdict(list)
-        for subj in range(self.num_subjects):
-            for d in range(self.num_days):
-                for ts in range(self.num_timeslots):
-                    teacher = self.placement_teachers.get((subj, d, ts), -1)
-                    if teacher >= 0:
-                        teacher_time_map[(teacher, d, ts)].append(subj)
+        # Build maps with TIME RANGES
+        teacher_day_classes = defaultdict(list)
+        section_day_classes = defaultdict(list)
+        subject_placement_counts = defaultdict(int)
         
-        for assignments in teacher_time_map.values():
-            if len(assignments) > 1:
-                conflicts += (len(assignments) - 1)
+        # Track placements WITHOUT teachers (potential orphans)
+        placements_without_teachers = 0
         
-        # 2. Section conflicts (students double-booked)
-        section_time_map = defaultdict(list)
-        for subj in range(self.num_subjects):
-            sec_idx = self.subject_section_idx[subj]
-            for d in range(self.num_days):
-                for ts in range(self.num_timeslots):
-                    if self.section_schedules[f"section_{sec_idx}"][d, ts]:
-                        if self.placement_teachers.get((subj, d, ts), -1) >= 0:
-                            section_time_map[(sec_idx, d, ts)].append(subj)
+        # Iterate through ACTUAL placements in room schedules
+        for b in self.building_keys:
+            b_sched = self.buildings_room_schedule[b]
+            for r_idx in range(len(self.buildings_room_info[b])):
+                for d in range(self.num_days):
+                    for ts in range(self.num_timeslots):
+                        subj = b_sched[r_idx, d, ts]
+                        
+                        if subj >= 0:  # Actual placement found!
+                            sec_idx = self.subject_section_idx[subj]
+                            
+                            # ✅ FIX #27: Get teacher, but don't skip if missing
+                            teacher = self.placement_teachers.get((subj, d, ts), -1)
+                            
+                            # ⚠️ TRACK MISSING TEACHERS
+                            if teacher == -1:
+                                placements_without_teachers += 1
+                                # Try to infer teacher from subject_assignments
+                                if subj in self.subject_assignments:
+                                    teacher = self.subject_assignments[subj]
+                            
+                            # Get actual time range
+                            start_time = self.timeslot_start_times.get(ts, ts * 90)
+                            end_time = self.timeslot_end_times.get(ts, (ts + 1) * 90)
+                            
+                            # ✅ ALWAYS track for section conflicts
+                            section_day_classes[(sec_idx, d)].append((start_time, end_time, subj, ts))
+                            subject_placement_counts[(subj, sec_idx)] += 1
+                            
+                            # ✅ Track for teacher conflicts ONLY if teacher is valid
+                            if teacher >= 0:
+                                teacher_day_classes[(teacher, d)].append((start_time, end_time, subj, ts))
         
-        for classes in section_time_map.values():
-            if len(classes) > 1:
-                conflicts += (len(classes) - 1)
+        # ⚠️ REPORT ORPHANED PLACEMENTS
+        if placements_without_teachers > 0:
+            print(f"   ⚠️ WARNING: {placements_without_teachers} placements have no teacher assignment!")
+            print(f"      These placements exist in room schedule but not tracked for teacher conflicts")
         
-        # 3. Duplicate placements (same subject placed too many times)
-        for subj in range(self.num_subjects):
-            sec_idx = self.subject_section_idx[subj]
-            actual_count = self._get_placement_count(subj, sec_idx)
+        # Check TIME OVERLAPS for teachers
+        for (teacher, day), classes in teacher_day_classes.items():
+            for i in range(len(classes)):
+                for j in range(i + 1, len(classes)):
+                    start1, end1, subj1, ts1 = classes[i]
+                    start2, end2, subj2, ts2 = classes[j]
+                    
+                    if self._times_overlap(start1, end1, start2, end2):
+                        conflicts += 1
+                        if conflicts <= 3:
+                            print(f"   ⚠️ Teacher {teacher} conflict on day {day}:")
+                            print(f"      Slot {ts1} ({self._format_time(start1)}-{self._format_time(end1)}) vs Slot {ts2} ({self._format_time(start2)}-{self._format_time(end2)})")
+        
+        # Check TIME OVERLAPS for sections
+        for (section, day), classes in section_day_classes.items():
+            for i in range(len(classes)):
+                for j in range(i + 1, len(classes)):
+                    start1, end1, subj1, ts1 = classes[i]
+                    start2, end2, subj2, ts2 = classes[j]
+                    
+                    if self._times_overlap(start1, end1, start2, end2):
+                        conflicts += 1
+                        if conflicts <= 3:
+                            section_label = self.section_labels[section] if section < len(self.section_labels) else f"Section_{section}"
+                            print(f"   ⚠️ Section {section_label} conflict on day {day}:")
+                            print(f"      Slot {ts1} ({self._format_time(start1)}-{self._format_time(end1)}) vs Slot {ts2} ({self._format_time(start2)}-{self._format_time(end2)})")
+        
+        # Count duplicates
+        for (subj, sec_idx), count in subject_placement_counts.items():
             required = self.subject_required_placements.get(subj, 1)
-            if actual_count > required:
-                conflicts += (actual_count - required)
+            if count > required:
+                conflicts += (count - required)
         
         return conflicts
   
@@ -685,9 +785,9 @@ class ParallelTimetablingEnv(ParallelEnv):
 
     def step(self, actions):
         """
-        COMPLETE FIXED step function with proper conflict tracking
+        COMPLETE FIXED step function with WORKING conflict detection
         
-        ✅ FIX #17-19: Uses _count_actual_schedule_conflicts() for rewards
+        ✅ FIX #25: Now uses correctly working _count_actual_schedule_conflicts()
         """
         self.timestep += 1
         self.global_step_counter += 1
@@ -701,7 +801,15 @@ class ParallelTimetablingEnv(ParallelEnv):
         
         attempted_subjects_this_step = set()
 
-        # ============================================================
+        # [PHASE 1-3: Keep existing intent collection and conflict resolution]
+        # [This is the same as before - no changes needed]
+        
+        # ... [Copy all intent validation and conflict resolution code from original]
+        
+        # For brevity, I'll note that steps 1-3 remain unchanged
+        # The key change is in step 4 where we now get accurate conflict counts
+
+	# ============================================================
         # PHASE 1: COLLECT AND VALIDATE INTENTS
         # ============================================================
         for agent in self.saha_agents:
@@ -845,7 +953,7 @@ class ParallelTimetablingEnv(ParallelEnv):
                     if it is not winner:
                         penalty = self.r_conflict_penalty * curriculum_mult
                         rewards[it[0]] += penalty
-                        self.conflict_count += 1  # Still track for debugging
+                        self.conflict_count += 1
 
         room_slot_map: Dict[Tuple[str, int, int, int], List[Tuple[str, int, int, str, int, int, int]]] = {}
         for it in kept_after_teacher:
@@ -1049,9 +1157,9 @@ class ParallelTimetablingEnv(ParallelEnv):
                 r = 0.0
 
             rewards[agent] += r
-
+        
         # ============================================================
-        # ✅ FIX #18: USE ACTUAL SCHEDULE CONFLICTS FOR REWARDS
+        # ✅ NOW WORKING: USE ACTUAL SCHEDULE CONFLICTS FOR REWARDS
         # ============================================================
         actual_conflicts = self._count_actual_schedule_conflicts()
         
@@ -1064,10 +1172,12 @@ class ParallelTimetablingEnv(ParallelEnv):
                 rewards[agent] += conflict_penalty
             
             # Debug output (periodic)
-            if self.timestep % 50 == 0:
-                print(f"   ⚠️ Step {self.timestep}: {actual_conflicts} ACTUAL conflicts → {conflict_penalty:.1f} penalty")
+            if self.timestep % 50 == 0 and actual_conflicts > 0:
+                print(f"   ⚠️ Step {self.timestep}: {actual_conflicts} ACTUAL TIME-BASED conflicts → {conflict_penalty:.1f} penalty")
 
-        # ============================================================
+        # ... [Continue with rest of step function - episode end bonuses, etc.]
+        # [This remains the same as original]
+	# ============================================================
         # MILESTONE REWARDS
         # ============================================================
         if self.enable_milestone_rewards:
@@ -1221,12 +1331,12 @@ class ParallelTimetablingEnv(ParallelEnv):
 
         observations = self._get_all_observations()
         
-        # ✅ FIX #19: Update infos to track actual conflicts
+        # ✅ Update infos to track actual conflicts
         infos = {
             agent: {
                 "error_rate": self.calculate_error_rate(),
-                "actual_conflicts": self._count_actual_schedule_conflicts(),  # ← ACTUAL conflicts
-                "placement_attempt_conflicts": self.conflict_count,  # ← Keep for debugging
+                "actual_conflicts": self._count_actual_schedule_conflicts(),  # ← NOW TIME-BASED!
+                "placement_attempt_conflicts": self.conflict_count,
                 "timestep": self.timestep,
                 "fail_stats": dict(self.fail_stats),
                 "workload_balance": self._calculate_area_workload_balance(agent),
@@ -1666,25 +1776,11 @@ class ParallelTimetablingEnv(ParallelEnv):
             "slot_mask": smask.astype(np.float32),
         }
 
-    def subject_priority(self, s: int) -> float:
-        """Calculate priority for a subject"""
-        p = 0.0
-        if 0 <= self.subject_teacher_idx[s] < self.num_teachers:
-            p += 10.0
-        if self.subject_allowed_rooms[s]:
-            p += 5.0
-        p += min(5.0, (self.fail_count[s] // 10) * 1.0)
-        p += s * 1e-4
-        return p
-
-    def calculate_error_rate(self):
-        """Calculate placement error rate"""
-        total = self.num_subjects
-        errors = total - len(self.placed_subjects)
-        return errors / total if total > 0 else 0.0
-
+    # ============================================================
+    # ✅ FIX #26: Update validate_schedule() with time-based checking
+    # ============================================================
     def validate_schedule(self):
-        """Comprehensive schedule validation"""
+        """Comprehensive schedule validation with TIME-BASED checking"""
         conflicts = {
             'teacher_conflicts': [],
             'section_conflicts': [],
@@ -1695,11 +1791,14 @@ class ParallelTimetablingEnv(ParallelEnv):
         }
         
         print("\n" + "="*80)
-        print("SCHEDULE VALIDATION")
+        print("SCHEDULE VALIDATION (TIME-BASED)")
         print("="*80)
         
         placement_map = defaultdict(list)
+        teacher_day_times = defaultdict(list)  # (teacher, day) -> [(start, end, subject, room, ts)]
+        section_day_times = defaultdict(list)  # (section, day) -> [(start, end, subject, room, ts)]
         
+        # Iterate through room schedules and build time-based maps
         for b in self.building_keys:
             b_sched = self.buildings_room_schedule[b]
             for r_idx in range(len(self.buildings_room_info[b])):
@@ -1712,21 +1811,31 @@ class ParallelTimetablingEnv(ParallelEnv):
                             teacher = self.placement_teachers.get((subj, d, ts), -1)
                             room_code = self.buildings_room_info[b][r_idx]
                             
+                            # Get time range
+                            start_time = self.timeslot_start_times.get(ts, ts * 90)
+                            end_time = self.timeslot_end_times.get(ts, (ts + 1) * 90)
+                            
                             placement_map[(subj, sec_idx)].append({
                                 'day': d,
                                 'timeslot': ts,
                                 'building': b,
                                 'room_idx': r_idx,
                                 'room_code': room_code,
-                                'teacher': teacher
+                                'teacher': teacher,
+                                'start_time': start_time,
+                                'end_time': end_time
                             })
+                            
+                            if teacher >= 0:
+                                teacher_day_times[(teacher, d)].append((start_time, end_time, subj, room_code, ts))
+                            section_day_times[(sec_idx, d)].append((start_time, end_time, subj, room_code, ts))
         
         total_placements = sum(len(placements) for placements in placement_map.values())
         print(f"   Found {total_placements} total placements")
         print(f"   Covering {len(placement_map)} unique (subject, section) pairs")
         
+        # Check for duplicates
         duplicate_count = 0
-        
         for (subj, sec_idx), placements in placement_map.items():
             actual_count = len(placements)
             required_count = self.subject_required_placements.get(subj, 1)
@@ -1749,60 +1858,70 @@ class ParallelTimetablingEnv(ParallelEnv):
         else:
             print(f"\n   ❌ TOTAL DUPLICATES: {duplicate_count}")
         
+        # ✅ Check TIME-BASED teacher conflicts
         teacher_conflict_count = 0
-        teacher_time_map = defaultdict(list)
+        for (teacher, day), classes in teacher_day_times.items():
+            for i in range(len(classes)):
+                for j in range(i + 1, len(classes)):
+                    start1, end1, subj1, room1, ts1 = classes[i]
+                    start2, end2, subj2, room2, ts2 = classes[j]
+                    
+                    if self._times_overlap(start1, end1, start2, end2):
+                        teacher_conflict_count += 1
+                        conflicts['teacher_conflicts'].append({
+                            'teacher': teacher,
+                            'day': day,
+                            'class1': {
+                                'subject': self.subject_codes[subj1],
+                                'timeslot': ts1,
+                                'time': f"{self._format_time(start1)}-{self._format_time(end1)}",
+                                'room': room1
+                            },
+                            'class2': {
+                                'subject': self.subject_codes[subj2],
+                                'timeslot': ts2,
+                                'time': f"{self._format_time(start2)}-{self._format_time(end2)}",
+                                'room': room2
+                            }
+                        })
         
-        for (subj, sec_idx), placements in placement_map.items():
-            for p in placements:
-                teacher = p['teacher']
-                if teacher >= 0:
-                    key = (teacher, p['day'], p['timeslot'])
-                    teacher_time_map[key].append({'subject': subj, 'section': sec_idx})
-        
-        for (teacher, day, ts), assignments in teacher_time_map.items():
-            if len(assignments) > 1:
-                teacher_conflict_count += (len(assignments) - 1)
-                conflicts['teacher_conflicts'].append({
-                    'teacher': teacher,
-                    'day': day,
-                    'timeslot': ts,
-                    'count': len(assignments),
-                    'assignments': assignments
-                })
-        
+        # ✅ Check TIME-BASED section conflicts
         section_conflict_count = 0
-        section_time_map = defaultdict(list)
-        
-        for (subj, sec_idx), placements in placement_map.items():
-            for p in placements:
-                key = (sec_idx, p['day'], p['timeslot'])
-                section_time_map[key].append({
-                    'subject': subj,
-                    'subject_name': self.subject_codes[subj],
-                    'room': p['room_code']
-                })
-        
-        for (section, day, ts), classes in section_time_map.items():
-            if len(classes) > 1:
-                section_conflict_count += (len(classes) - 1)
-                conflicts['section_conflicts'].append({
-                    'section': self.section_labels[section],
-                    'section_idx': section,
-                    'day': day,
-                    'timeslot': ts,
-                    'count': len(classes),
-                    'classes': classes
-                })
+        for (section, day), classes in section_day_times.items():
+            for i in range(len(classes)):
+                for j in range(i + 1, len(classes)):
+                    start1, end1, subj1, room1, ts1 = classes[i]
+                    start2, end2, subj2, room2, ts2 = classes[j]
+                    
+                    if self._times_overlap(start1, end1, start2, end2):
+                        section_conflict_count += 1
+                        conflicts['section_conflicts'].append({
+                            'section': self.section_labels[section],
+                            'section_idx': section,
+                            'day': day,
+                            'class1': {
+                                'subject': self.subject_codes[subj1],
+                                'timeslot': ts1,
+                                'time': f"{self._format_time(start1)}-{self._format_time(end1)}",
+                                'room': room1
+                            },
+                            'class2': {
+                                'subject': self.subject_codes[subj2],
+                                'timeslot': ts2,
+                                'time': f"{self._format_time(start2)}-{self._format_time(end2)}",
+                                'room': room2
+                            }
+                        })
 
         if teacher_conflict_count == 0:
             print("   ✅ No teacher conflicts")
         else:
-            print(f"\n   ❌ TEACHER CONFLICTS: {teacher_conflict_count}")
+            print(f"\n   ❌ TEACHER CONFLICTS (TIME-BASED): {teacher_conflict_count}")
         
         if section_conflict_count == 0:
             print("   ✅ No section conflicts")
         else:
-            print(f"\n   ❌ SECTION CONFLICTS: {section_conflict_count}")
+            print(f"\n   ❌ SECTION CONFLICTS (TIME-BASED): {section_conflict_count}")
         
         total_conflicts = duplicate_count + teacher_conflict_count + section_conflict_count
         
@@ -1821,7 +1940,7 @@ class ParallelTimetablingEnv(ParallelEnv):
             'fully_placed_rate': fully_placed_count / self.num_subjects * 100
         }
         
-        print(f"\nSUMMARY:")
+        print(f"\nSUMMARY (TIME-BASED):")
         print(f"Total conflicts: {total_conflicts}")
         print(f"  Teacher: {teacher_conflict_count}")
         print(f"  Section: {section_conflict_count}")
@@ -1836,12 +1955,31 @@ class ParallelTimetablingEnv(ParallelEnv):
         actual_conflicts = self._count_actual_schedule_conflicts()
         print(f"\nStep: {self.timestep}/{self.max_timesteps}")
         print(f"Placed: {len(self.placed_subjects)}/{self.num_subjects}")
-        print(f"Actual conflicts: {actual_conflicts}")
+        print(f"Actual conflicts (TIME-BASED): {actual_conflicts}")
         print(f"Curriculum phase: {self._get_curriculum_multiplier():.1f}x")
 
     def close(self):
         pass
 
+    def subject_priority(self, s: int) -> float:
+        """Calculate priority for a subject"""
+        p = 0.0
+        if 0 <= self.subject_teacher_idx[s] < self.num_teachers:
+            p += 10.0
+        if self.subject_allowed_rooms[s]:
+            p += 5.0
+        p += min(5.0, (self.fail_count[s] // 10) * 1.0)
+        p += s * 1e-4
+        return p
+
+    def calculate_error_rate(self):
+        """Calculate placement error rate"""
+        total = self.num_subjects
+        errors = total - len(self.placed_subjects)
+        return errors / total if total > 0 else 0.0
+
     @lru_cache(maxsize=256)
     def _cached_priority(self, subj_idx: int) -> float:
         return self.subject_priority(subj_idx)
+    
+   

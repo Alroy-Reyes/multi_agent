@@ -1,0 +1,13 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-L,Science,"Alcantara, Norberto",F,1245-1415,90,2,G211,Physical,G,G,Hybrid,No
+PRACTICAL RESEARCH 2,ABM 12-B,Research,"Alcantara, Norberto",F,1245-1415,90,2,Y405,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-R,Science,"Alcantara, Norberto",H,1100-1230,90,2,ZOOM010,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-Q,Science,"Alcantara, Norberto",H,1430-1600,90,2,ZOOM007,Virtual,Z,Z,Online,No
+PRACTICAL RESEARCH 2,ABM 12-C,Research,"Alcantara, Norberto",M,0915-1045,90,2,Y501,Physical,Y,Y,Hybrid,No
+PRACTICAL RESEARCH 2,ABM 12-B,Research,"Alcantara, Norberto",M,1245-1415,90,2,Y405,Physical,Y,Y,Hybrid,No
+PRACTICAL RESEARCH 2,ABM 12-D,Research,"Alcantara, Norberto",M,1245-1415,90,2,Y502,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-Q,Science,"Alcantara, Norberto",T,1245-1415,90,2,ZOOM019,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-L,Science,"Alcantara, Norberto",W,0730-0900,90,2,G211,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 1-LABORATORY,STEM 12-R,Science,"Alcantara, Norberto",W,0915-1045,90,2,ZOOM014,Virtual,Z,Z,Online,No
+PRACTICAL RESEARCH 2,ABM 12-C,Research,"Alcantara, Norberto",W,1245-1415,90,2,Y501,Physical,Y,Y,Hybrid,No
+PRACTICAL RESEARCH 2,ABM 12-D,Research,"Alcantara, Norberto",W,1245-1415,90,2,Y502,Physical,Y,Y,Hybrid,No

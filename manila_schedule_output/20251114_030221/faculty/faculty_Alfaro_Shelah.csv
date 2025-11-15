@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-A,Science,"Alfaro, Shelah",F,1430-1600,90,2,ZOOM020,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 1,STEM 12-Q,Science,"Alfaro, Shelah",H,0730-0900,90,2,Y403,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-Q,Science,"Alfaro, Shelah",T,0915-1045,90,2,Y403,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-A,Science,"Alfaro, Shelah",W,0730-0900,90,2,ZOOM005,Virtual,Z,Z,Online,No

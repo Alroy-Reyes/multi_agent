@@ -1,0 +1,6 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-H,Science,"Landingin, Harold",F,0730-0900,90,2,ZOOM006,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-G,Science,"Landingin, Harold",H,0730-0900,90,2,ZOOM013,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2,STEM 12-A,Science,"Landingin, Harold",H,1100-1230,90,2,G101,Physical,G,G,Hybrid,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-H,Science,"Landingin, Harold",T,1100-1230,90,2,ZOOM005,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2,STEM 12-A,Science,"Landingin, Harold",W,1430-1600,90,2,G101,Physical,G,G,Hybrid,No

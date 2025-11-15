@@ -1,0 +1,7 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL PHYSICS 1,STEM 12-C,Science,"Caras, Jamaica",F,1100-1230,90,2,G206,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-B,Science,"Caras, Jamaica",H,0730-0900,90,2,G201,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-F,Science,"Caras, Jamaica",H,1430-1600,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-F,Science,"Caras, Jamaica",T,0730-0900,90,2,G204,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-C,Science,"Caras, Jamaica",W,1245-1415,90,2,G206,Physical,G,G,Hybrid,No
+GENERAL PHYSICS 1,STEM 12-B,Science,"Caras, Jamaica",W,1430-1600,90,2,G201,Physical,G,G,Hybrid,No

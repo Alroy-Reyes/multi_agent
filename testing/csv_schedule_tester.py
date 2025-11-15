@@ -1124,7 +1124,7 @@ def export_teacher_schedules(schedule_data, output_dir):
 # ======================================================================
 def main():
     # DEFAULT MANILA CHECKPOINT (UPDATED TO ITERATION 10)
-    DEFAULT_CHECKPOINT = "C:/ray_logs/Manila_v15_0_REBALANCED/PPO_manila_env_8768a_00000_0_2025-11-11_21-58-41/checkpoint_000004"
+    DEFAULT_CHECKPOINT = "C:/ray_logs/Manila_v15_0_REBALANCED/PPO_manila_env_3a124_00000_0_2025-11-12_23-49-52/checkpoint_000099"
     
     parser = argparse.ArgumentParser(description="Export Manila schedule v16.2 (with enhanced validation)")
     parser.add_argument('--checkpoint', type=str, default=DEFAULT_CHECKPOINT,

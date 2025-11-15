@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL MATHEMATICS,HUMSS 11-B,Math,"Tresvalles, Regina",M,0730-0900,90,2,ZOOM010,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,STEM 11-G,Math,"Tresvalles, Regina",M,0730-0930,120,1,ZOOM016,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,STEM 11-G,Math,"Tresvalles, Regina",T,0730-0930,120,1,ZOOM021,Virtual,Z,Z,Online,No
+GENERAL MATHEMATICS,HUMSS 11-B,Math,"Tresvalles, Regina",W,0730-0930,120,1,ZOOM008,Virtual,Z,Z,Online,No

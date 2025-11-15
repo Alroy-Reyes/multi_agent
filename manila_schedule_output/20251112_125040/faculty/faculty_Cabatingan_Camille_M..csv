@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,ABM 11-I,Homeroom,Cabatingan Camille M.,F,0945-1015,30,1,V502,Physical,V,V,Face-to-Face,No
+HOMEROOM,ABM 11-H,Homeroom,Cabatingan Camille M.,H,1215-1245,30,1,G209,Physical,G,G,Face-to-Face,No
+HOMEROOM,ABM 11-J,Homeroom,Cabatingan Camille M.,M,1100-1230,90,2,V503,Physical,V,V,Face-to-Face,No
+HOMEROOM,ABM 11-G,Homeroom,Cabatingan Camille M.,W,1215-1245,30,1,G208,Physical,G,G,Face-to-Face,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 11-H,Homeroom,"Navarro, Joanna Christelle D.",F,1430-1500,30,1,Y506,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-F,Homeroom,"Navarro, Joanna Christelle D.",H,1330-1530,120,1,Y504,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-G,Homeroom,"Navarro, Joanna Christelle D.",T,1100-1130,30,1,Y505,Physical,Y,Y,Face-to-Face,No
+HOMEROOM,STEM 11-E,Homeroom,"Navarro, Joanna Christelle D.",T,1245-1445,120,1,Y503,Physical,Y,Y,Face-to-Face,No

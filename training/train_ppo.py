@@ -10,7 +10,7 @@ CHANGES FROM v18.9:
 ✅ REBALANCE #4: Softer completion pressure (5x reduction)
 ✅ REBALANCE #5: Stronger value learning (vf_coeff: 1.0→3.0)
 ✅ REBALANCE #6: Gentler entropy decay (min: 0.05→0.2)
-✅ REBALANCE #7: Larger batch size (512→2048) + more SGD iters (1→4)
+✅ REBALANCE #7: Larger batch size (512) + more SGD iters (1→4)
 ✅ REBALANCE #8: Smoother LR schedule (slower decay)
 ✅ REBALANCE #9: Conservative policy updates (clip: 0.3→0.2)
 ✅ REBALANCE #10: Tighter reward clipping (±100→±50)

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-J,Science,"Florentino, Eiza",H,0730-0900,90,2,ZOOM007,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-I,Science,"Florentino, Eiza",M,1245-1415,90,2,ZOOM015,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-I,Science,"Florentino, Eiza",T,0730-0900,90,2,ZOOM005,Virtual,Z,Z,Online,No
+GENERAL CHEMISTRY 2-LABORATORY,STEM 12-J,Science,"Florentino, Eiza",T,1430-1600,90,2,ZOOM016,Virtual,Z,Z,Online,No

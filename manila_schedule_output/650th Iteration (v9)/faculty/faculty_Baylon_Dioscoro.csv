@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+BUSINESS FINANCE,ABM 12-G,Business/ABM,"Baylon, Dioscoro",F,1430-1600,90,2,Y505,Physical,Y,Y,Hybrid,No
+BUSINESS FINANCE,ABM 12-F,Business/ABM,"Baylon, Dioscoro",T,1430-1600,90,2,Y504,Physical,Y,Y,Hybrid,No
+BUSINESS FINANCE,ABM 12-F,Business/ABM,"Baylon, Dioscoro",W,1100-1230,90,2,Y504,Physical,Y,Y,Hybrid,No
+BUSINESS FINANCE,ABM 12-G,Business/ABM,"Baylon, Dioscoro",W,1430-1600,90,2,Y505,Physical,Y,Y,Hybrid,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+GENERAL CHEMISTRY 1,STEM 12-Q,Science,"Matulac, John Marc",F,0730-0900,90,2,Y403,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-Q,Science,"Matulac, John Marc",H,1245-1415,90,2,Y403,Physical,Y,Y,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-R,Science,"Matulac, John Marc",T,1430-1600,90,2,V502,Physical,V,V,Hybrid,No
+GENERAL CHEMISTRY 1,STEM 12-R,Science,"Matulac, John Marc",W,0730-0900,90,2,V502,Physical,V,V,Hybrid,No

@@ -1,0 +1,5 @@
+Subject,Section,Subject_Area,Faculty,Days,Time,Duration_Min,Meetings_Per_Week,Room,Room_Type,Campus,Building,Modality,Is_Async
+HOMEROOM,STEM 11-K,Homeroom,"Hugo, Alleaona",H,0830-0900,30,1,L209,Physical,L,L,Face-to-Face,No
+HOMEROOM,STEM 11-J,Homeroom,"Hugo, Alleaona",H,0930-1000,30,1,L208,Physical,L,L,Face-to-Face,No
+HOMEROOM,STEM 11-L,Homeroom,"Hugo, Alleaona",T,0915-0945,30,1,L210,Physical,L,L,Face-to-Face,No
+HOMEROOM,STEM 11-I,Homeroom,"Hugo, Alleaona",W,0830-0900,30,1,L204,Physical,L,L,Face-to-Face,No
