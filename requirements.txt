@@ -1,0 +1,6 @@
+pip install pettingzoo gymnasium ray[rllib]
+pip install scikit-image opencv-python
+pip install ray[default]==2.9.3
+pip install torch
+pip install numpy==1.24.4
+pip install tensorboard
